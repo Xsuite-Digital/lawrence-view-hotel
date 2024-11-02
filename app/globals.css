@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font definitions */
+:root {
+  --font-tiro-bangla: "Tiro Bangla", sans-serif;
+  --font-readex-pro: "Readex Pro", sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-tiro-bangla);
+}
+
+.font-paragraph {
+  font-family: var(--font-readex-pro);
+}
+/* Global styles for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: var(--font-tiro-bangla);
+}
+
+/* Global styles for paragraphs */
+p,
+button,
+li {
+  font-family: var(--font-readex-pro);
+}
+h1 {
+  font-size: 64px;
+}
+h2 {
+  font-size: 36px;
+}
+/* span {
+  font-size: 32px;
+} */
+
+@keyframes borderRotate {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+  }
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@layer utilities {
+  .animate-borderRotate {
+    animation: borderRotate 0.8s ease-in-out forwards;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c4a053;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+::selection {
+  background-color: #c4a053;
+  color: #000000;
+}
+
+::-webkit-selection {
+  background-color: #c4a053;
+  color: #000000;
+}
+
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+}
+
+li {
+  position: relative; /* Position relative to place underline */
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -5px; 
+  height: 2px; 
+  background-color: #c4a053;
+  width: 0; 
+  transition: width 0.3s ease-in-out; 
+}
+
+li:hover .underline {
+  width: 100%; 
+}
