@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -73,12 +73,12 @@ const Page = () => {
             >
               {/* Image */}
               <motion.div
-                className="bg-white relative flex items-center justify-center p-20 mb-4 cursor-pointer overflow-hidden rounded-lg"
+                className=" relative flex items-center justify-center  mb-4 cursor-pointer overflow-hidden rounded-lg"
                 whileHover={{ scale: 1.1 }} // Image zoom on hover
               >
                 <Image
-                  height={100}
-                  width={100}
+                  height={300}
+                  width={300}
                   src={service.imgsrc}
                   alt={service.title}
                   className="h-auto object-cover transition-transform duration-300"

@@ -69,7 +69,7 @@ const Page = () => {
                     <div className="p-2 text-center">
                       <button
                         type="button"
-                        className="px-4 py-2 text-white text-sm tracking-wider border-3  border-[#c4a053] outline-none bg-black rounded-xl"
+                        className="px-4 py-2 text-white text-sm tracking-wider border-3  border-[#c4a053] outline-none bg-black "
                       >
                         {card.button}
                       </button>

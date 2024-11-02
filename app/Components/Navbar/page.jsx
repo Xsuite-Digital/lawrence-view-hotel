@@ -28,7 +28,7 @@ const Page = () => {
         <div>
           <Link href="/Contact">
             <motion.button
-              className="bg-[#c4a053]  px-4 py-1 rounded-lg"
+              className="bg-[#c4a053]  px-4 py-1 "
               whileHover={{ scale: 1.1 }} // Scale and rotate on hover
               whileTap={{ scale: 0.95 }} // Slightly shrink on tap
             >

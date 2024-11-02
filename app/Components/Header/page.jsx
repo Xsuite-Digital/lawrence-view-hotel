@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
@@ -41,7 +40,7 @@ const Header = () => {
               target="_blank"
               className=" border-[#c4a053] pr-2  border-r-2"
             >
-              0331 6361916{" "}
+              <span>0331 63 61 916</span>{" "}
             </Link>
             {" | "}
           </div>
@@ -54,7 +53,7 @@ const Header = () => {
               target="_blank"
               className="border-[#c4a053]  duration-300 ease-in-out border-r-2 pr-2"
             >
-              info@xsuite.digital
+              <span>info@xsuite.digital</span>
             </Link>
             {" | "}
           </div>
