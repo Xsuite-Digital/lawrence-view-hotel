@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { GalleryCard } from "../../Helpers/Data";
 import Image from "next/image";
+import ImageModal from "../ImageModal/page"; // Import the ImageModal component
 
 const Page = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const visibleCards = 4;
 
   const handleNext = () => {
@@ -17,6 +19,15 @@ const Page = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
+  };
+
+  const openModal = (index) => {
+    setCurrentIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -52,13 +63,16 @@ const Page = () => {
                     key={index}
                     className="bg-white relative group transform-gpu transition-transform duration-500 shadow-lg hover:border-[#c4a053] ease-in-out border w-full max-w-sm rounded-xl font-[sans-serif] overflow-hidden flex flex-col justify-between mx-auto mt-4"
                   >
-                    <div className="relative">
+                    <div
+                      className="relative"
+                      onClick={() => openModal(currentIndex + index)}
+                    >
                       <Image
                         height={288}
                         width={383}
                         src={card.Imgsrc}
                         alt={card.name}
-                        className="h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-110 object-center rounded-t-lg"
+                        className="h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-110 object-center rounded-t-lg cursor-pointer"
                         quality={100}
                       />
                       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-t-lg"></div>
@@ -87,9 +101,11 @@ const Page = () => {
               />
             </button>
           </div>
+
           <div className="flex flex-col items-center justify-center text-white text-3xl pt-20">
             <h1>Best Hotels In Lahore</h1>
           </div>
+
           <div className="flex flex-col items-center justify-center text-white text-normal pt-10">
             <p className="w-[70vw] text-center">
               If you’re searching for the perfect hotel room near you in Lahore,
@@ -104,6 +120,11 @@ const Page = () => {
           </div>
         </section>
       </main>
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        initialIndex={currentIndex}
+      />
     </div>
   );
 };

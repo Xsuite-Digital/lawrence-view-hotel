@@ -1,47 +1,79 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion for animations
+import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
-import DatePicker from "react-datepicker"; // Import DatePicker
-import "react-datepicker/dist/react-datepicker.css"; // Import CSS for DatePicker
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { addDays } from "date-fns";
 
 function Page() {
-  const [selectedOption, setSelectedOption] = useState("Select room");
+  const today = new Date();
+  const tomorrow = addDays(today, 1);
+
   const [isOpen, setIsOpen] = useState(false);
   const [dateRangeOpen, setDateRangeOpen] = useState(false);
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
-  const [formattedDateRange, setFormattedDateRange] = useState("");
-  const [rooms, setRooms] = useState([{ id: 1, people: 1 }]);
+  const [startDate, setStartDate] = useState(today);
+  const [endDate, setEndDate] = useState(tomorrow);
+  const [formattedDateRange, setFormattedDateRange] = useState(
+    `${today.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    })} - ${tomorrow.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    })}`
+  );
+  const [rooms, setRooms] = useState([{ id: 1, people: 2 }]);
+  const [roomPeopleDisplay, setRoomPeopleDisplay] = useState("1 Room 2 People");
 
-  const handleDateConfirm = () => {
-    if (startDate && endDate) {
+  const handleDateChange = (date, isStart) => {
+    if (isStart) {
+      setStartDate(date);
+    } else {
+      setEndDate(date);
       const formattedStart = startDate.toLocaleDateString("en-US", {
         month: "long",
         day: "numeric",
         year: "numeric",
       });
-      const formattedEnd = endDate.toLocaleDateString("en-US", {
+      const formattedEnd = date.toLocaleDateString("en-US", {
         month: "long",
         day: "numeric",
         year: "numeric",
       });
       setFormattedDateRange(`${formattedStart} - ${formattedEnd}`);
-      setDateRangeOpen(false);
+      setDateRangeOpen(false); // Close the calendar after selecting the end date
     }
-    setDateRangeOpen(false);
   };
 
   const clearDates = () => {
-    setStartDate(null);
-    setEndDate(null);
-    setFormattedDateRange("");
+    setStartDate(today);
+    setEndDate(tomorrow);
+    setFormattedDateRange(
+      `${today.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      })} - ${tomorrow.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      })}`
+    );
     setDateRangeOpen(false);
   };
 
   const openDateRange = () => {
-    setDateRangeOpen(true); // Open the date range picker
+    setIsOpen(false); // Close room selector when opening date range
+    setDateRangeOpen(true);
+  };
+
+  const openRoomSelector = () => {
+    setDateRangeOpen(false); // Close date range when opening room selector
+    setIsOpen(true);
   };
 
   const handlePeopleChange = (roomId, people) => {
@@ -53,27 +85,44 @@ function Page() {
   };
 
   const addRoom = () => {
-    setRooms([...rooms, { id: rooms.length + 1, people: 1 }]);
+    setRooms([...rooms, { id: rooms.length + 1, people: 2 }]);
   };
 
   const removeRoom = (roomId) => {
-    setRooms((prevRooms) => prevRooms.filter((room) => room.id !== roomId));
+    setRooms((prevRooms) => {
+      const updatedRooms = prevRooms.filter((room) => room.id !== roomId);
+      if (updatedRooms.length === 0) {
+        setRoomPeopleDisplay("1 Room 2 People"); // Reset to default
+      }
+      return updatedRooms;
+    });
+  };
+
+  const updateRoomPeopleDisplay = () => {
+    if (rooms.length === 0) {
+      setRoomPeopleDisplay("1 Room 2 People"); // Default display
+      return;
+    }
+    const totalPeople = rooms.reduce((sum, room) => sum + room.people, 0);
+    setRoomPeopleDisplay(
+      `${rooms.length} Room${rooms.length > 1 ? "s" : ""} ${totalPeople} People`
+    );
   };
 
   return (
     <div>
-      <div className="p-6 flex bg-[#2c2c2c] bg-opacity-55">
+      <div className="p-6 flex justify-center bg-[#2c2c2c] bg-opacity-55">
         {/* Single Input Date Range Picker */}
-        <div className="relative w-[44vw]">
+        <div className="relative w-full max-w-lg mb-4">
           <div
-            className="p-2 bg-gray-100 text-black border h-10 border-gray-300 transition-all duration-300 ease-in-out cursor-pointer flex items-center justify-between"
+            className="p-2 bg-gray-100 text-black border h-10 border-gray-300 transition-all duration-300 ease-in-out cursor-pointer flex items-center justify-center"
             onClick={openDateRange}
           >
-            {formattedDateRange || "Select date range"}
+            <span>{formattedDateRange || "Select date range"}</span>
             {formattedDateRange && (
               <Icon
                 icon="mdi:close-circle"
-                className="ml-2 text-gray-500 cursor-pointer hover:text-red-500"
+                className="text-gray-500 cursor-pointer hover:text-red-500"
                 onClick={clearDates}
                 title="Clear dates"
               />
@@ -85,52 +134,55 @@ function Page() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute z-20 w-full mt-2 bg-white border border-gray-300 rounded-xl shadow-lg transition-all duration-300 ease-in-out p-4"
+              className="absolute z-20 w-full bg-white border border-gray-300 shadow-lg transition-all duration-300 ease-in-out p-4"
             >
-              <div className="flex justify-between mb-2">
+              <div className="flex justify-between items-center mb-2">
+                <div className="text-black text-xs">
+                  {formattedDateRange
+                    ? `Your Selection: ${formattedDateRange}`
+                    : "Select date range"}
+                </div>
+
+                <button
+                  onClick={clearDates}
+                  className="text-gray-600 py-1 px-2 rounded-md hover:text-red-500 transition-colors"
+                >
+                  Clear
+                </button>
+              </div>
+              <div className="flex">
                 <DatePicker
                   selected={startDate}
-                  onChange={(date) => setStartDate(date)}
+                  onChange={(date) => handleDateChange(date, true)}
                   selectsStart
                   startDate={startDate}
                   endDate={endDate}
                   inline
+                  className="border-none bg-transparent" // Make background transparent
                 />
+                <div className="border-l border-gray-300" /> {/* Divider */}
                 <DatePicker
                   selected={endDate}
-                  onChange={(date) => setEndDate(date)}
+                  onChange={(date) => handleDateChange(date, false)}
                   selectsEnd
                   startDate={startDate}
                   endDate={endDate}
                   minDate={startDate}
                   inline
+                  className="border-none bg-transparent" // Make background transparent
                 />
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={handleDateConfirm}
-                  className="mt-2 bg-[#c4a053] text-black py-2 px-4 rounded-md"
-                >
-                  Confirm
-                </button>
-                <button
-                  onClick={() => setDateRangeOpen(false)} // Close the calendars
-                  className="mt-2 text-gray-600 py-2 px-4 rounded-md hover:text-red-500 transition-colors"
-                >
-                  Close
-                </button>
               </div>
             </motion.div>
           )}
         </div>
 
         {/* Dynamic Room Selector */}
-        <div className="relative w-[40vw] ml-4">
+        <div className="relative w-full max-w-sm">
           <div
-            className="p-2 bg-gray-100 text-black border h-10 border-gray-300 transition-all duration-300 ease-in-out cursor-pointer flex items-center justify-between"
-            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 bg-gray-100 text-black border h-10 border-gray-300 transition-all duration-300 ease-in-out cursor-pointer flex items-center justify-center"
+            onClick={openRoomSelector}
           >
-            {selectedOption}
+            {roomPeopleDisplay}
             <span
               className={`ml-2 h-2 w-2 flex items-center justify-center transition-transform ${
                 isOpen ? "rotate-180" : "rotate-0"
@@ -145,7 +197,7 @@ function Page() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute z-10 w-full mt-2 bg-white border border-gray-300 rounded-xl shadow-lg p-4"
+              className="absolute z-10 w-full bg-white border border-gray-300 shadow-lg p-4"
             >
               <AnimatePresence>
                 {rooms.map((room) => (
@@ -171,26 +223,38 @@ function Page() {
                       ))}
                     </select>
                     <Icon
-                      icon="mi:close"
+                      icon="mdi:trash-can"
                       className="ml-2 text-gray-500 font-semibold h-5 w-5 cursor-pointer hover:text-red-500 transition-colors"
-                      onClick={() => removeRoom(room.id)}
+                      onClick={() => {
+                        removeRoom(room.id);
+                        updateRoomPeopleDisplay(); // Update display after removing room
+                      }}
                       title="Remove room"
                     />
                   </motion.div>
                 ))}
               </AnimatePresence>
-              <button
-                onClick={addRoom}
-                className="mt-2 bg-[#c4a053] text-black py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors"
-              >
-                Add Room
-              </button>
+              <div className="flex justify-between">
+                <button
+                  onClick={addRoom}
+                  className="mt-2 bg-[#c4a053] text-black py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors"
+                >
+                  Add Room
+                </button>
+                <button
+                  onClick={() => {
+                    setIsOpen(false); // Close room selector after done
+                    updateRoomPeopleDisplay(); // Update display after closing
+                  }}
+                  className="mt-2 bg-[#c4a053] text-black py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors"
+                >
+                  Done
+                </button>
+              </div>
             </motion.div>
           )}
         </div>
-
-        {/* Book Now Button */}
-        <button className="px-8 w-full max-w-[12vw] py-1 bg-[#c4a053] ml-3 text-black rounded-md hover:bg-opacity-90 transition-colors">
+        <button className="px-8 h-10 w-full max-w-44 bg-[#c4a053] text-black hover:bg-opacity-90 transition-colors">
           Book Now
         </button>
       </div>
