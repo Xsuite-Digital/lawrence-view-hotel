@@ -30,7 +30,7 @@ function Page() {
       setFormattedDateRange(`${formattedStart} - ${formattedEnd}`);
       setDateRangeOpen(false);
     }
-    setDateRangeOpen(false)
+    setDateRangeOpen(false);
   };
 
   const clearDates = () => {
@@ -81,48 +81,47 @@ function Page() {
           </div>
 
           {dateRangeOpen && (
-  <motion.div
-    initial={{ opacity: 0, y: -10 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -10 }}
-    className="absolute z-20 w-full mt-2 bg-white border border-gray-300 rounded-xl shadow-lg transition-all duration-300 ease-in-out p-4"
-  >
-    <div className="flex justify-between mb-2">
-      <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        selectsStart
-        startDate={startDate}
-        endDate={endDate}
-        inline
-      />
-      <DatePicker
-        selected={endDate}
-        onChange={(date) => setEndDate(date)}
-        selectsEnd
-        startDate={startDate}
-        endDate={endDate}
-        minDate={startDate}
-        inline
-      />
-    </div>
-    <div className="flex justify-between">
-      <button
-        onClick={handleDateConfirm}
-        className="mt-2 bg-[#c4a053] text-black py-2 px-4 rounded-md"
-      >
-        Confirm
-      </button>
-      <button
-        onClick={() => setDateRangeOpen(false)} // Close the calendars
-        className="mt-2 text-gray-600 py-2 px-4 rounded-md hover:text-red-500 transition-colors"
-      >
-        Close
-      </button>
-    </div>
-  </motion.div>
-)}
-
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute z-20 w-full mt-2 bg-white border border-gray-300 rounded-xl shadow-lg transition-all duration-300 ease-in-out p-4"
+            >
+              <div className="flex justify-between mb-2">
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  selectsStart
+                  startDate={startDate}
+                  endDate={endDate}
+                  inline
+                />
+                <DatePicker
+                  selected={endDate}
+                  onChange={(date) => setEndDate(date)}
+                  selectsEnd
+                  startDate={startDate}
+                  endDate={endDate}
+                  minDate={startDate}
+                  inline
+                />
+              </div>
+              <div className="flex justify-between">
+                <button
+                  onClick={handleDateConfirm}
+                  className="mt-2 bg-[#c4a053] text-black py-2 px-4 rounded-md"
+                >
+                  Confirm
+                </button>
+                <button
+                  onClick={() => setDateRangeOpen(false)} // Close the calendars
+                  className="mt-2 text-gray-600 py-2 px-4 rounded-md hover:text-red-500 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          )}
         </div>
 
         {/* Dynamic Room Selector */}
@@ -160,7 +159,9 @@ function Page() {
                     <span className="mr-2">Room {room.id}:</span>
                     <select
                       value={room.people}
-                      onChange={(e) => handlePeopleChange(room.id, e.target.value)}
+                      onChange={(e) =>
+                        handlePeopleChange(room.id, e.target.value)
+                      }
                       className="border focus:outline-none border-gray-300 rounded-md p-1"
                     >
                       {[...Array(10).keys()].map((i) => (
