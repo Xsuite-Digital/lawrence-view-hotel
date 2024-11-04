@@ -199,6 +199,11 @@ function Page() {
               exit={{ opacity: 0, y: -10 }}
               className="absolute z-10 w-full bg-white border border-gray-300 shadow-lg p-4"
             >
+              <div className="text-sm mb-2">
+
+             {formattedDateRange
+                    && `Your Selection: ${roomPeopleDisplay}`}
+                    </div>
               <AnimatePresence>
                 {rooms.map((room) => (
                   <motion.div
