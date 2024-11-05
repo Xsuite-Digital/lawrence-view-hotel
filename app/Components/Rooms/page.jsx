@@ -37,9 +37,11 @@ const Page = () => {
               <Image
                 src="/Left-arrow.webp"
                 alt="right-arrow"
-                height={25}
-                width={25}
-                className=" h-auto w-full"
+                height={45}
+                width={45}
+                className={` h-auto w-full ${
+                  currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
+                } `}
               />
             </button>
 
@@ -56,7 +58,7 @@ const Page = () => {
                         width={330}
                         src={card.Imgsrc}
                         alt={card.name}
-                        className="h-full object-center rounded-t-lg"
+                        className="h-full w-auto object-center rounded-t-lg"
                         quality={100}
                       />
                     </div>
@@ -87,9 +89,11 @@ const Page = () => {
               <Image
                 src="/right-arrow.webp"
                 alt="right-arrow"
-                height={25}
-                width={25}
-                className=" h-auto w-full"
+                height={45}
+                width={45}
+                className={` h-auto w-full ${
+                  currentIndex === 1 ? "opacity-50 cursor-not-allowed" : ""
+                } `}
               />
             </button>
           </div>
