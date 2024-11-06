@@ -33,7 +33,7 @@ li {
   font-family: var(--font-readex-pro);
 }
 h1 {
-  font-size: 64px;
+  font-size: 40px;
 }
 h2 {
   font-size: 36px;
@@ -111,3 +111,7 @@ li {
 li:hover .underline {
   width: 100%; 
 }
+
+
+
+

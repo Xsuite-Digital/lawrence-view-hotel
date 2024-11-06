@@ -26,6 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/47956760.js"></script>
       <body
         className={`${tiroBangla.variable} ${readexPro.variable} antialiased`}
       >

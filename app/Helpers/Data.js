@@ -49,7 +49,7 @@ export const GalleryCard = [
     Imgsrc: "/g3.webp",
   },
   {
-    Imgsrc: "/g4.webp",
+    Imgsrc: "/g4.webp.jpg",
   },
   {
     Imgsrc: "/g1.webp",
@@ -138,7 +138,7 @@ export const AboutContent = [
 
 export const RoomRates = [
   {
-    Imgsrc: "/Deluxx.jpeg",
+    Imgsrc: "/Deluxx.webp",
     name: "Deluxe Double Room",
     description:
       "Double, Full, Bathroom with shower, Seating area, Wireless internet, Remote control TV, Fridge, Minibar, Fan, Individually controlled air conditioning, Full-length mirror, Desk, Desk lamp, Free local calls, Newspaper, Hairdryer, Room safe, Private bathroom, Operator 24 hours, Free toiletries, and Flat Screen",
@@ -152,7 +152,7 @@ export const RoomRates = [
     ],
   },
   {
-    Imgsrc: "/exective-room.jpg",
+    Imgsrc: "/exective-room.webp",
     name: "Executive  Suite Room",
     description:
       "Double, Full, Bathroom with shower, Seating area, Wireless internet, Remote control TV, Fridge, Minibar, Fan, Individually controlled air conditioning, Full-length mirror, Desk, Desk lamp, Free local calls, Newspaper, Hairdryer, Room safe, Private bathroom, Operator 24 hours, Free toiletries, and Flat Screen",
@@ -166,7 +166,7 @@ export const RoomRates = [
     ],
   },
   {
-    Imgsrc: "/super.jpeg",
+    Imgsrc: "/super.webp",
     name: "Superior Suite Room",
     description:
       "Double, Full, Bathroom with shower, Seating area, Wireless internet, Remote control TV, Fridge, Minibar, Fan, Individually controlled air conditioning, Full-length mirror, Desk, Desk lamp, Free local calls, Newspaper, Hairdryer, Room safe, Private bathroom, Operator 24 hours, Free toiletries, and Flat Screen",

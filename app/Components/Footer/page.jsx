@@ -74,16 +74,19 @@ const HotelContactNewsletter = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 items-center">
             {/* Logo */}
-            <div>
-              <h2 className="text-2xl mt-2">About</h2>
+            <div className="">
+             <div className=" flex items-center mr-10 justify-center">
+
               <Image
-                src="/LVH-logo.webp"
+                src="/LH.png"
                 alt="Lawrence View Hotel"
-                className="w-28"
+                className="w-28 p-2"
                 width={200}
                 height={200}
-              />
-              <p>
+                />
+                </div>
+
+              <p className=" text-sm p-2">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry&apos;s standard
                 dummy text ever since the 1500s

@@ -147,7 +147,7 @@ function Page() {
                   onClick={clearDates}
                   className="text-gray-600 py-1 px-2 rounded-md hover:text-red-500 transition-colors"
                 >
-                  Clear
+                  Close
                 </button>
               </div>
               <div className="flex">
