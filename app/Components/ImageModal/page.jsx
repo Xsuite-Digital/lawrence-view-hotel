@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useState } from "react";
 import { GalleryCard } from "../../Helpers/Data"; // Make sure the path is correct
@@ -26,7 +24,7 @@ const ImageModal = ({ isOpen, onClose, initialIndex }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300 ease-in-out">
-      <div className="relative max-w-3xl w-full flex flex-col items-center">
+      <div className="relative max-w-3xl w-full flex flex-col items-center p-4">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -37,25 +35,22 @@ const ImageModal = ({ isOpen, onClose, initialIndex }) => {
         </button>
 
         {/* Main Image Section with Navigation Arrows */}
-        <div className="flex justify-center items-center z-40 mb-4">
+        <div className="flex justify-center items-center z-40 mb-4 w-full">
           <button
             onClick={handlePrev}
             disabled={currentIndex === 0}
             aria-label="Previous Image"
             className={`text-white ${
               currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
-            } flex items-center justify-center h-12 w-12`}
+            } flex items-center justify-center h-10 w-10 md:h-12 md:w-12`}
           >
-            <Icon
-              icon="tabler:arrow-left"
-              className="text-[#c4a053] h-10 w-10"
-            />
+            <Icon icon="tabler:arrow-left" className="text-[#c4a053] h-8 w-8 md:h-10 md:w-10" />
           </button>
           <Image
             src={GalleryCard[currentIndex].Imgsrc}
             alt={GalleryCard[currentIndex].name}
-            width={800}
-            height={600}
+            width={500} // Adjusted width for mobile
+            height={400} // Adjusted height for mobile
             className="rounded-lg object-cover transition-opacity duration-300 ease-in-out mx-4"
           />
           <button
@@ -66,17 +61,14 @@ const ImageModal = ({ isOpen, onClose, initialIndex }) => {
               currentIndex >= totalImages - 1
                 ? "opacity-50 cursor-not-allowed"
                 : ""
-            } flex items-center justify-center h-12 w-12`}
+            } flex items-center justify-center h-10 w-10 md:h-12 md:w-12`}
           >
-            <Icon
-              icon="tabler:arrow-right"
-              className="text-[#c4a053] h-10 w-10"
-            />
+            <Icon icon="tabler:arrow-right" className="text-[#c4a053] h-8 w-8 md:h-10 md:w-10" />
           </button>
         </div>
 
         {/* Thumbnail Section Below the Main Image */}
-        <div className="flex justify-center space-x-2 mt-2">
+        <div className="flex justify-center space-x-2 mt-2 overflow-x-auto">
           {GalleryCard.map((image, index) => (
             <div
               key={index}
@@ -88,8 +80,8 @@ const ImageModal = ({ isOpen, onClose, initialIndex }) => {
               <Image
                 src={image.Imgsrc}
                 alt={image.name}
-                width={100} // Fixed width for thumbnails
-                height={100} // Fixed height for thumbnails
+                width={100} 
+                height={100} 
                 className="rounded-lg object-cover"
               />
             </div>

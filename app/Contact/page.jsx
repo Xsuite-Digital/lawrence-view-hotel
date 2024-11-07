@@ -2,7 +2,7 @@ import Map from "../Components/Map/page";
 
 function page() {
   return (
-    <div className="bg-black text-white p-4 mt-32">
+    <div className="bg-black text-white p-4 ">
       <div className="text-center">
         <h1>Contact</h1>
         <span className="block">
@@ -15,18 +15,18 @@ function page() {
         </span>
       </div>
       <Map />
-      <div className="flex py-12 space-x-6 px-4 ">
-        <div className="w-[40vw]">
-          <h2 className="uppercase">How to contact</h2>
-          <span>
+      <div className="flex lg:flex-row flex-col py-3 space-x-6 px-4 ">
+        <div className=" w-full lg:w-[40vw]">
+          <h2 className="uppercase text-xl">How to contact</h2>
+          <span className=" text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&apos;s standard dummy
             text ever since the 1500s
           </span>
         </div>
-        <div className="w-[60vw] flex justify-center ">
-          <form className="rounded-md w-full  space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+        <div className="lg:w-[60vw] flex justify-center ">
+          <form className="rounded-md w-full mt-2  space-y-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="First Name*"

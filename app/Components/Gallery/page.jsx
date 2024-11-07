@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GalleryCard } from "../../Helpers/Data";
 import Image from "next/image";
 import ImageModal from "../ImageModal/page"; // Import the ImageModal component
@@ -7,8 +7,21 @@ import ImageModal from "../ImageModal/page"; // Import the ImageModal component
 const Page = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const visibleCards = 4;
+  const [visibleCards, setVisibleCards] = useState(4);
 
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(4);
+      }
+    };
+
+    updateVisibleCards(); 
+    window.addEventListener("resize", updateVisibleCards);
+    return () => window.removeEventListener("resize", updateVisibleCards);
+  }, []);
   const handleNext = () => {
     if (currentIndex < GalleryCard.length - visibleCards) {
       setCurrentIndex(currentIndex + 1);
@@ -53,10 +66,11 @@ const Page = () => {
                 width={40}
                 height={40}
                 priority
+                
               />
             </button>
 
-            <div className="grid grid-cols-4 gap-4 overflow-hidden w-full max-w-8xl">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 overflow-hidden w-full  max-w-8xl">
               {GalleryCard.slice(currentIndex, currentIndex + visibleCards).map(
                 (card, index) => (
                   <div
@@ -67,14 +81,15 @@ const Page = () => {
                       className="relative"
                       onClick={() => openModal(currentIndex + index)}
                     >
-                      <Image
-                        height={288}
-                        width={383}
-                        src={card.Imgsrc}
-                        alt={card.name}
-                        className="h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-110 object-center rounded-t-lg cursor-pointer"
-                        quality={100}
-                      />
+                     <Image
+  height={288}
+  width={383}
+  src={card.Imgsrc}
+  alt={card.name}
+  className="h-32 w-64 sm:h-auto sm:w-full transition-transform duration-500 ease-in-out transform group-hover:scale-110 object-center rounded-t-lg cursor-pointer"
+  quality={100}
+/>
+
                       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-t-lg"></div>
                     </div>
                   </div>
@@ -102,12 +117,12 @@ const Page = () => {
             </button>
           </div>
 
-          <div className="flex flex-col items-center justify-center text-white text-3xl pt-20">
-            <h1>Best Hotels In Lahore</h1>
+          <div className="flex flex-col items-center justify-center text-white  pt-20">
+            <h1 className=" text-2xl lg:text-3xl">Best Hotels In Lahore</h1>
           </div>
 
-          <div className="flex flex-col items-center justify-center text-white text-normal pt-10">
-            <p className="w-[70vw] text-center">
+          <div className="flex flex-col justify-center items-center  text-white  pt-10">
+            <p className="w-[70vw] text-start lg:text-center justify-start">
               If you’re searching for the perfect hotel room near you in Lahore,
               Lawrence View Hotel is the perfect choice. Our hotel offers
               comfortable and affordable accommodations that are designed to

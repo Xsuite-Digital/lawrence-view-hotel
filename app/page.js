@@ -9,7 +9,7 @@ import Map from "./Components/Map/page";
 export default function Home() {
   return (
     <div>
-      <div>
+      <div >
         <LandingPage />
       </div>
       <div className="py-4 bg-black">

@@ -49,11 +49,11 @@ const Header = () => {
             <Icon icon="fluent:mail-16-regular" className="h-5 w-5" />
 
             <Link
-              href="mailto:info@xsuite.digital"
+              href="mailto:lawrenceviewhotel@gmail.com"
               target="_blank"
               className="border-[#c4a053]  duration-300 ease-in-out border-r-2 pr-2"
             >
-              <span>info@xsuite.digital</span>
+              <span>lawrenceviewhotel@gmail.com</span>
             </Link>
             {" | "}
           </div>

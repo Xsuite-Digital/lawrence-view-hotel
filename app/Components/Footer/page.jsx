@@ -31,43 +31,43 @@ const HotelContactNewsletter = () => {
   return (
     <div className="w-full">
       {/* Newsletter Section */}
-      <div className="relative w-full h-[100px] bg-[#c4A053] bg-cover bg-center">
-        <div className="absolute inset-0  ">
-          <div className="h-full flex items-center justify-center px-4 lg:px-8">
-            <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-center gap-6">
-              <h2 className="text-black text-xl md:text-2xl font-medium uppercase">
-                Subscribe to our newsletter
-              </h2>
-              <div className="w-full max-w-md">
-                <form onSubmit={handleSubmit} className="flex">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-2 border border-gray-300  focus:outline-none focus:border-[#C4A053]"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="px-6 py-2 bg-black text-white font-medium   "
-                  >
-                    Subscribe
-                  </button>
-                </form>
-                {successMessage && (
-                  <p className="mt-2 text-green-400 text-sm">
-                    {successMessage}
-                  </p>
-                )}
-                {errorMessage && (
-                  <p className="mt-2 text-red-400 text-sm">{errorMessage}</p>
-                )}
+        <div className="relative w-full h-[100px] bg-[#c4A053] bg-cover bg-center">
+          <div className="absolute inset-0  ">
+            <div className="h-full lg:flex flex-col  items-center justify-center px-4 lg:px-8">
+              <div className="w-full max-w-6xl flex flex-col md:flex-row items-center md:justify-center justify-start ">
+                <h2 className="text-black text-lg lg:text-2xl font-medium lg:mt-0 mt-3 uppercase">
+                  Subscribe to our newsletter
+                </h2>
+                <div className=" max-w-xs p-2 lg:max-w-md ">
+                  <form onSubmit={handleSubmit} className="flex">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      className="flex-1 px-1 lg:px-4 py-2 border border-gray-300  focus:outline-none focus:border-[#C4A053]"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className=" px-1 lg:px-6 py-2 bg-black text-white font-medium   "
+                    >
+                      Subscribe
+                    </button>
+                  </form>
+                  {successMessage && (
+                    <p className="mt-2 text-green-400 text-sm">
+                      {successMessage}
+                    </p>
+                  )}
+                  {errorMessage && (
+                    <p className="mt-2 text-red-400 text-sm">{errorMessage}</p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* Contact Section */}
       <div className="w-full bg-black text-white py-8 px-4 lg:px-8">

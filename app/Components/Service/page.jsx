@@ -58,7 +58,7 @@ const Page = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="group relative bg-transparent rounded-lg p-6 overflow-hidden"
+              className="group relative bg-transparent border-2 hover:border-[#c4a053] rounded-lg p-6 overflow-hidden"
               initial={{ opacity: 0, y: 20 }} // Initial state
               animate={{ opacity: 1, y: 0 }} // Animate to this state
               transition={{
