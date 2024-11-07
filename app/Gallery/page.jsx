@@ -13,7 +13,7 @@ const Page = () => {
 
   return (
     <div>
-      <main className="bg-black p-2 min-h-screen mt-32">
+      <main className="bg-black p-2 min-h-screen ">
         <div className="flex flex-col items-center justify-center space-y-3 text-white text-5xl pt-10">
           <h1>Gallery</h1>
         </div>
