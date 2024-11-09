@@ -91,11 +91,11 @@ h2 {
 
 
 ul {
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: none; 
 }
 
 li {
-  position: relative; /* Position relative to place underline */
+  position: relative; 
 }
 
 .underline {

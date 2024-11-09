@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { GalleryCard } from "../../Helpers/Data";
 import Image from "next/image";
-import ImageModal from "../ImageModal/page"; // Import the ImageModal component
+import ImageModal from "../ImageModal/page"; 
 
 const Page = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

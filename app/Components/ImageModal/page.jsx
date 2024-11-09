@@ -1,12 +1,17 @@
 "use client";
-import React, { useState } from "react";
-import { GalleryCard } from "../../Helpers/Data"; // Make sure the path is correct
+import React, { useState, useRef } from "react";
+import { GalleryCard } from "../../Helpers/Data"; // Ensure path is correct
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
 const ImageModal = ({ isOpen, onClose, initialIndex }) => {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const totalImages = GalleryCard.length;
+
+  const carouselRef = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
   const handleNext = () => {
     if (currentIndex < totalImages - 1) {
@@ -18,6 +23,56 @@ const ImageModal = ({ isOpen, onClose, initialIndex }) => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
+  };
+
+  const handleSelectImage = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Smooth scroll function
+  const smoothScroll = (scrollPosition) => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollTo({
+        left: scrollPosition,
+        behavior: "smooth", // Smooth scrolling
+      });
+    }
+  };
+
+  // Mouse events for dragging to scroll
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.clientX;
+    scrollLeft.current = carouselRef.current.scrollLeft;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+    const x = e.clientX;
+    const walk = (x - startX.current) * 2; // Adjust scroll speed
+    smoothScroll(scrollLeft.current - walk); // Smooth scrolling
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+  };
+
+  // Touch events for dragging to scroll
+  const handleTouchStart = (e) => {
+    isDragging.current = true;
+    startX.current = e.touches[0].clientX;
+    scrollLeft.current = carouselRef.current.scrollLeft;
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging.current) return;
+    const x = e.touches[0].clientX;
+    const walk = (x - startX.current) * 2; // Adjust scroll speed
+    smoothScroll(scrollLeft.current - walk); // Smooth scrolling
+  };
+
+  const handleTouchEnd = () => {
+    isDragging.current = false;
   };
 
   if (!isOpen) return null;
@@ -40,9 +95,7 @@ const ImageModal = ({ isOpen, onClose, initialIndex }) => {
             onClick={handlePrev}
             disabled={currentIndex === 0}
             aria-label="Previous Image"
-            className={`text-white ${
-              currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
-            } flex items-center justify-center h-10 w-10 md:h-12 md:w-12`}
+            className={`text-white ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""} flex items-center justify-center h-10 w-10 md:h-12 md:w-12`}
           >
             <Icon icon="tabler:arrow-left" className="text-[#c4a053] h-8 w-8 md:h-10 md:w-10" />
           </button>
@@ -57,32 +110,35 @@ const ImageModal = ({ isOpen, onClose, initialIndex }) => {
             onClick={handleNext}
             disabled={currentIndex >= totalImages - 1}
             aria-label="Next Image"
-            className={`text-white ${
-              currentIndex >= totalImages - 1
-                ? "opacity-50 cursor-not-allowed"
-                : ""
-            } flex items-center justify-center h-10 w-10 md:h-12 md:w-12`}
+            className={`text-white ${currentIndex >= totalImages - 1 ? "opacity-50 cursor-not-allowed" : ""} flex items-center justify-center h-10 w-10 md:h-12 md:w-12`}
           >
             <Icon icon="tabler:arrow-right" className="text-[#c4a053] h-8 w-8 md:h-10 md:w-10" />
           </button>
         </div>
 
-        {/* Thumbnail Section Below the Main Image */}
-        <div className="flex justify-center space-x-2 mt-2 overflow-x-auto">
+        {/* Thumbnail Section Below the Main Image (Carousel for mobile) */}
+        <div
+          ref={carouselRef}
+          className="flex space-x-2 mt-2 overflow-x-auto scrollbar-hide cursor-pointer snap-x snap-mandatory scroll-smooth"
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           {GalleryCard.map((image, index) => (
             <div
               key={index}
-              className={`cursor-pointer ${
-                index === currentIndex ? "border-2 border-[#c4a053]" : ""
-              }`}
-              onClick={() => setCurrentIndex(index)}
+              className={`flex-shrink-0 ${index === currentIndex ? "border-2 border-[#c4a053]" : ""}`}
+              onClick={() => handleSelectImage(index)}
             >
               <Image
                 src={image.Imgsrc}
                 alt={image.name}
-                width={100} 
-                height={100} 
-                className="rounded-lg object-cover"
+                width={100} // Thumbnail width
+                height={100} // Thumbnail height
+                className="rounded-lg"
               />
             </div>
           ))}

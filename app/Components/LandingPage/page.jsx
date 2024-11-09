@@ -35,7 +35,7 @@ const Page = () => {
             <Image
               src={src}
               alt={`Slider Image ${index + 1}`}
-              className="w-full h-auto object-cover md:h-[70vh] h-[50vh]" // Adjust height for mobile and desktop
+              className="w-full  object-cover md:h-[70vh] h-[50vh]" // Adjust height for mobile and desktop
               width={1000}
               height={100}
             />
