@@ -1,13 +1,13 @@
-export default function Home() {
+import BookingEngine from "../components/BookingEngine/Bookingengine"
+import Hero from "../components/HomeComponents/Hero"
+
+const Home = () => {
   return (
     <div>
-      <h1>Lawrence View Hotel</h1>
-      <p>
-        Welcome to Lawrence View Hotel, the best hotel in the world. We offer
-        the best services and the best rooms. You can book a room by clicking
-        the button below.
-      </p>
-      <button className="">Book a room</button>
+    <Hero />  
+  
     </div>
-  );
+  )
 }
+
+export default Home
