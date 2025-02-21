@@ -1,13 +1,11 @@
-import BookingEngine from "../components/BookingEngine/Bookingengine"
-import Hero from "../components/HomeComponents/Hero"
+import Hero from "../components/HomeComponents/Hero";
 
 const Home = () => {
   return (
     <div>
-    <Hero />  
-  
+      <Hero />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
