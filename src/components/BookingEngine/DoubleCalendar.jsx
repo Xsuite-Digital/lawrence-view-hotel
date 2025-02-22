@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { format, addDays, startOfMonth, endOfMonth } from "date-fns";
 
 const DoubleCalendar = () => {

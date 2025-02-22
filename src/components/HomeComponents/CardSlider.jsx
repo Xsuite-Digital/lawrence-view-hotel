@@ -1,5 +1,17 @@
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, Wifi, Car, Coffee, School as Pool, Space as Spa, Mountain, UtensilsCrossed, Dumbbell, Waves } from "lucide-react";
+import { useState } from "react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Wifi,
+  Car,
+  Coffee,
+  School as Pool,
+  Space as Spa,
+  Mountain,
+  UtensilsCrossed,
+  Dumbbell,
+  Waves,
+} from "lucide-react";
 import LLVH from "../../assets/LLVH.webp";
 import MLJLVH from "../../assets/MLJLVH.webp";
 
@@ -14,9 +26,9 @@ const mockData = [
       { name: "Parking", icon: Car },
       { name: "Gourmet Breakfast", icon: Coffee },
       { name: "Infinity Pool", icon: Pool },
-      { name: "Premium Spa", icon: Spa }
+      { name: "Premium Spa", icon: Spa },
     ],
-    alt: "Luxury Resort"
+    alt: "Luxury Resort",
   },
   {
     id: 2,
@@ -28,10 +40,10 @@ const mockData = [
       { name: "24/7 Dining", icon: UtensilsCrossed },
       { name: "Fitness Center", icon: Dumbbell },
       { name: "Beach Access", icon: Waves },
-      { name: "Wellness Spa", icon: Spa }
+      { name: "Wellness Spa", icon: Spa },
     ],
-    alt: "Beachfront Escape"
-  }
+    alt: "Beachfront Escape",
+  },
 ];
 
 const CardSlider = () => {
@@ -40,43 +52,42 @@ const CardSlider = () => {
 
   const handleSlideChange = (direction) => {
     if (isTransitioning) return;
-    
+
     setIsTransitioning(true);
     setIndex((prevIndex) => {
-      if (direction === 'next') {
+      if (direction === "next") {
         return (prevIndex + 1) % mockData.length;
       }
       return (prevIndex - 1 + mockData.length) % mockData.length;
     });
-    
+
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
   return (
     <div className="relative min-h-[600px] w-full max-w-7xl mx-auto p-12 mt-12">
       <div className="absolute inset-0 " />
-      
+
       <button
-        onClick={() => handleSlideChange('prev')}
+        onClick={() => handleSlideChange("prev")}
         className="absolute left-4 secondary top-1/2 -translate-y-1/2 z-10 p-4  transition-all rounded-full  hover:scale-110 duration-300"
         disabled={isTransitioning}
-        
       >
         <ChevronLeft className="text-gray-900 w-6 h-6" />
       </button>
 
       <div className="relative h-[600px] overflow-hidden rounded-xl ">
-        <div 
+        <div
           className={`absolute w-full h-full transition-transform duration-500 ease-out ${
-            isTransitioning ? 'scale-105 blur-sm' : 'scale-100'
+            isTransitioning ? "scale-105 blur-sm" : "scale-100"
           }`}
         >
-          <img 
-            src={mockData[index].image} 
-            alt={mockData[index].alt} 
+          <img
+            src={mockData[index].image}
+            alt={mockData[index].alt}
             className="w-full h-full object-cover"
           />
-          
+
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
@@ -88,10 +99,10 @@ const CardSlider = () => {
             <p className="lg:text-xl xl:text-xl 2xl:text-xl text-sm text-gray-200 mb-6">
               {mockData[index].description}
             </p>
-            
+
             <div className="grid lg:grid-cols-5 grid-cols-3 gap-6">
               {mockData[index].amenities.map((amenity, i) => (
-                <div 
+                <div
                   key={i}
                   className="flex flex-col items-center text-center group"
                 >
@@ -109,7 +120,7 @@ const CardSlider = () => {
       </div>
 
       <button
-        onClick={() => handleSlideChange('next')}
+        onClick={() => handleSlideChange("next")}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-4 secondary  transition-all rounded-full  hover:scale-110 duration-300"
         disabled={isTransitioning}
       >
@@ -122,7 +133,7 @@ const CardSlider = () => {
           <button
             key={i}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              i === index ? 'bg-white w-8' : 'bg-white/50 hover:bg-white/75'
+              i === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"
             }`}
             onClick={() => setIndex(i)}
           />

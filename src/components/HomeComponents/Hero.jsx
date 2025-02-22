@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import p1 from "../../assets/p1.webp";
 import p2 from "../../assets/p2.webp";
@@ -38,9 +38,12 @@ const Hero = () => {
 
       {/* Hero Text */}
       <div className="relative px-6 md:px-24 text-center md:text-left w-full flex flex-col items-center md:items-start justify-center">
-        <h1 className="text-white text-3xl md:text-5xl font-bold">Lawrence View Hotel</h1>
+        <h1 className="text-white text-3xl md:text-5xl font-bold">
+          Lawrence View Hotel
+        </h1>
         <p className="text-white text-base md:text-lg max-w-lg mt-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, delectus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+          delectus.
         </p>
         <button className="mt-6 border border-[#b89628] hover:border-none hover:bg-[#b89628] bg-transparent duration-300 ease-in-out px-6 py-3 text-white font-semibold text-lg rounded-lg hover:bg-opacity-80 transition-all">
           Book Now
@@ -51,7 +54,11 @@ const Hero = () => {
       <div
         className={`relative md:fixed md:left-1/2  md:transform md:-translate-x-1/2 z-50  transition-all  
         w-[90%] md:w-auto -bottom-32   md:bottom-auto 
-        ${isScrolled ? "md:top-0 py-2 duration-300 ease-in-out " : "md:top-36 duration-300 ease-in-out"}`}
+        ${
+          isScrolled
+            ? "md:top-0 py-2 duration-300 ease-in-out "
+            : "md:top-36 duration-300 ease-in-out"
+        }`}
       >
         <BookingEngine />
       </div>
