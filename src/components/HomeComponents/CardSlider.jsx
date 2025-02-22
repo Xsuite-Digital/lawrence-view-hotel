@@ -53,7 +53,7 @@ const CardSlider = () => {
   };
 
   return (
-    <div className="relative min-h-[600px] w-full max-w-7xl mx-auto p-12">
+    <div className="relative min-h-[600px] w-full max-w-7xl mx-auto p-12 mt-12">
       <div className="absolute inset-0 " />
       
       <button
@@ -82,14 +82,14 @@ const CardSlider = () => {
 
           {/* Content Container */}
           <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-            <h2 className="text-4xl font-bold mb-3 text-white tracking-tight">
+            <h2 className="lg:text-4xl text-2xl font-bold mb-3 text-white tracking-tight">
               {mockData[index].title}
             </h2>
-            <p className="text-xl text-gray-200 mb-6">
+            <p className="lg:text-xl xl:text-xl 2xl:text-xl text-sm text-gray-200 mb-6">
               {mockData[index].description}
             </p>
             
-            <div className="grid grid-cols-5 gap-6">
+            <div className="grid lg:grid-cols-5 grid-cols-3 gap-6">
               {mockData[index].amenities.map((amenity, i) => (
                 <div 
                   key={i}
@@ -98,7 +98,7 @@ const CardSlider = () => {
                   <div className="p-3 bg-white/10 rounded-full backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300">
                     <amenity.icon className="w-6 h-6" />
                   </div>
-                  <span className="mt-2 text-sm font-medium opacity-90 group-hover:opacity-100">
+                  <span className="mt-2  text-xs opacity-90 group-hover:opacity-100">
                     {amenity.name}
                   </span>
                 </div>

@@ -12,7 +12,7 @@ export default function RoomSelector() {
   };
 
   return (
-    <div className="relative w-72">
+    <div className="relative w-48">
       {/* Input Field */}
       <input
         type="text"
