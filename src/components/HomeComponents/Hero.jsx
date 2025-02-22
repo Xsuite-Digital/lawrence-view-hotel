@@ -35,7 +35,7 @@ const Hero = () => {
       {/* Booking Engine */}
       <div
         className={`fixed  left-1/2 transform -translate-x-1/2 z-50 transition-all  
-        ${isScrolled ? "w-[80vw] bg-white  py-2 top-24 duration-300 ease-in-out " : "w-auto top-36 bg-transparent"}`}
+        ${isScrolled ? "w-[80vw]   py-2 top-0 duration-300 ease-in-out " : "w-auto top-36 duration-300 ease-in-out"}`}
       >
         <BookingEngine />
       </div>
@@ -46,7 +46,7 @@ const Hero = () => {
         <p className="text-white text-base md:text-lg max-w-lg mt-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, delectus.
         </p>
-        <button className="mt-6 px-6 py-3 text-white bg-secondary-color font-semibold text-lg rounded-lg hover:bg-opacity-80 transition-all">
+        <button className="mt-6 border border-[#b89628] hover:border-none hover:bg-[#b89628] bg-transparent duration-300 ease-in-out px-6 py-3 text-white bg-secondary-color font-semibold text-lg rounded-lg hover:bg-opacity-80 transition-all">
           Book Now
         </button>
       </div>
