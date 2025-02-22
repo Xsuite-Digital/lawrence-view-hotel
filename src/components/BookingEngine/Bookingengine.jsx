@@ -7,7 +7,7 @@ const BookingEngine = () => {
   const [city, setCity] = useState("LAHORE");
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between  mx-auto p-4 bg-white shadow-lg rounded-lg gap-x-4">
+    <div className="flex flex-col lg:flex-row items-center justify-between  mx-auto w-64 lg:w-full xl:w-full 2xl:w-full p-4 bg-white shadow-lg rounded-lg gap-x-4">
       {/* City Selection */}
       <div className="flex flex-col">
         <label className="text-black font-medium">Select City:</label>
@@ -23,7 +23,7 @@ const BookingEngine = () => {
       </div>
 
       {/* Room Selector */}
-      <div className="flex flex-col">
+      <div className="flex flex-col p-2">
         <label className="text-black font-medium">Select Room:</label>
         <RoomSelector />
       </div>

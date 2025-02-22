@@ -29,26 +29,31 @@ const Hero = () => {
 
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center transition-all duration-1000 flex items-center justify-center"
+      className="relative w-full bg-cover bg-center transition-all duration-1000 flex flex-col items-center justify-center
+      h-[80vh] md:h-screen" // Adjust height: 80vh for mobile, full-screen for desktop
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
-      {/* Booking Engine */}
-      <div
-        className={`fixed  left-1/2 transform -translate-x-1/2 z-50 transition-all  
-        ${isScrolled ? "w-[80vw]   py-2 top-0 duration-300 ease-in-out " : "w-auto top-36 duration-300 ease-in-out"}`}
-      >
-        <BookingEngine />
-      </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Hero Text */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-10 md:px-24 text-center md:text-left w-full">
+      <div className="relative px-6 md:px-24 text-center md:text-left w-full flex flex-col items-center md:items-start justify-center">
         <h1 className="text-white text-3xl md:text-5xl font-bold">Lawrence View Hotel</h1>
         <p className="text-white text-base md:text-lg max-w-lg mt-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, delectus.
         </p>
-        <button className="mt-6 border border-[#b89628] hover:border-none hover:bg-[#b89628] bg-transparent duration-300 ease-in-out px-6 py-3 text-white bg-secondary-color font-semibold text-lg rounded-lg hover:bg-opacity-80 transition-all">
+        <button className="mt-6 border border-[#b89628] hover:border-none hover:bg-[#b89628] bg-transparent duration-300 ease-in-out px-6 py-3 text-white font-semibold text-lg rounded-lg hover:bg-opacity-80 transition-all">
           Book Now
         </button>
+      </div>
+
+      {/* Booking Engine (Bottom on Mobile, Fixed on Top on Scroll for Desktop) */}
+      <div
+        className={`relative md:fixed md:left-1/2  md:transform md:-translate-x-1/2 z-50  transition-all  
+        w-[90%] md:w-auto -bottom-32   md:bottom-auto 
+        ${isScrolled ? "md:top-0 py-2 duration-300 ease-in-out " : "md:top-36 duration-300 ease-in-out"}`}
+      >
+        <BookingEngine />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import BookingEngine from "../components/BookingEngine/Bookingengine"
+import Contact from "../components/Contact"
 import CardSlider from "../components/HomeComponents/CardSlider"
 import Hero from "../components/HomeComponents/Hero"
 import HotelFeature from "../components/HomeComponents/HotelFeature"
@@ -9,6 +10,7 @@ const Home = () => {
     <Hero /> 
     <CardSlider /> 
   <HotelFeature />
+  <Contact />
     </div>
   )
 }
