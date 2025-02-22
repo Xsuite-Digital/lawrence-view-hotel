@@ -40,7 +40,7 @@ const BookingEngine = () => {
 
       {/* Book Now Button */}
       <div className="flex mt-5">
-        <button className="w-32 bg-[#c4a053] text-black p-3 rounded-md hover:bg-[#b2954b] transition duration-300">
+        <button className="w-32 bg-[#c4a053] text-black p-3 rounded-md hover:bg-[#  ] transition duration-300">
           Book Now
         </button>
       </div>
