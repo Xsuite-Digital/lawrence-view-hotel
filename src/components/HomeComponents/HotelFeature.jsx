@@ -1,4 +1,3 @@
-import React from "react";
 import { Lightbulb, Waves, CheckCircle } from "lucide-react";
 import P1 from "../../assets/P1.webp";
 import P2 from "../../assets/P2.webp";
@@ -15,8 +14,9 @@ const HotelFeature = () => {
           We Provide Outdoor Activities To All Visitors
         </h2>
         <p className="mt-4 text-gray-600 leading-relaxed">
-          San Francisco has hills with views, the coast, excellent food & has been voted the happiest, healthiest, 
-          and fittest city in the States many times.
+          San Francisco has hills with views, the coast, excellent food & has
+          been voted the happiest, healthiest, and fittest city in the States
+          many times.
         </p>
 
         {/* Features */}
@@ -35,7 +35,8 @@ const HotelFeature = () => {
         <ul className="mt-6 space-y-2 text-center lg:text-left">
           <li className="flex items-center justify-center lg:justify-start gap-2 text-gray-700">
             <CheckCircle className="text-[#c4a053] w-5 h-5" />
-            It is a long fact that a reader will be distracted by readable content.
+            It is a long fact that a reader will be distracted by readable
+            content.
           </li>
           <li className="flex items-center justify-center lg:justify-start gap-2 text-gray-700">
             <CheckCircle className="text-[#c4a053] w-5 h-5" />
@@ -57,17 +58,17 @@ const HotelFeature = () => {
         <div className="border-t-8 w-56 h-64 border-l-8 border-[#c4a053] absolute bottom-0 left-8 hidden lg:block"></div>
 
         <div className="absolute left-64 -bottom-10 object-cover overflow-hidden hidden lg:block">
-          <img 
-            src={P1} 
-            alt="Luxury Hotel Interior" 
+          <img
+            src={P1}
+            alt="Luxury Hotel Interior"
             className="w-[400px] h-[300px] object-cover"
           />
         </div>
 
         <div className="absolute -top-28 left-8 object-cover overflow-hidden hidden lg:block">
-          <img 
-            src={P2} 
-            alt="Hotel Hallway" 
+          <img
+            src={P2}
+            alt="Hotel Hallway"
             className="w-[400px] h-[300px] object-cover"
           />
         </div>
@@ -76,14 +77,14 @@ const HotelFeature = () => {
 
         {/* Mobile Images */}
         <div className="flex flex-col items-center gap-6 lg:hidden">
-          <img 
-            src={P2} 
-            alt="Hotel Hallway" 
+          <img
+            src={P2}
+            alt="Hotel Hallway"
             className="w-[90%] h-auto object-cover rounded-lg shadow-lg"
           />
-          <img 
-            src={P1} 
-            alt="Luxury Hotel Interior" 
+          <img
+            src={P1}
+            alt="Luxury Hotel Interior"
             className="w-[90%] h-auto object-cover rounded-lg shadow-lg"
           />
         </div>
