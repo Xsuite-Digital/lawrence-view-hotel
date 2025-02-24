@@ -8,6 +8,7 @@ import Rooms from "./pages/Rooms";
 import RoomsDetail from "./components/RoomsDetail";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Routes>

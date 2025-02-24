@@ -26,7 +26,7 @@ export default function RoomsDetail() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-12 px-6 lg:px-0 mt-24">
+    <div className="max-w-7xl mx-auto py-12 px-6 lg:px-0 ">
       {/* Room Details Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* Image Carousel */}
