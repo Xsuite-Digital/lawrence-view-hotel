@@ -17,7 +17,7 @@ const Amenities = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <h3 className="text-sm tracking-widest text-gray-500 uppercase">Elevate Your Stay</h3>
-        <h2 className="lg:text-4xl text-xl font-semibold mt-2">Stay In Luxury With Top-Rated Amenities</h2>
+        <h2 className="lg:text-4xl text-xl font-semibold mt-2">Stay In Luxury  With Top-Rated Amenities</h2>
 
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
