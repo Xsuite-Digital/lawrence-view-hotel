@@ -10,27 +10,26 @@ const BookingEngine = () => {
     <div className="flex flex-col lg:flex-row items-center justify-between mx-auto   w-64 lg:w-full xl:w-full 2xl:w-full p-4 bg-white ">
       {/* City Selection */}
       <div className="flex flex-col">
-       
         <select
           className="w-48 p-2 border  focus:outline-none text-black"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         >
-          <option value="" disabled>Select City</option>
+          <option value="" disabled>
+            Select Destination
+          </option>
           <option value="LAHORE">Lahore</option>
-          <option value="ISLAMABAD">Islamabad</option>
-          <option value="KARACHI">Karachi</option>
+          <option value="ISLAMABAD">Malam Jabba</option>
         </select>
       </div>
 
       {/* Room Selector */}
       <div className="flex flex-col p-2">
-        
         <RoomSelector />
       </div>
 
       {/* Calendar */}
-      <div >
+      <div>
         <div className="hidden lg:block ">
           <DoubleCalendar />
         </div>
