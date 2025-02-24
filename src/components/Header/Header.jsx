@@ -1,10 +1,11 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import logo from "../../assets/logo.webp";
 import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
+    <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start ">
       {/* Mobile View: Logo + Sidebar */}
       <div className="flex justify-between items-center w-full px-4 py-3 md:hidden">
         {/* Mobile Logo */}
@@ -38,14 +39,14 @@ export default function Header() {
         <div className="flex flex-wrap md:flex-nowrap items-center justify-center md:justify-end space-x-4 md:space-x-6 text-black p-4">
           <a
             href="tel:+923206361916"
-            className="flex items-center space-x-1 hover:underline text-black"
+            className="flex items-center space-x-1 hover:underline hover:text-[#b89628] text-black"
           >
             <Phone size={18} />
-            <span className="text-sm md:text-base">+92 (320) 6361-916</span>
+            <span className="text-sm md:text-base ">+92 (320) 6361-916</span>
           </a>
           <a
             href="mailto:lawrenceviewhotel@gmail.com"
-            className="flex items-center space-x-1 hover:underline text-black"
+            className="flex items-center space-x-1 hover:underline text-black hover:text-[#b89628]"
           >
             <Mail size={18} />
             <span className="text-sm md:text-base">
@@ -57,7 +58,7 @@ export default function Header() {
               href="https://www.facebook.com/LawrenceViewHotelLahore"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black"
+              className="text-black hover:text-[#b89628]"
             >
               <Facebook size={20} />
             </a>
@@ -65,7 +66,7 @@ export default function Header() {
               href="https://www.instagram.com/lawrence.view.hotel.lahore/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black"
+              className="text-black hover:text-[#b89628]"
             >
               <Instagram size={20} />
             </a>
@@ -73,7 +74,7 @@ export default function Header() {
               href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black"
+              className="text-black hover:text-[#b89628]"
             >
               <Linkedin size={20} />
             </a>
@@ -83,18 +84,18 @@ export default function Header() {
         {/* Navigation Menu */}
         <div className="flex justify-center md:justify-start p-4">
           <nav className="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
-            <a href="/" className="text-black hover:text-gray-700">
+            <Link to="/" className="text-black hover:text-[#b89628]">
               Home
-            </a>
-            <a href="/rooms" className="text-black hover:text-gray-700">
-              Rooms
-            </a>
-            <a href="/about" className="text-black hover:text-gray-700">
+            </Link>
+            <Link to="/about" className="text-black hover:text-[#b89628]">
               About
-            </a>
-            <a href="/contact" className="text-black hover:text-gray-700">
+            </Link>
+            <Link to="/rooms" className="text-black hover:text-[#b89628]">
+              Rooms & Suites
+            </Link>
+            <Link to="/contact" className="text-black hover:text-[#b89628]">
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
