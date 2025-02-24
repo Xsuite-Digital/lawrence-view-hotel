@@ -20,7 +20,7 @@ export default function Header() {
   // Navigation Tabs
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Rooms", path: "/rooms" },
+    { name: "Rooms & Suites", path: "/rooms" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -36,7 +36,12 @@ export default function Header() {
         <div className="flex justify-between items-center w-full px-4 py-3 md:hidden">
           {/* Mobile Logo */}
           <div>
-            <img src={logo} width={80} height={80} alt="Lawrence View Hotel Logo" />
+            <img
+              src={logo}
+              width={80}
+              height={80}
+              alt="Lawrence View Hotel Logo"
+            />
           </div>
 
           {/* Sidebar */}
@@ -47,7 +52,12 @@ export default function Header() {
 
         {/* Desktop View: Only Logo */}
         <div className="hidden md:flex w-auto items-center">
-          <img src={logo} width={100} height={100} alt="Lawrence View Hotel Logo" />
+          <img
+            src={logo}
+            width={100}
+            height={100}
+            alt="Lawrence View Hotel Logo"
+          />
         </div>
 
         {/* Right Section (Desktop View) */}
@@ -57,22 +67,45 @@ export default function Header() {
               scroll ? "text-white" : "text-black"
             }`}
           >
-            <a href="tel:+923206361916" className="flex items-center space-x-1 hover:underline">
+            <a
+              href="tel:+923206361916"
+              className="flex items-center space-x-1 hover:underline hover:text-[#b89628]"
+            >
               <Phone size={18} />
               <span className="text-sm md:text-base">+92 (320) 6361-916</span>
             </a>
-            <a href="mailto:lawrenceviewhotel@gmail.com" className="flex items-center space-x-1 hover:underline">
+            <a
+              href="mailto:lawrenceviewhotel@gmail.com"
+              className="flex items-center space-x-1 hover:underline hover:text-[#b89628]"
+            >
               <Mail size={18} />
-              <span className="text-sm md:text-base">lawrenceviewhotel@gmail.com</span>
+              <span className="text-sm md:text-base">
+                lawrenceviewhotel@gmail.com
+              </span>
             </a>
             <div className="flex space-x-3">
-              <a href="https://www.facebook.com/LawrenceViewHotelLahore" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/LawrenceViewHotelLahore"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#b89628]"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="https://www.instagram.com/lawrence.view.hotel.lahore/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/lawrence.view.hotel.lahore/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#b89628]"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#b89628]"
+              >
                 <Linkedin size={20} />
               </a>
             </div>
@@ -86,7 +119,9 @@ export default function Header() {
                   key={index}
                   to={link.path}
                   className={`transition-colors duration-300 ${
-                    scroll ? "text-white hover:text-gray-400" : "text-black hover:text-gray-700"
+                    scroll
+                      ? "text-white hover:text-[#b89628]"
+                      : "text-black hover:text-[#b89628]"
                   }`}
                 >
                   {link.name}
