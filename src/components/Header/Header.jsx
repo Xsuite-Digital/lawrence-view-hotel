@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logor.webp";
+import logo from "../../assets/LVHLOGO.webp";
 import Sidebar from "./Sidebar";
 
 export default function Header() {
