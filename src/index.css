@@ -126,7 +126,7 @@ button {
   font-size: var(--text-base);
   font-weight: 600;
   padding: 10px 16px;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   cursor: pointer;
   transition: 0.3s;
   line-height: var(--lh-sm);

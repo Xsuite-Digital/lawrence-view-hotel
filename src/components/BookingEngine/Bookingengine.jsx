@@ -7,29 +7,30 @@ const BookingEngine = () => {
   const [city, setCity] = useState("");
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between mx-auto   w-64 lg:w-full xl:w-full 2xl:w-full p-4 bg-white ">
+    <div className="flex flex-col lg:flex-row items-center justify-center mx-auto    2xl:max-w-6xl xl:max-w-5xl lg:max-w-4xl  bg-black bg-opacity-20 w-full py-4 px-4 border-2 border-[#c4a053]   ">
       {/* City Selection */}
-      <div className="flex flex-col">
+      <div className="flex  flex-col">
+       
         <select
           className="w-48 p-2 border  focus:outline-none text-black"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         >
-          <option value="" disabled>
-            Select Destination
-          </option>
+          <option value="" disabled>Select City</option>
           <option value="LAHORE">Lahore</option>
-          <option value="ISLAMABAD">Malam Jabba</option>
+          <option value="ISLAMABAD">Islamabad</option>
+          <option value="KARACHI">Karachi</option>
         </select>
       </div>
 
       {/* Room Selector */}
-      <div className="flex flex-col p-2">
+      <div className="flex flex-col  p-2">
+        
         <RoomSelector />
       </div>
 
       {/* Calendar */}
-      <div>
+      <div >
         <div className="hidden lg:block ">
           <DoubleCalendar />
         </div>

@@ -50,18 +50,7 @@ const Hero = () => {
         </button>
       </div>
 
-      {/* Booking Engine (Bottom on Mobile, Fixed on Top on Scroll for Desktop) */}
-      <div
-        className={`relative md:fixed md:left-1/2  md:transform md:-translate-x-1/2 z-50  transition-all  
-        w-[90%] md:w-auto -bottom-32   md:bottom-auto 
-        ${
-          isScrolled
-            ? "md:top-0 py-2 duration-300 ease-in-out "
-            : "md:top-36 duration-300 ease-in-out"
-        }`}
-      >
-        <BookingEngine />
-      </div>
+      
     </div>
   );
 };
