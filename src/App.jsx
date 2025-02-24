@@ -4,6 +4,8 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import AppLayout from "./components/AppLayout";
 import "./App.css";
+import Rooms from "./pages/Rooms";
+import RoomsDetail from "./components/RoomsDetail";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<AboutUs />} />
+          <Route path="rooms" element={<Rooms />} />
+          <Route path="rooms/:id" element={<RoomsDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -9,7 +9,12 @@ import HotelFeature from "../components/HomeComponents/HotelFeature"
 const Home = () => {
   return (
     <div>
-    <Hero /> 
+    <Hero />
+    <div className=" p-4 mt-4">
+
+    <BookingEngine />
+    </div>
+
     <CardSlider />
     <Amenities /> 
   <HotelFeature />
