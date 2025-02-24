@@ -1,8 +1,10 @@
 import P2 from "../assets/P2.webp";
 import P1 from "../assets/P1.webp";
+import R1 from "../assets/R1.webp";
 
 export const rooms = [
   {
+    image:R1,
     id: 1,
     title: "Deluxe Double Room",
     guests: "2 Guests",
@@ -42,6 +44,8 @@ export const rooms = [
     images: [P1, P2, P2, P2],
   },
   {
+    image:R1,
+
     id: 2,
     title: "Superior Suite Room",
     guests: "3 Guests",
@@ -85,6 +89,8 @@ export const rooms = [
     images: [P2, P2, P2, P2],
   },
   {
+    image:R1,
+
     id: 3,
     title: "Executive Suite Room",
     guests: "2 Guests",
@@ -127,6 +133,8 @@ export const rooms = [
     images: [P2, P2, P2, P2],
   },
   {
+    image:R1,
+
     id: 4,
     title: "Studio Apartment",
     guests: "2 Guests",
@@ -166,6 +174,8 @@ export const rooms = [
     images: [P2, P2, P2, P2],
   },
   {
+    image:R1,
+
     id: 5,
     title: "Mashhood Apartment",
     guests: "4 Guests",
@@ -205,6 +215,8 @@ export const rooms = [
     images: [P2, P2, P2, P2],
   },
   {
+    image:R1,
+
     id: 6,
     title: "Anas Apartment",
     guests: "3 Guests",
