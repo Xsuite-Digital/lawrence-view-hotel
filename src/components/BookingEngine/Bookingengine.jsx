@@ -4,18 +4,19 @@ import DoubleCalendar from "./DoubleCalendar";
 import RoomSelector from "./RoomSelector";
 
 const BookingEngine = () => {
-  const [city, setCity] = useState("LAHORE");
+  const [city, setCity] = useState("");
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between  mx-auto w-64 lg:w-full xl:w-full 2xl:w-full p-4 bg-white shadow-lg rounded-lg gap-x-4">
+    <div className="flex flex-col lg:flex-row items-center justify-between mx-auto   w-64 lg:w-full xl:w-full 2xl:w-full p-4 bg-white ">
       {/* City Selection */}
       <div className="flex flex-col">
-        <label className="text-black font-medium">Select City:</label>
+       
         <select
-          className="w-48 p-2 border rounded-md focus:outline-none text-black"
+          className="w-48 p-2 border  focus:outline-none text-black"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         >
+          <option value="" disabled>Select City</option>
           <option value="LAHORE">Lahore</option>
           <option value="ISLAMABAD">Islamabad</option>
           <option value="KARACHI">Karachi</option>
@@ -24,13 +25,13 @@ const BookingEngine = () => {
 
       {/* Room Selector */}
       <div className="flex flex-col p-2">
-        <label className="text-black font-medium">Select Room:</label>
+        
         <RoomSelector />
       </div>
 
       {/* Calendar */}
-      <div className="flex flex-col">
-        <div className="hidden lg:block mt-5">
+      <div >
+        <div className="hidden lg:block ">
           <DoubleCalendar />
         </div>
         <div className="block lg:hidden ">
@@ -39,8 +40,8 @@ const BookingEngine = () => {
       </div>
 
       {/* Book Now Button */}
-      <div className="flex mt-5">
-        <button className="w-32 bg-[#c4a053] text-black p-3 rounded-md hover:bg-[#  ] transition duration-300">
+      <div className="flex ">
+        <button className="w-32 bg-[#c4a053] text-black py-2 px-4  transition duration-300">
           Book Now
         </button>
       </div>
