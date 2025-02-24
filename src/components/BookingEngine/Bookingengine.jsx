@@ -8,7 +8,7 @@ const BookingEngine = () => {
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center mx-auto    2xl:max-w-6xl xl:max-w-5xl lg:max-w-4xl  bg-black bg-opacity-20 w-full py-4 px-4 border-2 border-[#c4a053]   ">
-      {/* City Selection */}
+      {/* Select City*/}
       <div className="flex  flex-col">
        
         <select
