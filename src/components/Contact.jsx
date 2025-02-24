@@ -36,18 +36,17 @@ const Contact = () => {
 
       
       {/* Contact Section */}
-      <div className="relative w-full">
+     {/* Contact Section */}
+<div className="relative w-full mb-4">
   {/* Background Image */}
   <img
     src={P2}
     alt="Luxury Hotel Room"
-    height={400}
-    width={600}
     className="w-full h-auto md:w-[1000px] md:h-[500px]"
   />
 
   {/* Inquiry Box */}
-  <div className="absolute lg:top-3/4 top-[15rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-80 text-white p-3 w-[90%] max-w-sm md:max-w-md md:left-[31rem]">
+  <div className="absolute lg:top-3/4 top-10 md:left-1/4 lg:ml-0 ml-5 md:transform md:-translate-x-1/2  md:-translate-y-1/2 bg-black bg-opacity-80 text-white p-3 w-[90%] max-w-sm md:max-w-md">
     <div className="border border-[#c4a053] p-6 border-opacity-70 text-center">
       <img src={logor} alt="LVH-logo" className="mx-auto w-16 h-16 md:w-24 md:h-24" />
       <p className="text-sm mt-2">Call us for any inquiry</p>
@@ -56,11 +55,11 @@ const Contact = () => {
   </div>
 
   {/* Contact Form */}
-  <div className="absolute lg:top-[85%] top-[35rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg p-6 md:p-8 w-[90%] max-w-lg">
+  <div className="relative mt-8 md:absolute md:top-[81.4%]  lg:ml-0 ml-5 -top-16 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-white  shadow-lg p-6 md:p-8 w-[90%] max-w-lg">
     <h2 className="text-lg md:text-xl flex items-center justify-center font-semibold text-black mb-4">
-      <img src={before} alt="icon" className="w-6 h-6" />
+      <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 " />
       <span className="mx-2">Get in Touch</span>
-      <img src={before} alt="icon" className="w-6 h-6" />
+      <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 " />
     </h2>
     <form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -79,7 +78,7 @@ const Contact = () => {
   </div>
 
   {/* Decorative Shape Image */}
-  <div className="lg:absolute hidden right-0 -bottom-12 md:-bottom-24 w-32 h-32 md:w-96 md:h-96">
+  <div className="lg:block   absolute hidden right-0 -bottom-12 md:-bottom-24 w-32 h-32 md:w-96 md:h-96">
     <img src={shape} height={400} width={400} alt="shape-image" className="w-full h-full" />
   </div>
 </div>
