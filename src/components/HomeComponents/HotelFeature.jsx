@@ -19,7 +19,7 @@ const HotelFeature = () => {
           many times.
         </p>
 
-        {/* Features */}
+        {/* Featured */}
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 mt-6 items-center lg:items-start">
           <div className="flex items-center gap-2">
             <Lightbulb className="w-6 h-6 text-[#c4a053]" />
