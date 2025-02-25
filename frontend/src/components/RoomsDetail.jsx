@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { rooms } from "../Helpers/Data";
-import BookingEngine from "../components/BookingEngine/Bookingengine";
+import BookingEngine from "./BookingEngine/Bookingengine";
 
 export default function RoomsDetail() {
   const { id } = useParams();
@@ -54,7 +54,7 @@ export default function RoomsDetail() {
                 key={index}
                 src={image}
                 alt={`Thumbnail ${index}`}
-                className={`w-20 h-20 object-cover  rounded-lg cursor-pointer  transition-transform hover:scale-110 ${
+                className={`w-20 h-20 object-cover   cursor-pointer  transition-transform hover:scale-110 ${
                   currentImageIndex === index ? "ring-4 ring-[#c4a053]" : ""
                 }`}
                 onClick={() => setCurrentImageIndex(index)}

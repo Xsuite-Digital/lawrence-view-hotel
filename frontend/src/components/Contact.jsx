@@ -46,7 +46,7 @@ const Contact = () => {
   />
 
   {/* Inquiry Box */}
-  <div className="absolute lg:top-3/4 top-10 md:left-1/4 lg:ml-0 ml-5 md:transform md:-translate-x-1/2  md:-translate-y-1/2 bg-black bg-opacity-80 text-white p-3 w-[90%] max-w-sm md:max-w-md">
+  <div className="absolute lg:top-3/4 top-10 md:left-1/4 xl:left-[20rem] lg:ml-0 ml-5 md:transform md:-translate-x-1/2  md:-translate-y-1/2 bg-black bg-opacity-80 text-white p-3 w-[90%] max-w-sm md:max-w-md">
     <div className="border border-[#c4a053] p-6 border-opacity-70 text-center">
       <img src={logor} alt="LVH-logo" className="mx-auto w-16 h-16 md:w-24 md:h-24" />
       <p className="text-sm mt-2">Call us for any inquiry</p>
@@ -55,7 +55,7 @@ const Contact = () => {
   </div>
 
   {/* Contact Form */}
-  <div className="relative mt-8 md:absolute md:top-[81.4%]  lg:ml-0 ml-5 -top-16 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-white  shadow-lg p-6 md:p-8 w-[90%] max-w-lg">
+  <div className="relative mt-8 md:absolute md:top-[81.4%] xl:left-[50rem]  lg:ml-0 ml-5 -top-16 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-white  shadow-lg p-6 md:p-8 w-[90%] max-w-lg">
     <h2 className="text-lg md:text-xl flex items-center justify-center font-semibold text-black mb-4">
       <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 " />
       <span className="mx-2">Get in Touch</span>
@@ -78,8 +78,8 @@ const Contact = () => {
   </div>
 
   {/* Decorative Shape Image */}
-  <div className="lg:block   absolute hidden right-0 -bottom-12 md:-bottom-24 w-32 h-32 md:w-96 md:h-96">
-    <img src={shape} height={400} width={400} alt="shape-image" className="w-full h-full" />
+  <div className="lg:block   absolute hidden right-0   top-1/2 2xl:top-1   ">
+    <img src={shape} height={400} width={400} alt="shape-image" className="w-full h-full xl:h-[20rem] xl:w-[20rem]  2xl:h-[42rem] 2xl:w-[42rem]" />
   </div>
 </div>
 
