@@ -12,13 +12,13 @@ import {
   Dumbbell,
   Waves,
 } from "lucide-react";
-import LLVH from "../../assets/LLVH.webp";
+import LVHL from "../../assets/LVHL.webp";
 import MLJLVH from "../../assets/MLJLVH.webp";
 
 const mockData = [
   {
     id: 1,
-    image: LLVH,
+    image: LVHL,
     title: "Luxury Resort",
     description: "Experience unparalleled luxury in our mountain retreat",
     amenities: [
