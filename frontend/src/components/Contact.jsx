@@ -57,9 +57,9 @@ const Contact = () => {
   {/* Contact Form */}
   <div className="relative mt-8 md:absolute md:top-[81.4%] xl:left-[50rem]  lg:ml-0 ml-5 -top-16 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-white  shadow-lg p-6 md:p-8 w-[90%] max-w-lg">
     <h2 className="text-lg md:text-xl flex items-center justify-center font-semibold text-black mb-4">
-      <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 " />
+      <img src={before} alt="icon" height={25} width={25} className="lg:w-6  2xl:w-4 2xl:h-4 w-full h-auto lg:h-6 " />
       <span className="mx-2">Get in Touch</span>
-      <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 " />
+      <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 2xl:w-4 2xl:h-4 w-full h-auto " />
     </h2>
     <form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
