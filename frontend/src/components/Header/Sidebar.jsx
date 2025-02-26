@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X, Menu, Facebook, Linkedin, Instagram, Mail, Phone } from "lucide-react";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-
+     const [scroll, setScroll] = useState(false);
+    
+      // Handle Scroll
+      useEffect(() => {
+        const handleScroll = () => {
+          setScroll(window.scrollY > 50);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+    
   return (
     <>
-      {/* Hamburger Icon */}
-      <button className="md:hidden text-black p-2" onClick={() => setIsOpen(true)}>
+     
+      <button className={`md:hidden p-2 ${scroll ? "text-white" : "text-black "} duration-300 ease-in-out`} onClick={() => setIsOpen(true)}>
         <Menu size={28} />
       </button>
 
