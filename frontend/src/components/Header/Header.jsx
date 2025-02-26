@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/LVHLOGO.webp";
+import logo from "../../assets/logo.webp";
 import Sidebar from "./Sidebar";
 
 export default function Header() {
@@ -32,10 +32,8 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start py-2">
-        {/* Mobile View: Logo + Sidebar */}
-        <div className="flex justify-between items-center w-full px-4 py-3 md:hidden">
-          {/* Mobile Logo */}
-          <div>
+        <div className="flex justify-between bg-black items-center w-full px-4 py-3 md:hidden">
+          <div >
             <img
               src={logo}
               width={80}
@@ -44,10 +42,7 @@ export default function Header() {
             />
           </div>
 
-          {/* Sidebar */}
-          <div>
             <Sidebar />
-          </div>
         </div>
 
         {/* Desktop View: Only Logo */}
@@ -112,7 +107,7 @@ export default function Header() {
           </div>
 
           {/* Navigation Menu */}
-          <div className="flex justify-center md:justify-start p-4">
+          <div className="flex justify justify-center p-4">
             <nav className="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
               {navLinks.map((link, index) => (
                 <Link
