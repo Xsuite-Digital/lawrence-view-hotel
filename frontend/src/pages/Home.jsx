@@ -1,4 +1,3 @@
-import BookingEngine from "../components/BookingEngine/Bookingengine"
 import Contact from "../components/Contact"
 import FAQ from "../components/FAQ"
 import Amenities from "../components/HomeComponents/Amenities"
@@ -10,10 +9,7 @@ const Home = () => {
   return (
     <div>
     <Hero />
-    <div className=" p-4 mt-4">
 
-    <BookingEngine />
-    </div>
 
     <CardSlider />
     <Amenities /> 

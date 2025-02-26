@@ -19,7 +19,7 @@ const mockData = [
   {
     id: 1,
     image: LVHL,
-    title: "Luxury Resort",
+    title: "Lahore",
     description: "Experience unparalleled luxury in our mountain retreat",
     amenities: [
       { name: "Free WiFi", icon: Wifi },
@@ -28,12 +28,12 @@ const mockData = [
       { name: "Infinity Pool", icon: Pool },
       { name: "Premium Spa", icon: Spa },
     ],
-    alt: "Luxury Resort",
+    alt: "Lahore",
   },
   {
     id: 2,
     image: MLJLVH,
-    title: "Beachfront Escape",
+    title: "Malam Jabba",
     description: "Your private paradise along pristine shores",
     amenities: [
       { name: "Ocean View", icon: Mountain },
@@ -42,7 +42,7 @@ const mockData = [
       { name: "Beach Access", icon: Waves },
       { name: "Wellness Spa", icon: Spa },
     ],
-    alt: "Beachfront Escape",
+    alt: "Malam Jabba",
   },
 ];
 
@@ -65,6 +65,8 @@ const CardSlider = () => {
   };
 
   return (
+    <>
+      <h1 className=" pl-24 lg:mt-0 mt-44 lg:text-3xl text-xl  font-semibold">Our Top Destinations</h1>
     <div className="relative min-h-[600px] w-full max-w-7xl mx-auto p-12 mt-12">
       <div className="absolute inset-0 " />
 
@@ -140,6 +142,8 @@ const CardSlider = () => {
         ))}
       </div>
     </div>
+    </>
+
   );
 };
 
