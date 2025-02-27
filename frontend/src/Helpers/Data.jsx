@@ -2,6 +2,19 @@ import P2 from "../assets/P2.webp";
 import P1 from "../assets/P1.webp";
 import R1 from "../assets/R1.webp";
 import ES from "../assets/ES.webp";
+import D1 from "../assets/D1.webp";
+import D2 from "../assets/D2.webp";
+import D3 from "../assets/D3.webp";
+import D4 from "../assets/D4.webp";
+import S1 from "../assets/S1.webp";
+import S2 from "../assets/S2.webp";
+import S3 from "../assets/S3.webp";
+import SA1 from "../assets/SA1.webp";
+import SA2 from "../assets/SA2.webp";
+import SA3 from "../assets/SA3.webp";
+import E1 from "../assets/E1.webp";
+import E2 from "../assets/E2.webp";
+import E3 from "../assets/E3.webp";
 import Deluxe from "../assets/Deluxe.webp";
 import Studio from "../assets/Studio.webp";
 
@@ -11,7 +24,7 @@ export const rooms = [
     id: 1,
     title: "Deluxe Double Room",
     guests: "2 Guests",
-    size: "15 sqft",
+    size: "26  ㎡",
     description:
       "A luxurious room with modern amenities and a comfortable ambiance, perfect for a relaxing stay.",
     price: "$240 per night",
@@ -38,32 +51,31 @@ export const rooms = [
       "Flat Screen TV",
     ],
     roomRules: [
-      "Check-in: 3:00 PM - 8:00 PM",
-      "Check-out: 12:00 PM",
-      "No smoking inside the room",
-      "Pets are not allowed",
-      "Valid ID required at check-in",
+      "Check-in time: After 12:00 on the day of arrival.",
+      "Check-out time: 12:00 upon day of departure.",
+      "Pets: No pets allowed",
+    
     ],
-    images: [P1, P2, P2, P2],
+    images: [D3, D2, D1, D4],  
   },
   {
     image:R1,
 
     id: 2,
     title: "Superior Suite Room",
-    guests: "3 Guests",
-    size: "20 sqft",
+    guests: "2 Guests",
+    size: "26  ㎡",
     description:
       "Experience the comfort of deluxe living in a modern space with a private balcony and stunning views.",
     price: "$320 per night",
     amenities: [
-      "Double Bed",
-      "Private Balcony",
+      "King",
+      "Separate luggage store",
       "Bathroom with shower",
-      "Free Breakfast",
-      "24/7 Room Service",
-      "Flat Screen TV",
-      "Coffee Maker",
+      " Breakfast area",
+      "Seating area",
+      "Cable TV",
+      "Beside Telephone",
       "Smart Lighting",
       "Wireless internet",
       "Remote control TV",
@@ -74,22 +86,21 @@ export const rooms = [
       "Full-length mirror",
       "Desk",
       "Desk lamp",
-      "Free local calls",
-      "Newspaper",
-      "Hairdryer",
+      "Microwave oven (Paid)",
+      "Iron for pants (Paid)",
+      "Coffee machine (Paid)",
       "Room safe",
       "Private bathroom",
       "Operator 24 hours",
       "Free toiletries",
     ],
     roomRules: [
-      "Check-in: 2:00 PM - 10:00 PM",
-      "Check-out: 11:00 AM",
-      "Smoking allowed on balcony only",
-      "No parties or events",
-      "Pets allowed on request",
+      "Check-in time: After 12:00 on the day of arrival.",
+      "Check-out time: 12:00 upon day of departure.",
+      "Pets: No pets allowed",
+    
     ],
-    images: [P2, P2, P2, P2],
+    images: [R1, S1, S2, S3],
   },
   {
     image:ES,
@@ -97,64 +108,63 @@ export const rooms = [
     id: 3,
     title: "Executive Suite Room",
     guests: "2 Guests",
-    size: "18 sqft",
+    size: "220 ㎡",
     description:
       "A perfect blend of luxury and elegance, featuring a hot tub and premium services for a sophisticated experience.",
     price: "$280 per night",
     amenities: [
-      "Double Bed",
-      "Complimentary Drinks",
-      "Hot Tub",
-      "Gym Access",
-      "Laundry Service",
-      "Smart TV",
-      "Work Desk",
-      "Soundproof Windows",
-      "Wireless internet",
-      "Remote control TV",
-      "Fridge",
-      "Minibar",
+      "King",
+      "Garden view",
+      "City view",
+      "Park view",
+      "Street view",
+      "Bathroom with jacuzzi",
+      "Bathroom with shower",
+      "Bathroom with window",
+      "Breakfast area",
+      "Desktop telephone",
       "Fan",
-      "Individually controlled air conditioning",
-      "Full-length mirror",
-      "Desk lamp",
+      "Microwave oven",
+      "Fan",
+      "Tea-maker",
+      "Plan of emergency exits",
+      "Individually controlled ventilation (Paid)",
       "Free local calls",
-      "Newspaper",
+      "Full-length mirror",
       "Hairdryer",
       "Room safe",
       "Private bathroom",
       "Operator 24 hours",
-      "Free toiletries",
+      "Kettle",
     ],
     roomRules: [
-      "Check-in: 4:00 PM - 9:00 PM",
-      "Check-out: 11:30 AM",
-      "Quiet hours from 10:00 PM to 7:00 AM",
-      "No visitors allowed after 9:00 PM",
-      "Pets not allowed",
+      "Check-in time: After 12:00 on the day of arrival.",
+      "Check-out time: 12:00 upon day of departure.",
+      "Pets: No pets allowed",
+    
     ],
-    images: [P2, P2, P2, P2],
+    images: [ES, E1, E2, E3],
   },
   {
     image:Studio,
 
     id: 4,
     title: "Studio Apartment",
-    guests: "2 Guests",
-    size: "25 sqft",
+    guests: "4 Guests",
+    size: "28 ㎡",
     description:
       "A compact and stylish apartment with all essential facilities, ideal for long-term stays.",
     price: "$200 per night",
     amenities: [
       "Queen Bed",
       "Kitchenette",
-      "Dining Table",
-      "Microwave",
-      "Washing Machine",
-      "High-Speed WiFi",
-      "Smart TV",
+      "Bathroom with jacuzzi",
+      "Breakfast area",
+      "Working room",
+      "Equipped kitchen",
+      "DSL broadband internet",
       "Remote control TV",
-      "Fridge",
+      "Satellite TV",
       "Minibar",
       "Fan",
       "Individually controlled air conditioning",
@@ -168,13 +178,12 @@ export const rooms = [
       "Free toiletries",
     ],
     roomRules: [
-      "Check-in: 3:00 PM - 9:00 PM",
-      "Check-out: 12:00 PM",
-      "No smoking inside the apartment",
-      "Pets allowed on request",
-      "No parties allowed",
+      "Check-in time: After 12:00 on the day of arrival.",
+      "Check-out time: 12:00 upon day of departure.",
+      "Pets: No pets allowed",
+    
     ],
-    images: [P2, P2, P2, P2],
+    images: [Studio, SA1, SA2, SA3],
   },
   {
     image:R1,

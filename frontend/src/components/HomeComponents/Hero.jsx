@@ -4,7 +4,7 @@ import p1 from "../../assets/p1.webp";
 import p2 from "../../assets/p2.webp";
 import p3 from "../../assets/p3.webp";
 import BookingEngine from "../BookingEngine/Bookingengine";
-
+import before from "../../assets/before.webp";
 const images = [p1, p2, p3];
 
 const Hero = () => {
@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <div
       className="relative w-full bg-cover bg-center transition-all duration-1000 flex flex-col items-center justify-center
-      h-[80vh] md:h-screen" // Adjust height: 80vh for mobile, full-screen for desktop
+      h-[80vh] md:h-screen" 
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       {/* Overlay */}
@@ -45,11 +45,34 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
           delectus.
         </p>
-        <button className="mt-6 border border-[#b89628] hover:border-none hover:bg-[#b89628] bg-transparent duration-300 ease-in-out px-6 py-3 text-white font-semibold text-lg rounded-lg hover:bg-opacity-80 transition-all">
-          Book Now
-        </button>
+        
       </div>
+      <div className=" hidden lg:block absolute top-56 left-2/3 bg-white  shadow-lg p-6 md:p-8 w-[90%] max-w-lg">
+    <h2 className="text-lg md:text-xl flex items-center justify-center font-semibold text-black mb-4">
+      <img src={before} alt="icon" height={25} width={25} className="lg:w-6  2xl:w-4 2xl:h-4 w-full h-auto lg:h-6 " />
+      <span className="mx-2">Get in Touch</span>
+      <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 2xl:w-4 2xl:h-4 w-full h-auto " />
+    </h2>
+    <form>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <input type="text" placeholder="Your Name" className="border p-2 rounded w-full" />
+        <input type="email" placeholder="Email Address" className="border p-2 rounded w-full" />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <input type="date" placeholder="Check In" className="border p-2 rounded w-full" />
+        <input type="date" placeholder="Check Out" className="border p-2 rounded w-full" />
+      </div>
+      <textarea placeholder="Write a Message" className="border p-2 rounded w-full mb-4"></textarea>
+      <button className="w-full bg-black text-white py-2 rounded hover:bg-[#c4a053] transition">
+        CHECK AVAILABILITY
+      </button>
+    </form>
+  </div>
 
+<div className=" absolute  lg:bottom-0 -bottom-1/4 bg-black bg-opacity-50 w-9/12   h-1/4  text-white  py-12 ">
+
+  <BookingEngine />
+</div>
       
     </div>
   );
