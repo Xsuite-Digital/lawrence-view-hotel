@@ -1,7 +1,7 @@
-import { BedDouble, Ruler, Users, Bath, Utensils, Bike, Info } from "lucide-react";
+import { Ruler, Users, Bath, Utensils, Bike, Info } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {rooms} from "../Helpers/Data";
+import { rooms } from "../Helpers/Data";
 
 export default function Rooms() {
   return (
@@ -32,10 +32,10 @@ export default function Rooms() {
                   <Utensils size={16} />
                   <Bike size={16} />
                 </div>
-                <Link to={`/rooms/${room.id}`} >
-                <button className="flex items-center text-black">
-                  Full Info <Info size={16} className="ml-1" />
-                </button>
+                <Link to={`/rooms/${room.id}`}>
+                  <button className="flex items-center text-black">
+                    Full Info <Info size={16} className="ml-1" />
+                  </button>
                 </Link>
               </div>
             </div>
