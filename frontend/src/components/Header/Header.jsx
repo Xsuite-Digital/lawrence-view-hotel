@@ -20,8 +20,8 @@ export default function Header() {
   // Navigation Tabs
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Rooms & Suites", path: "/rooms" },
     { name: "About", path: "/about" },
+    { name: "Rooms & Suites", path: "/rooms" },
     { name: "Contact", path: "/contact" },
   ];
 
