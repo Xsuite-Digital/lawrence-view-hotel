@@ -66,7 +66,6 @@ const CardSlider = () => {
 
   return (
     <>
-      <h1 className=" pl-24 lg:mt-0 mt-44 lg:text-3xl text-xl  font-semibold">Our Top Destinations</h1>
     <div className="relative min-h-[600px] w-full max-w-7xl mx-auto p-12 mt-12">
       <div className="absolute inset-0 " />
 
