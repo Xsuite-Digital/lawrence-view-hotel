@@ -189,7 +189,7 @@ export const rooms = [
     image:R1,
 
     id: 5,
-    title: "Mashhood Apartment",
+    title: "Twin Sharing",
     guests: "4 Guests",
     size: "30 sqft",
     description:
@@ -230,7 +230,7 @@ export const rooms = [
     image:R1,
 
     id: 6,
-    title: "Anas Apartment",
+    title: "Quad Room",
     guests: "3 Guests",
     size: "22 sqft",
     description:
