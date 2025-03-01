@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <div
       className="relative w-full bg-cover bg-center transition-all duration-1000 flex flex-col items-center justify-center
-      h-[80vh] md:h-screen" 
+      h-[80vh] md:h-screen"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       {/* Overlay */}
@@ -45,35 +45,63 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
           delectus.
         </p>
-        
       </div>
-      <div className=" hidden lg:block absolute top-56 left-2/3 bg-white  shadow-lg p-6 md:p-8 w-[90%] max-w-lg">
-    <h2 className="text-lg md:text-xl flex items-center justify-center font-semibold text-black mb-4">
-      <img src={before} alt="icon" height={25} width={25} className="lg:w-6  2xl:w-4 2xl:h-4 w-full h-auto lg:h-6 " />
-      <span className="mx-2">Get in Touch</span>
-      <img src={before} alt="icon" height={25} width={25} className="lg:w-6 lg:h-6 2xl:w-4 2xl:h-4 w-full h-auto " />
-    </h2>
-    <form>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <input type="text" placeholder="Your Name" className="border p-2 rounded w-full" />
-        <input type="email" placeholder="Email Address" className="border p-2 rounded w-full" />
+      <div className=" hidden lg:block absolute top-56 2xl:left-1/2 left-2/3 xl:left-[52rem] xl:top-20 bg-white  shadow-lg p-6 md:p-8 w-[90%] max-w-lg xl:max-w-md">
+        <h2 className="text-lg md:text-xl flex items-center justify-center font-semibold text-black mb-4">
+          <img
+            src={before}
+            alt="icon"
+            height={25}
+            width={25}
+            className="lg:w-6  2xl:w-4 2xl:h-4 w-full h-auto lg:h-6 "
+          />
+          <span className="mx-2">Get in Touch</span>
+          <img
+            src={before}
+            alt="icon"
+            height={25}
+            width={25}
+            className="lg:w-6 lg:h-6 2xl:w-4 2xl:h-4 w-full h-auto "
+          />
+        </h2>
+        <form>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="border p-2 rounded w-full"
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              className="border p-2 rounded w-full"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <input
+              type="date"
+              placeholder="Check In"
+              className="border p-2 rounded w-full"
+            />
+            <input
+              type="date"
+              placeholder="Check Out"
+              className="border p-2 rounded w-full"
+            />
+          </div>
+          <textarea
+            placeholder="Write a Message"
+            className="border p-2 rounded w-full mb-4"
+          ></textarea>
+          <button className="w-full bg-black text-white py-2 rounded hover:bg-[#c4a053] transition">
+            CHECK AVAILABILITY
+          </button>
+        </form>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <input type="date" placeholder="Check In" className="border p-2 rounded w-full" />
-        <input type="date" placeholder="Check Out" className="border p-2 rounded w-full" />
-      </div>
-      <textarea placeholder="Write a Message" className="border p-2 rounded w-full mb-4"></textarea>
-      <button className="w-full bg-black text-white py-2 rounded hover:bg-[#c4a053] transition">
-        CHECK AVAILABILITY
-      </button>
-    </form>
-  </div>
 
-<div className=" absolute  lg:bottom-0 -bottom-1/4 bg-black bg-opacity-50 w-9/12   h-1/4  text-white  py-12 ">
-
-  <BookingEngine />
-</div>
-      
+      <div className=" absolute  lg:bottom-0 -bottom-1/4 bg-black bg-opacity-50 w-9/12   h-1/4  text-white  py-12 ">
+        <BookingEngine />
+      </div>
     </div>
   );
 };
