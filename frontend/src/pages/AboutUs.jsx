@@ -10,6 +10,6 @@ export default function AboutUs() {
   <ValuesSection />
   <TeamSection />
   <FacilitiesSection />
-  {/* <TestimonialsSection /> */}
+  <TestimonialsSection />
 </div></div>;
 }

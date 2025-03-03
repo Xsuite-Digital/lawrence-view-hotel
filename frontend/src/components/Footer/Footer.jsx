@@ -20,6 +20,13 @@ const Footer = () => {
     setEmail("");
   };
 
+  const tabs = [
+    { name: "Rooms & Suites", link: "/rooms" },
+    { name: "Contact", link: "/contact" },
+    { name: "About", link: "/about" }
+  ];
+  
+
   return (
     <footer className="bg-black text-white py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
@@ -67,19 +74,19 @@ const Footer = () => {
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/LawrenceViewHotelLahore" target="_blank" rel="noopener noreferrer"
                 className="text-white hover:text-[#c4a053] transition-colors duration-300"
               >
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/lawrence.view.hotel.lahore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"
                 className="text-white hover:text-[#c4a053] transition-colors duration-300"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"  target="_blank" rel="noopener noreferrer"
                 className="text-white hover:text-[#c4a053] transition-colors duration-300"
               >
                 
@@ -90,21 +97,14 @@ const Footer = () => {
 
           <div className="space-y-6">
             <h4 className="text-xl font-semibold text-white">Quick Links</h4>
-            <nav className="grid grid-cols-2 gap-4">
-              {[
-                "Rooms & Suites",
-                "Dining Experience",
-                "Spa & Wellness",
-                "Events & Weddings",
-                "Special Offers",
-                "Gallery",
-              ].map((link, index) => (
+            <nav className="grid grid-cols-1 gap-4">
+              {tabs.map((link, index) => (
                 <a
                   key={index}
                   href="#"
                   className="text-white hover:text-[#c4a053] hover:underline decoration-[#c4a053] underline-offset-4 transition-all duration-300"
                 >
-                  {link}
+                  {link.name}
                 </a>
               ))}
             </nav>
@@ -115,17 +115,26 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="flex-shrink-0 h-6 w-6 text-[#c4a053]" />
-                <p className="text-white">
-                  1234 Golden Beach Road, Sunset Bay, SB 56789
-                </p>
+                <a href="https://maps.app.goo.gl/bSAT2zHBW9SRgaRr7" className="text-white">
+                54-A Lawrence Road, opposite Jinnah Garden, Jinnah Town, Lahore, 54000, Pakistan
+
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="flex-shrink-0 h-6 w-6 text-[#c4a053]" />
-                <p className="text-white">+1 (555) 123-4567</p>
+                <a href="tel:+923206361916" className="text-white">03206361916</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="flex-shrink-0 h-6 w-6 text-[#c4a053]" />
-                <p className="text-white">info@goldensands.com</p>
+                <a 
+  href="mailto:reservation@lawrenceviewhotel.com" 
+  className="text-white hover:text-[#c4a053] transition-colors"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  reservation@lawrenceviewhotel.com
+</a>
+
               </div>
             </div>
           </div>
