@@ -33,7 +33,10 @@ export default function Header() {
     >
       <div className="flex justify-between items-center  ">
         <div className="flex items-center">
-          <img src={logo} alt="Lawrence View Hotel Logo" className="lg:w-full w-32 h-16 lg:h-auto" />
+        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+  <img src={logo} alt="Lawrence View Hotel Logo" className="lg:w-full w-32 h-16 lg:h-auto" />
+</Link>
+
         </div>
 
         <nav className="hidden lg:flex space-x-6 text-sm md:text-base py-3">

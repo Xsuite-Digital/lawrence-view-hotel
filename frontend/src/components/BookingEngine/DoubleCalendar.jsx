@@ -60,7 +60,7 @@ const DoubleCalendar = () => {
           type="button" // Prevent form submission
           onClick={() => handleDateClick(currentDay)}
           className={`p-2 rounded ${
-            isSelected ? "bg-blue-600 text-white" : "text-black"
+            isSelected ? "bg-blue-600 text-black" : "text-black"
           } cursor-pointer`}
         >
           {i}
@@ -92,7 +92,7 @@ const DoubleCalendar = () => {
             selectedEndDate,
             "dd-MM-yyyy"
           )}`}
-          className="border p-2 w-[25vw] focus:outline-none cursor-pointer"
+          className="border p-2 w-[25vw] text-black focus:outline-none cursor-pointer"
         />
         {/* Cross Button */}
         <button
@@ -165,7 +165,7 @@ const DoubleCalendar = () => {
                   (day) => (
                     <div
                       key={day}
-                      className="text-center font-semibold p-4 text-xs text-gray-600"
+                      className="text-center font-semibold p-4 text-xs text-black"
                     >
                       {day}
                     </div>
