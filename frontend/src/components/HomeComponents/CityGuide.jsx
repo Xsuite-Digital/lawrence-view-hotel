@@ -2,7 +2,7 @@ import { MapPin, Landmark, Navigation, Compass } from "lucide-react";
 import img from "../../assets/cityguide.jpg";
 const CityGuideTour = () => {
   return (
-    <section className="bg-white text-black py-8 px-6 md:px-20">
+    <section className="bg-white text-black py-16 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
         {/* Left Section with Image */}
         <div className="">

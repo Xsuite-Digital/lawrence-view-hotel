@@ -33,10 +33,16 @@ export default function Header() {
     >
       <div className="flex justify-between items-center  ">
         <div className="flex items-center">
-        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-  <img src={logo} alt="Lawrence View Hotel Logo" className="lg:w-full w-32 h-16 lg:h-auto" />
-</Link>
-
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <img
+              src={logo}
+              alt="Lawrence View Hotel Logo"
+              className="lg:w-full w-32 h-16 lg:h-auto"
+            />
+          </Link>
         </div>
 
         <nav className="hidden lg:flex space-x-6 text-sm md:text-base py-3">
@@ -45,7 +51,9 @@ export default function Header() {
               key={index}
               to={link.path}
               className={`transition-colors duration-300 ${
-                scroll ? "text-white hover:text-[#b89628]" : "text-black hover:text-[#b89628]"
+                scroll
+                  ? "text-white hover:text-[#b89628]"
+                  : "text-black hover:text-[#b89628]"
               }`}
             >
               {link.name}
@@ -54,22 +62,45 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center space-x-4 p-3">
-          <a href="tel:+923206361916" className="flex items-center space-x-1 hover:underline hover:text-[#b89628]">
+          <a
+            href="tel:+923206361916"
+            className="flex items-center space-x-1 hover:underline hover:text-[#b89628]"
+          >
             <Phone size={18} />
             <span className="text-sm md:text-base">+92 (320) 6361-916</span>
           </a>
-          <a href="mailto:lawrenceviewhotel@gmail.com" className="flex items-center space-x-1 hover:underline hover:text-[#b89628]">
+          <a
+            href="mailto:reservation@lawrenceviewhotel.com"
+            className="flex items-center space-x-1 hover:underline hover:text-[#b89628]"
+          >
             <Mail size={18} />
-            <span className="text-sm md:text-base">lawrenceviewhotel@gmail.com</span>
+            <span className="text-sm md:text-base">
+              reservation@lawrenceviewhotel.com
+            </span>
           </a>
           <div className="flex space-x-3">
-            <a href="https://www.facebook.com/LawrenceViewHotelLahore" target="_blank" rel="noopener noreferrer" className="hover:text-[#b89628]">
+            <a
+              href="https://www.facebook.com/LawrenceViewHotelLahore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#b89628]"
+            >
               <Facebook size={20} />
             </a>
-            <a href="https://www.instagram.com/lawrence.view.hotel.lahore/" target="_blank" rel="noopener noreferrer" className="hover:text-[#b89628]">
+            <a
+              href="https://www.instagram.com/lawrence.view.hotel.lahore/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#b89628]"
+            >
               <Instagram size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/" target="_blank" rel="noopener noreferrer" className="hover:text-[#b89628]">
+            <a
+              href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#b89628]"
+            >
               <Linkedin size={20} />
             </a>
           </div>
