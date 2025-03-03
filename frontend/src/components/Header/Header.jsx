@@ -70,12 +70,12 @@ export default function Header() {
             <span className="text-sm md:text-base">+92 (320) 6361-916</span>
           </a>
           <a
-            href="mailto:lawrenceviewhotel@gmail.com"
+            href="mailto:reservation@lawrenceviewhotel.com"
             className="flex items-center space-x-1 hover:underline hover:text-[#b89628]"
           >
             <Mail size={18} />
             <span className="text-sm md:text-base">
-              lawrenceviewhotel@gmail.com
+              reservation@lawrenceviewhotel.com
             </span>
           </a>
           <div className="flex space-x-3">

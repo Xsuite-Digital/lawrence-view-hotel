@@ -16,6 +16,7 @@ const Home = () => {
       </div>
       <Amenities />
       <HotelFeature />
+      <CityGuide />
       <Contact />
       <FAQ />
     </div>
