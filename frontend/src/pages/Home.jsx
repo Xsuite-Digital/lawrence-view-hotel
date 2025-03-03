@@ -10,8 +10,10 @@ const Home = () => {
     <div>
     <Hero />
 
+<div className="2xl:mt-0 mt-32">
 
-    <CardSlider />
+    <CardSlider  />
+</div>
     <Amenities /> 
   <HotelFeature />
   <Contact />

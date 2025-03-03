@@ -69,7 +69,7 @@ const Hero = () => {
     </form>
   </div>
 
-<div className=" absolute  lg:bottom-0 -bottom-1/4 bg-black bg-opacity-50 w-9/12   h-1/4  text-white  py-12 ">
+<div className=" absolute  lg:-bottom-0 -bottom-8   text-white  py-12 ">
 
   <BookingEngine />
 </div>

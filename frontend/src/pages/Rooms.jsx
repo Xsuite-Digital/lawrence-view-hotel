@@ -6,7 +6,7 @@ import {rooms} from "../Helpers/Data";
 export default function Rooms() {
   return (
     <div className="bg-gray-100 py-12   ">
-      <h2 className="text-3xl font-bold text-center mb-8">Rooms</h2>
+      <h2 className="text-3xl font-bold mt-4 2xl:mt-0 text-center mb-8">Rooms</h2>
       <div className="grid lg:grid-cols-3 max-w-5xl w-full mx-auto  grid-cols-1 gap-y-8   ">
         {rooms.map((room) => (
           <motion.div
