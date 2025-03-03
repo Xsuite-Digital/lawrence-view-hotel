@@ -1,4 +1,4 @@
-import contactbanner from "../assets/contactbanner.webp";
+import contactbanner from "../assets/MLJLVH.webp";
 
 import {
   Mail,

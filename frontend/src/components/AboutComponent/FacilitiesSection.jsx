@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import A1 from '../../assets/ABOUT2.webp';
+import D1 from '../../assets/Dining.webp';
 const facilities = [
   {
     title: "Luxury Suites",
@@ -9,19 +10,19 @@ const facilities = [
   },
   {
     title: "Fine Dining",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800",
+    image: D1,
     description: "Savor exquisite cuisine at our award-winning restaurants."
   },
-  {
-    title: "Wellness Spa",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800",
-    description: "Rejuvenate your body and mind in our luxury spa."
-  },
-  {
-    title: "Conference Center",
-    image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=800",
-    description: "State-of-the-art facilities for your business needs."
-  }
+  // {
+  //   title: "Wellness Spa",
+  //   image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800",
+  //   description: "Rejuvenate your body and mind in our luxury spa."
+  // },
+  // {
+  //   title: "Conference Center",
+  //   image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=800",
+  //   description: "State-of-the-art facilities for your business needs."
+  // }
 ];
 
 const stats = [
