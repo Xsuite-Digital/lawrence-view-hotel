@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import A1 from "../../assets/ABOUT1.webp";
 export const StorySection = () => {
   return (
     <section className="py-20 bg-white overflow-hidden">
@@ -26,9 +26,9 @@ export const StorySection = () => {
             className="max-w-full"
           >
             <img
-              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800"
+              src={A1}
               alt="Lawrence View Hotel Vintage"
-              className="rounded-lg shadow-xl w-full"
+              className="rounded-lg shadow-xl lg:h-[40rem] h-auto w-full"
             />
           </motion.div>
 
