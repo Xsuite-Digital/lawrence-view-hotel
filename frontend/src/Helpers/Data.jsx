@@ -15,6 +15,10 @@ import SA3 from "../assets/SA3.webp";
 import E1 from "../assets/E1.webp";
 import E2 from "../assets/E2.webp";
 import E3 from "../assets/E3.webp";
+import T1 from "../assets/TWIN.webp";
+import T2 from "../assets/T2.webp";
+import T3 from "../assets/T3.webp";
+import Q1 from "../assets/QUAD.webp";
 import Deluxe from "../assets/Deluxe.webp";
 import Studio from "../assets/Studio.webp";
 
@@ -186,7 +190,7 @@ export const rooms = [
     images: [Studio, SA1, SA2, SA3],
   },
   {
-    image:R1,
+    image:T1,
 
     id: 5,
     title: "Twin Sharing",
@@ -224,10 +228,10 @@ export const rooms = [
       "Pets allowed",
       "Smoking allowed on balcony",
     ],
-    images: [P2, P2, P2, P2],
+    images: [T1 , T2 , T3],
   },
   {
-    image:R1,
+    image:Q1,
 
     id: 6,
     title: "Quad Room",
@@ -262,6 +266,6 @@ export const rooms = [
       "Pets not allowed",
       "Quiet hours from 10:00 PM to 7:00 AM",
     ],
-    images: [P2, P2, P2, P2],
+    images: [Q1],
   },
 ];

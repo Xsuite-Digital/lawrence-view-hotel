@@ -6,7 +6,6 @@ const amenitiesData = [
   { icon: Shirt, title: "Clothing Cleaning Service", desc: "Laundry & dry cleaning at your service." },
   { icon: Wifi, title: "Free High-Speed WiFi", desc: "Stay connected anywhere in the hotel." },
   { icon: Coffee, title: "Morning Refreshment", desc: "Enjoy complimentary morning tea & coffee." },
-  { icon: Bed, title: "Outdoor Pool", desc: "Luxury swimming pool with a view." },
   { icon: Camera, title: "Security Camera", desc: "24/7 surveillance for your safety." },
   { icon: Utensils, title: "Room Services", desc: "Order food & amenities anytime." },
 ];

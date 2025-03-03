@@ -1,4 +1,4 @@
-import { Lightbulb, Waves, CheckCircle } from "lucide-react";
+import { Lightbulb, Waves, CheckCircle, Table } from "lucide-react";
 import P1 from "../../assets/ABOUT1.webp";
 import P2 from "../../assets/ABOUT2.webp";
 import {Link} from 'react-router-dom';
@@ -26,8 +26,8 @@ const HotelFeature = () => {
             <span className="font-medium text-gray-900">The Best Lighting</span>
           </div>
           <div className="flex items-center gap-2">
-            <Waves className="w-6 h-6 text-[#c4a053]" />
-            <span className="font-medium text-gray-900">The Best Swimming</span>
+            <Table className="w-6 h-6 text-[#c4a053]" />
+            <span className="font-medium text-gray-900">The Best Dining</span>
           </div>
         </div>
 

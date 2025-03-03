@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="absolute top-[180px] w-full right-[18rem]">
+        <div className="absolute 2xl:top-[180px] top-[16rem]  lg:right-[23rem]  2xl:right-[18rem]">
           <GetInTouch />
         </div>
 

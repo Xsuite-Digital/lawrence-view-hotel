@@ -10,7 +10,7 @@ import {
   Music,
   Music2,
 } from "lucide-react";
-
+import LOGO from "../../assets/logo.webp"
 const Footer = () => {
   const [email, setEmail] = useState("");
 
@@ -66,7 +66,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-white">
-              Golden Sands Resort
+            <img src={LOGO} alt="lvh-logo" />
             </h3>
             <p className="text-sm max-w-xs text-white">
               Indulge in luxury at Golden Sands Resort, where every moment is
