@@ -75,7 +75,7 @@ const CustomCalendar = () => {
         value={`${
           range.start ? format(range.start, "dd-MM-yyyy") : "Start Date"
         } - ${range.end ? format(range.end, "dd-MM-yyyy") : "End Date"}`}
-        className="border p-2 rounded cursor-pointer w-full max-w-5xl"
+        className="border p-2 rounded text-black cursor-pointer w-full max-w-5xl"
       />
 
       {calendarOpen && (

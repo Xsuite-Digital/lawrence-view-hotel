@@ -5,7 +5,7 @@ import { TestimonialsSection } from "../components/AboutComponent/TestimonialsSe
 import { ValuesSection } from "../components/AboutComponent/ValuesSection";
 
 export default function AboutUs() {
-  return <div>  <div className="min-h-screen bg-white">
+  return <div>  <div className="min-h-screen  bg-white">
   <StorySection />
   <ValuesSection />
   <TeamSection />

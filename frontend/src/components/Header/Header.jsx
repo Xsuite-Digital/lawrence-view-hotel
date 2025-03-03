@@ -31,16 +31,21 @@ export default function Header() {
         scroll ? "bg-black shadow-lg text-white" : "bg-white text-black"
       }`}
     >
-      <div className="flex justify-between items-center   ">
+      <div className="flex justify-between items-center  ">
         <div className="flex items-center">
-          <img
-            src={logo}
-            alt="Lawrence View Hotel Logo"
-            className="lg:w-full w-32 h-16 lg:h-auto"
-          />
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <img
+              src={logo}
+              alt="Lawrence View Hotel Logo"
+              className="lg:w-full w-32 h-16 lg:h-auto"
+            />
+          </Link>
         </div>
 
-        <nav className="hidden lg:flex space-x-6 px-3 text-sm md:text-base">
+        <nav className="hidden lg:flex space-x-6 text-sm md:text-base py-3">
           {navLinks.map((link, index) => (
             <Link
               key={index}
@@ -56,7 +61,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center p-3 space-x-4">
+        <div className="hidden lg:flex items-center space-x-4 p-3">
           <a
             href="tel:+923206361916"
             className="flex items-center space-x-1 hover:underline hover:text-[#b89628]"

@@ -37,8 +37,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Hero Text */}
-      <div className="relative px-6 md:px-24 text-center md:text-left w-full flex flex-col items-center md:items-start justify-center">
-        <h1 className="text-white text-3xl md:text-5xl font-bold">
+      <div className="relative px-6 md:px-24  text-center md:text-left w-full flex flex-col items-center md:items-start justify-center">
+        <h1 className="text-white text-3xl md:text-7xl font-bold">
           Lawrence View Hotel
         </h1>
         <p className="text-white text-base md:text-lg max-w-lg mt-4">
@@ -99,7 +99,7 @@ const Hero = () => {
         </form>
       </div>
 
-      <div className=" absolute  lg:bottom-0 -bottom-1/4 bg-black bg-opacity-50 w-9/12   h-1/4  text-white  py-12 ">
+      <div className=" absolute  lg:-bottom-0 -bottom-8   text-white  py-12 ">
         <BookingEngine />
       </div>
     </div>

@@ -10,10 +10,12 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <CardSlider />
+
+      <div className="2xl:mt-0 mt-32">
+        <CardSlider />
+      </div>
       <Amenities />
       <HotelFeature />
-      <CityGuide />
       <Contact />
       <FAQ />
     </div>
