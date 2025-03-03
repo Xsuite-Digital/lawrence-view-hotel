@@ -1,6 +1,6 @@
 import { Lightbulb, Waves, CheckCircle } from "lucide-react";
-import P1 from "../../assets/P1.webp";
-import P2 from "../../assets/P2.webp";
+import P1 from "../../assets/ABOUT1.webp";
+import P2 from "../../assets/ABOUT2.webp";
 import {Link} from 'react-router-dom';
 const HotelFeature = () => {
   return (

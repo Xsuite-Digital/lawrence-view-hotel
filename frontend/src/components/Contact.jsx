@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Hotel, Bell, Star, MapPin } from "lucide-react"; // Lucide Icons
-import P2 from "../assets/p2.webp";
+import P2 from "../assets/ABOUT1.webp";
 import before from "../assets/before.webp";
 import shape from "../assets/shape.webp";
 import logor from "../assets/logor.webp";

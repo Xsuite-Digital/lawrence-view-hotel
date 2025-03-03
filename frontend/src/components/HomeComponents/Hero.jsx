@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import p1 from "../../assets/p1.webp";
-import p2 from "../../assets/p2.webp";
-import p3 from "../../assets/p3.webp";
+import p1 from "../../assets/LVVH.webp";
+import p2 from "../../assets/LVHH.webp";
 import BookingEngine from "../BookingEngine/Bookingengine";
 import before from "../../assets/before.webp";
-const images = [p1, p2, p3];
+const images = [p1, p2];
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

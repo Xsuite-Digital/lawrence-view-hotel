@@ -1,10 +1,10 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
-
+import A1 from '../../assets/ABOUT2.webp';
 const facilities = [
   {
     title: "Luxury Suites",
-    image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800",
+    image: A1,
     description: "Experience ultimate comfort in our meticulously designed suites."
   },
   {
