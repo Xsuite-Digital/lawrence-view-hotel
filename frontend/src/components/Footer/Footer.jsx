@@ -101,7 +101,7 @@ const Footer = () => {
               {tabs.map((link, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={link.link}
                   className="text-white hover:text-[#c4a053] hover:underline decoration-[#c4a053] underline-offset-4 transition-all duration-300"
                 >
                   {link.name}
