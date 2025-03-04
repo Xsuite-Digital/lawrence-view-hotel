@@ -7,6 +7,7 @@ import "./App.css";
 import Rooms from "./pages/Rooms";
 import RoomsDetail from "./components/RoomsDetail";
 import { useEffect } from "react";
+import ChatIcon from "./Helpers/ChatIcon";
 
 // Scroll to Top Component
 const ScrollToTop = () => {
@@ -23,6 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ChatIcon />
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />

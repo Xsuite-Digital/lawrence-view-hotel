@@ -5,9 +5,11 @@ import p2 from "../../assets/LVHH.webp";
 import BookingEngine from "../BookingEngine/Bookingengine";
 
 import GetInTouch from "./GetInTouch";
+
 const images = [p1, p2];
 
 const Hero = () => {
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
