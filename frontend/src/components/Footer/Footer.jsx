@@ -1,143 +1,152 @@
 import { useState } from "react";
 import {
-  Send,
   Facebook,
   Instagram,
   MapPin,
   Mail,
   Phone,
-  SquarePlay,
-  Music,
+  ChevronDown,
   Music2,
+  Linkedin,
 } from "lucide-react";
-import LOGO from "../../assets/logo.webp"
-const Footer = () => {
-  const [email, setEmail] = useState("");
+import LOGO from "../../assets/logo.webp";
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Newsletter signup:", email);
-    setEmail("");
+const Footer = () => {
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection(openSection === section ? null : section);
   };
 
-  const tabs = [
-    { name: "Rooms & Suites", link: "/rooms" },
-    { name: "Contact", link: "/contact" },
-    { name: "About", link: "/about" }
+  const sections = [
+    {
+      title: "Quick Links",
+      content: [
+        { name: "Rooms & Suites", link: "/rooms" },
+        { name: "Contact", link: "/contact" },
+        { name: "About", link: "/about" },
+      ],
+    },
+    {
+      title: "Contact Us",
+      content: [
+        {
+          icon: <MapPin className="h-5 w-5 text-[#c4a053]" />,
+          text: "54-A Lawrence Road, Lahore",
+          link: "https://maps.app.goo.gl/bSAT2zHBW9SRgaRr7",
+        },
+        {
+          icon: <Phone className="h-5 w-5 text-[#c4a053]" />,
+          text: "03206361916",
+          link: "tel:+923206361916",
+        },
+        {
+          icon: <Mail className="h-5 w-5 text-[#c4a053]" />,
+          text: "reservation@lawrenceviewhotel.com",
+          link: "mailto:reservation@lawrenceviewhotel.com",
+        },
+      ],
+    },
+    {
+      title: "FAQs",
+      content: [
+        {
+          question: "What amenities does Lawrence View Hotel offer?",
+          answer:
+            "We offer luxurious rooms, complimentary breakfast, free Wi-Fi, airport transfers, a fitness center, and 24/7 room service to ensure a comfortable stay.",
+        },
+        {
+          question: "What are the check-in and check-out times?",
+          answer:
+            "Check-in time is 2:00 PM, and check-out time is 12:00 PM. Early check-in and late check-out are subject to availability.",
+        },
+      ],
+    },
   ];
-  
 
   return (
-    <footer className="bg-black text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto text-center">
-        <div className=" p-8 border-b border-gray-300">
-          <div className="flex flex-col items-center space-y-6">
-            <h4 className="text-3xl font-extrabold text-white">
-              Stay Updated!
-            </h4>
-            <p className="text-white max-w-md">
-              Subscribe to our newsletter and never miss out on our latest
-              updates and offers.
-            </p>
-            <form
-              onSubmit={handleSubmit}
-              className="flex w-full max-w-lg bg-white rounded-full shadow-lg overflow-hidden"
+    <footer className="bg-black text-white py-10 px-4 w-full">
+      <div className="max-w-7xl mx-auto">
+        <img src={LOGO} alt="lvh-logo" className="h-12 mx-auto mb-6" />
+        {sections.map((section, index) => (
+          <div key={index} className="border-b border-gray-700 py-4">
+            <button
+              className="w-full flex justify-between items-center text-lg font-semibold"
+              onClick={() => toggleSection(index)}
             >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-white text-gray-800 placeholder-gray-500 py-3 px-6 focus:outline-none focus:ring-2 focus:[#c4a053]"
-                required
+              {section.title}
+              <ChevronDown
+                className={`h-5 w-5 transition-transform ${
+                  openSection === index ? "rotate-180" : ""
+                }`}
               />
-              <button
-                type="submit"
-                className="bg-[#c4a053] hover:bg-[#c4a053] text-white px-6 py-3 flex items-center justify-center transition duration-300"
+            </button>
+            {openSection === index && (
+              <div
+                className={`mt-4 ${
+                  section.title === "FAQs"
+                    ? "flex flex-col space-y-3"
+                    : "grid grid-cols-4 gap-4"
+                }`}
               >
-                <Send size={20} />
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-white">
-            <img src={LOGO} alt="lvh-logo" />
-            </h3>
-            <p className="text-sm max-w-xs text-white">
-              Indulge in luxury at Golden Sands Resort, where every moment is
-              crafted for your ultimate relaxation and pleasure.
-            </p>
-            <div className="flex justify-center md:justify-start space-x-4">
-              <a
-                href="https://www.facebook.com/LawrenceViewHotelLahore" target="_blank" rel="noopener noreferrer"
-                className="text-white hover:text-[#c4a053] transition-colors duration-300"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://www.instagram.com/lawrence.view.hotel.lahore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"
-                className="text-white hover:text-[#c4a053] transition-colors duration-300"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"  target="_blank" rel="noopener noreferrer"
-                className="text-white hover:text-[#c4a053] transition-colors duration-300"
-              >
-                
-              <Music2 size={20} />
-              </a>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-white">Quick Links</h4>
-            <nav className="grid grid-cols-1 gap-4">
-              {tabs.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.link}
-                  className="text-white hover:text-[#c4a053] hover:underline decoration-[#c4a053] underline-offset-4 transition-all duration-300"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </nav>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="text-xl font-semibold text-white">Contact Us</h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="flex-shrink-0 h-6 w-6 text-[#c4a053]" />
-                <a href="https://maps.app.goo.gl/bSAT2zHBW9SRgaRr7" className="text-white">
-                54-A Lawrence Road, opposite Jinnah Garden, Jinnah Town, Lahore, 54000, Pakistan
-
-                </a>
+                {section.content.map((item, idx) => (
+                  <div key={idx} className="text-white">
+                    {item.icon && <span className="mr-2">{item.icon}</span>}
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        className="hover:text-[#c4a053] transition"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.name || item.text}
+                      </a>
+                    ) : (
+                      <div>
+                        <p className="font-semibold">{item.question}</p>
+                        <p className="text-gray-400">{item.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="flex-shrink-0 h-6 w-6 text-[#c4a053]" />
-                <a href="tel:+923206361916" className="text-white">03206361916</a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="flex-shrink-0 h-6 w-6 text-[#c4a053]" />
-                <a 
-  href="mailto:reservation@lawrenceviewhotel.com" 
-  className="text-white hover:text-[#c4a053] transition-colors"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  reservation@lawrenceviewhotel.com
-</a>
-
-              </div>
-            </div>
+            )}
           </div>
+        ))}
+        <div className="flex justify-start space-x-6 mt-6">
+          <span className="font-extrabold">Follow Us</span>
+          <a
+            href="https://www.facebook.com"
+            className="hover:text-[#c4a053]"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Facebook />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            className="hover:text-[#c4a053]"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Instagram />
+          </a>
+          <a
+            href="https://www.tiktok.com"
+            className="hover:text-[#c4a053]"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Music2 />
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            className="hover:text-[#c4a053]"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Linkedin />
+          </a>
         </div>
       </div>
     </footer>
