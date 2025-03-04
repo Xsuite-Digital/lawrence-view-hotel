@@ -5,6 +5,7 @@ import CardSlider from "../components/HomeComponents/CardSlider";
 import Hero from "../components/HomeComponents/Hero";
 import HotelFeature from "../components/HomeComponents/HotelFeature";
 import CityGuide from "../components/HomeComponents/CityGuide";
+import BookingForm from "../components/Contact";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
       <Amenities />
       <HotelFeature />
       <CityGuide />
-      <Contact />
+      <BookingForm  />
       <FAQ />
     </div>
   );

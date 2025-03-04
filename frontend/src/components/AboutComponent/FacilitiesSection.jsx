@@ -13,23 +13,14 @@ const facilities = [
     image: D1,
     description: "Savor exquisite cuisine at our award-winning restaurants."
   },
-  // {
-  //   title: "Wellness Spa",
-  //   image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800",
-  //   description: "Rejuvenate your body and mind in our luxury spa."
-  // },
-  // {
-  //   title: "Conference Center",
-  //   image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=800",
-  //   description: "State-of-the-art facilities for your business needs."
-  // }
+
 ];
 
 const stats = [
-  { value: 38, label: "Years of Excellence" },
-  { value: 250, label: "Luxury Rooms" },
-  { value: 4, label: "Restaurants" },
-  { value: 1000, label: "Happy Guests Daily" }
+  { value: "15+", label: "Years of Excellence" },
+  { value: "18+", label: "Luxury Rooms" },
+  { value: 1, label: "Restaurant" },
+  { value: "50+", label: "Happy Guests Daily" }
 ];
 
 export const FacilitiesSection = () => {
@@ -70,7 +61,7 @@ export const FacilitiesSection = () => {
                 whileHover={{ scale: 1.1 }}
                 className="text-4xl font-bold text-amber-500 mb-2"
               >
-                {stat.value}+
+                {stat.value}
               </motion.div>
               <p className="text-gray-600">{stat.label}</p>
             </motion.div>

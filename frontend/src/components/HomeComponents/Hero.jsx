@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import p1 from "../../assets/p1.webp";
-import p2 from "../../assets/p2.webp";
-import p3 from "../../assets/p3.webp";
+import p1 from "../../assets/LVVH.webp";
+import p2 from "../../assets/LVHH.webp";
 import BookingEngine from "../BookingEngine/Bookingengine";
 
 import GetInTouch from "./GetInTouch";
-const images = [p1, p2, p3];
+const images = [p1, p2];
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -48,8 +47,8 @@ const Hero = () => {
           perfect stay.
         </p>
       </div>
-      <div className="absolute w-full flex justify-center items-center top-14">
-        s
+      <div className="absolute right-[3rem]  2xl:right-1/4 2xl:top-1/3 top-1/4    flex justify-center items-center ">
+        
         <GetInTouch />
       </div>
       <div className=" absolute  lg:-bottom-0 -bottom-8   text-white  py-12 ">
