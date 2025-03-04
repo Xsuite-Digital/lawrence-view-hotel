@@ -67,9 +67,7 @@ const Bookingengine = () => {
   }, []);
 
   return (
-
     <div className="w-[90vw]">
-
       <style>
         {`@import url(//d2uyahi4tkntqv.cloudfront.net/assets/shared.booknow.css?v=1.0.0);
           @import url(//d2uyahi4tkntqv.cloudfront.net/assets/search_widget.css?v=1.0.0);`}
