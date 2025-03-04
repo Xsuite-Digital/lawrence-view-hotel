@@ -1,7 +1,6 @@
 import { ParkingCircle, Wifi, Camera, Bed, Shirt, Bath, Utensils, Car, Coffee } from "lucide-react";
 
 const amenitiesData = [
-  { icon: Bath, title: "Wellness & Relaxation", desc: "Spa, sauna, and wellness facilities." },
   { icon: Car, title: "Pick-Up Service", desc: "Airport & city transfers available." },
   { icon: Shirt, title: "Clothing Cleaning Service", desc: "Laundry & dry cleaning at your service." },
   { icon: Wifi, title: "Free High-Speed WiFi", desc: "Stay connected anywhere in the hotel." },

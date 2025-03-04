@@ -1,19 +1,31 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import contactbanner from "../assets/MLJLVH.webp";
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Music2 } from "lucide-react";
 
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Facebook,
-  Instagram,
-  Twitter,
-} from "lucide-react";
+function Contact() {
+  const formRef = useRef();
 
-function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          alert("Failed to send message. Try again later.");
+          console.error("EmailJS Error:", error);
+        }
+      );
   };
 
   return (
@@ -43,19 +55,19 @@ function App() {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 text-[#b89628] flex-shrink-0 transition-colors duration-300 hover:text-black" />
-                <p className="text-gray-600">
+                <a href="https://maps.app.goo.gl/bSAT2zHBW9SRgaRr7" target="_blank" className="text-gray-600">
                   54-A Lawrence Road, opposite Jinnah Garden,
                   <br />
                   Jinnah Town, Lahore, 54000, Pakistan
-                </p>
+                </a>
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="w-6 h-6 text-[#b89628] flex-shrink-0 transition-colors duration-300 hover:text-black" />
-                <p className="text-gray-600">+92 320 6361916</p>
+                <a href="tel:+923206361916" target="_blank" className="text-gray-600">+92 320 6361916</a>
               </div>
               <div className="flex items-center space-x-4">
                 <Mail className="w-6 h-6 text-[#b89628] flex-shrink-0 transition-colors duration-300 hover:text-black" />
-                <p className="text-gray-600">lawrenceviewhotel@gmail.com</p>
+                <a href="mailto:reservation@lawrenceviewhotel.com" target="_blank" className="text-gray-600">reservation@lawrenceviewhotel.com</a>
               </div>
               <div className="flex items-start space-x-4">
                 <Clock className="w-6 h-6 text-[#b89628] flex-shrink-0 transition-colors duration-300 hover:text-black" />
@@ -70,24 +82,30 @@ function App() {
               <h3 className="text-xl font-light text-gray-900 mb-4">
                 Follow Us
               </h3>
-              <div className="flex space-x-6">
+              <div className="flex justify-center md:justify-start space-x-4">
                 <a
-                  href="#"
-                  className="text-[#b89628] hover:text-black transition-colors duration-300"
+                  href="https://www.facebook.com/LawrenceViewHotelLahore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#c4a053] transition-colors duration-300"
                 >
-                  <Facebook className="w-6 h-6" />
+                  <Facebook size={20} />
                 </a>
                 <a
-                  href="#"
-                  className="text-[#b89628] hover:text-black transition-colors duration-300"
+                  href="https://www.instagram.com/lawrence.view.hotel.lahore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#c4a053] transition-colors duration-300"
                 >
-                  <Instagram className="w-6 h-6" />
+                  <Instagram size={20} />
                 </a>
                 <a
-                  href="#"
-                  className="text-[#b89628] hover:text-black transition-colors duration-300"
+                  href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#c4a053] transition-colors duration-300"
                 >
-                  <Twitter className="w-6 h-6" />
+                  <Music2 size={20} />
                 </a>
               </div>
             </div>
@@ -98,49 +116,40 @@ function App() {
             <h2 className="text-3xl font-light text-gray-900 mb-8">
               Send us a Message
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
+                  className="mt-1  p-2 focus:outline-none block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
                   required
                 />
               </div>
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
+                  className="mt-1 p-2 focus:outline-none block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
                   required
                 />
               </div>
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={6}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
+                  className="mt-1 p-2 focus:outline-none block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
                   required
                 ></textarea>
               </div>
@@ -173,4 +182,4 @@ function App() {
   );
 }
 
-export default App;
+export default Contact;

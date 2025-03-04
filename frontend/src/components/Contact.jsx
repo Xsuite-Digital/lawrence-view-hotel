@@ -1,105 +1,104 @@
-import { Hotel, Bell, Star, MapPin } from "lucide-react"; // Lucide Icons
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Hotel, Bell, Star, MapPin } from "lucide-react";
 import P2 from "../assets/p2.webp";
 import shape from "../assets/shape.webp";
 import logor from "../assets/logor.webp";
-import GetInTouch from "./HomeComponents/GetInTouch";
 
-const features = [
-  {
-    icon: Hotel,
-    title: "Luxury Rooms",
-    description:
-      "Elegantly designed rooms with premium amenities to ensure a comfortable stay.",
-  },
-  {
-    icon: Bell,
-    title: "24/7 Concierge",
-    description:
-      "Our dedicated team is available around the clock to cater to your needs.",
-  },
-  {
-    icon: Star,
-    title: "Award-Winning Hospitality",
-    description:
-      "Recognized for excellence in service and luxury accommodation.",
-  },
-  {
-    icon: MapPin,
-    title: "Prime Location",
-    description:
-      "Located in the heart of the city with easy access to major attractions.",
-  },
+const rooms = [
+  "Deluxe Double Room",
+  "Superior Suite Room",
+  "Executive Suite Room",
+  "Studio Apartment",
+  "Twin Sharing",
+  "Quad Room",
 ];
 
-const FeatureCard = ({ Icon, title, description }) => (
-  <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
-    <Icon className="text-[#c4a053]" size={40} />
-    <h3 className="text-lg font-semibold mt-4">{title}</h3>
-    <p className="text-gray-600 text-center mt-2">{description}</p>
-  </div>
-);
+const BookingForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    room: rooms[0],
+    message: "",
+  });
 
-const Contact = () => {
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formData,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (response) => {
+          alert("Booking request sent successfully!");
+          setFormData({ name: "", email: "", room: rooms[0], message: "" });
+        },
+        (error) => {
+          alert("Failed to send booking request.");
+        }
+      );
+  };
+
   return (
-    <section className="relative w-full bg-white">
-      <div className="w-full bg-gray-100 py-16 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Why Choose Lawrence View Hotel?
-          </h2>
-          <p className="text-gray-600 mt-4">
-            Experience luxury, comfort, and excellence in the heart of the city.
-          </p>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {features.map(({ icon: Icon, title, description }, index) => (
-            <FeatureCard
-              key={index}
-              Icon={Icon}
-              title={title}
-              description={description}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="relative w-full mb-4">
-        <img
-          src={P2}
-          alt="Luxury Hotel Room"
-          className="w-full h-auto md:w-[1000px] md:h-[500px]"
-        />
-
-        <div className="absolute lg:top-3/4 top-10 md:left-1/4 xl:left-[20rem] lg:ml-0 ml-5 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-black bg-opacity-80 text-white p-3 w-[90%] max-w-sm md:max-w-md">
-          <div className="border border-[#c4a053] p-6 border-opacity-70 text-center">
-            <img
-              src={logor}
-              alt="LVH-logo"
-              className="mx-auto w-16 h-16 md:w-24 md:h-24"
-            />
-            <p className="text-sm mt-2">Call us for any inquiry</p>
-            <p className="text-xl md:text-2xl font-bold">(801) 500 50 088</p>
-          </div>
-        </div>
-
-        <div className="absolute 2xl:top-[260px] top-[16rem]  lg:right-[23rem]  2xl:right-[58rem]">
-          <GetInTouch />
-        </div>
-
-        {/* Decorative Shape */}
-        <div className="lg:block absolute hidden right-0 top-1/2 2xl:top-1">
-          <img
-            src={shape}
-            height={400}
-            width={400}
-            alt="shape-image"
-            className="w-full h-full xl:h-[20rem] xl:w-[20rem] 2xl:h-[42rem] 2xl:w-[42rem]"
+    <section className="bg-white py-10 px-6">
+      <div className="max-w-3xl mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold text-center mb-4">Book Your Stay</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your Name"
+            required
+            className="w-full p-3 border rounded"
           />
-        </div>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Your Email"
+            required
+            className="w-full p-3 border rounded"
+          />
+          <select
+            name="room"
+            value={formData.room}
+            onChange={handleChange}
+            className="w-full p-3 border rounded"
+          >
+            {rooms.map((room, index) => (
+              <option key={index} value={room}>
+                {room}
+              </option>
+            ))}
+          </select>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Additional Requests"
+            className="w-full p-3 border rounded"
+          ></textarea>
+          <button
+            type="submit"
+            className="w-full bg-[#c4a053] text-white py-3 rounded font-bold"
+          >
+            Submit Booking
+          </button>
+        </form>
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default BookingForm;
