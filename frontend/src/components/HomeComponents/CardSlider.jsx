@@ -34,8 +34,8 @@ export default function CardSlider() {
                <Utensils size={16} />
                <Bike size={16} />
              </div>
-             <Link to={`/rooms/${room.id}`}>
-               <button className="flex items-center text-black">
+             <Link to={`/rooms/${room.id}`} >
+               <button className="flex items-center cursor-pointer text-black">
                  Full Info <Info size={16} className="ml-1" />
                </button>
              </Link>
@@ -47,7 +47,7 @@ export default function CardSlider() {
       </div>
       <div className="text-center mt-8">
         <Link to="/rooms">
-          <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition">
+          <button className="bg-white bg-opacity-70 placeholder:  px-6 py-2 rounded-md hover transition">
             View All Rooms
           </button>
         </Link>

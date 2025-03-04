@@ -81,16 +81,19 @@ const Footer = () => {
                 }`}
               />
             </button>
-            {openSection === index && (
-              <div
-                className={`mt-4 ${
-                  section.title === "FAQs"
-                    ? "flex flex-col space-y-3"
-                    : "grid grid-cols-4 gap-4"
-                }`}
-              >
+            <div
+              className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                openSection === index ? "max-h-96" : "max-h-0"
+              }`}
+            >
+            <div
+  className={`mt-4 ${
+    section.title === "FAQs" ? "flex flex-col space-y-3" : "grid grid-cols-4 gap-4"
+  }`}
+>
+
                 {section.content.map((item, idx) => (
-                  <div key={idx} className="text-white">
+                  <div key={idx} className="text-white flex">
                     {item.icon && <span className="mr-2">{item.icon}</span>}
                     {item.link ? (
                       <a
@@ -103,14 +106,14 @@ const Footer = () => {
                       </a>
                     ) : (
                       <div>
-                        <p className="font-semibold">{item.question}</p>
+                        <p className="font-semibold text-[#c4a053]">{item.question}</p>
                         <p className="text-gray-400">{item.answer}</p>
                       </div>
                     )}
                   </div>
                 ))}
               </div>
-            )}
+            </div>
           </div>
         ))}
         <div className="flex justify-start space-x-6 mt-6">
