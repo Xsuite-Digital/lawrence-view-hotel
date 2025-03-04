@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { X, Menu, Facebook, Linkedin, Instagram, Mail, Phone } from "lucide-react";
+import { X, Menu, Facebook, Linkedin, Instagram, Mail, Phone, Music2 } from "lucide-react";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,15 +71,15 @@ export default function Sidebar() {
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-6">
-            <a href="https://www.facebook.com/LawrenceViewHotelLahore" target="_blank" rel="noopener noreferrer">
-              <Facebook size={24} className="text-black hover:text-gray-700" />
-            </a>
-            <a href="https://www.instagram.com/lawrence.view.hotel.lahore/" target="_blank" rel="noopener noreferrer">
-              <Instagram size={24} className="text-black hover:text-gray-700" />
-            </a>
-            <a href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/" target="_blank" rel="noopener noreferrer">
-              <Linkedin size={24} className="text-black hover:text-gray-700" />
-            </a>
+          <a href="https://www.facebook.com/LawrenceViewHotelLahore" target="_blank" rel="noopener noreferrer" className="hover:text-[#b89628]">
+            <Facebook size={20} />
+          </a>
+          <a href="https://www.instagram.com/lawrence.view.hotel.lahore/" target="_blank" rel="noopener noreferrer" className="hover:text-[#b89628]">
+            <Instagram size={20} />
+          </a>
+          <a href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1" className="hover:text-[#b89628]">
+            <Music2 size={20} />
+          </a>
           </div>
         </div>
       </div>
