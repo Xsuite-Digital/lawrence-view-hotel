@@ -25,9 +25,9 @@ const FAQ = () => {
         "Yes, we offer high-speed Wi-Fi access throughout the hotel, including rooms, lobby, and dining areas, free of charge for all our guests.",
     },
     {
-      question: "Is there a swimming pool and fitness center in the hotel?",
+      question: "Can unmarried couples book a room at the hotel?",
       answer:
-        "Yes, we have a well-maintained swimming pool and a fully equipped fitness center available for our guests to enjoy during their stay.",
+        " No, we do not allow room bookings for unmarried couples as per our hotel policy.",
     },
     {
       question: "What is your cancellation policy?",
@@ -41,13 +41,13 @@ const FAQ = () => {
   };
 
   return (
-    <div className="font-sans mx-auto p-6 sm:p-12 lg:p-32 bg-white text-black">
-      <div className="mb-6">
+    <div className="  text-white">
+      {/* <div className="mb-6">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center">
           Frequently Asked
           <span className="text-[#c4a053] ml-2">Questions</span>
         </h2>
-      </div>
+      </div> */}
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
@@ -56,7 +56,7 @@ const FAQ = () => {
           >
             <button
               type="button"
-              className="toggle-button w-full text-sm sm:text-base outline-none text-left font-semibold py-4 px-3 sm:py-6 sm:px-4 flex items-center text-black rounded-t-lg hover:text-[#c4a053] transition-all duration-300"
+              className="toggle-button w-full text-sm sm:text-base outline-none text-left font-semibold py-4 px-3 sm:py-6 sm:px-4 flex items-center text-white rounded-t-lg hover:text-[#c4a053] transition-all duration-300"
               onClick={() => toggleAccordion(index)}
               aria-expanded={openIndex === index}
             >
@@ -74,7 +74,7 @@ const FAQ = () => {
                   : "max-h-0 invisible overflow-hidden"
               }`}
             >
-              <p className="text-xs sm:text-sm text-gray-700 px-4 sm:px-6 pb-4 sm:pb-6">
+              <p className="text-xs sm:text-sm text-white px-4 sm:px-6 pb-4 sm:pb-6">
                 {faq.answer}
               </p>
             </div>

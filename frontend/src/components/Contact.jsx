@@ -41,7 +41,7 @@ const FeatureCard = ({ Icon, title, description }) => (
 
 const Contact = () => {
   return (
-    <section className="relative w-full bg-white">
+    <section className="relative w-full bg-white lg:mb-28 mb-0">
       <div className="w-full bg-gray-100 py-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">

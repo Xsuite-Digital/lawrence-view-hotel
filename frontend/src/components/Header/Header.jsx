@@ -31,8 +31,8 @@ export default function Header() {
     {
       name: "Destinations",
       dropdown: [
-        { name: "Lahore", path: "/destinations/lahore" },
-        { name: "Malam Jabba", path: "/destinations/malam-jabba" },
+        { name: "Lahore", path: "/Lahore" },
+        { name: "Malam Jabba", path: "/MLJ" },
       ],
     },
     { name: "About", path: "/about" },
@@ -49,6 +49,7 @@ export default function Header() {
         <div className=" border-b">
           <Link to="/">
             <img
+            onClick={()=> window.scrollTo({top:0 , behavior:"smooth"})}
               src={logo}
               alt="Lawrence View Hotel Logo"
               width={200}
@@ -64,6 +65,7 @@ export default function Header() {
         <div className="flex justify-evenly items-center  border-b">
           <Link to="/">
             <img
+             onClick={()=> window.scrollTo({top:0 , behavior:"smooth"})}
               src={logo}
               alt="Lawrence View Hotel Logo"
               width={200}
@@ -82,8 +84,8 @@ export default function Header() {
                 <a href="tel:+923206361916" className="text-sm text-gray-600">
                   +92 (320) 6361-916
                 </a>
-                <a href="tel:+923206361916" className="text-sm text-gray-600">
-                  +92 (320) 6361-916
+                <a href="tel:+924236311574" className="text-sm text-gray-600">
+                  +92 (42) 36311574
                 </a>
               </div>
             </div>
@@ -157,7 +159,7 @@ export default function Header() {
                 {dropdownVisible && (
                   <div
                     className="absolute left-0 bg-black text-white mt-2 py-2 w-40"
-                    onMouseEnter={() => clearTimeout(timeoutId)} // Cancel timeout when hovering dropdown
+                    onMouseEnter={() => clearTimeout(timeoutId)} 
                     onMouseLeave={() => {
                       timeoutId = setTimeout(
                         () => setDropdownVisible(false),

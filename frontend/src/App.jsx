@@ -8,8 +8,11 @@ import Rooms from "./pages/Rooms";
 import RoomsDetail from "./components/RoomsDetail";
 import { useEffect } from "react";
 import ChatIcon from "./Helpers/ChatIcon";
+import TC from "./components/Policies/TC";
+import PrivacyPolicy from "./components/Policies/PrivacyPolicy";
+import Lahore from "./pages/Lahore";
+import MLJ from "./pages/MLJ";
 
-// Scroll to Top Component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -28,9 +31,14 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
+          
+          <Route path="Lahore" element={<Lahore />} />
+          <Route path="MLJ" element={<MLJ />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="rooms" element={<Rooms />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-conditions" element={<TC />} />
           <Route path="rooms/:id" element={<RoomsDetail />} />
         </Route>
       </Routes>

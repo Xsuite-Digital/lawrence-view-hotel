@@ -21,7 +21,7 @@ const ChatIcon = () => {
     >
       {visible && (
         <a
-          href="https://wa.me/9232016361916"
+          href="https://wa.me/+923206361916"
           target="_blank"
           rel="noopener noreferrer"
         >
