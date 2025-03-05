@@ -9,9 +9,10 @@ import BookingForm from "../components/Contact";
 import ReasonsToBook from "../components/HomeComponents/ReasonsToBook";
 
 const Home = () => {
+  
   return (
     <div>
-      <Hero />
+      <Hero  />
       <div className="2xl:mt-0 mt-32">
         <CardSlider />
       </div>
@@ -20,7 +21,6 @@ const Home = () => {
       <HotelFeature />
       <CityGuide />
       <BookingForm  />
-      <FAQ />
     </div>
   );
 };
