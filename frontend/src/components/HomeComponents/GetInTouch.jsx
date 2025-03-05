@@ -10,16 +10,17 @@ export default function GetInTouch() {
   const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
+    
     e.preventDefault();
     setLoading(true);
 
     emailjs
-      .sendForm(
-        "your_service_id", // Replace with your EmailJS Service ID
-        "your_template_id", // Replace with your EmailJS Template ID
-        form.current,
-        "your_public_key" // Replace with your EmailJS Public Key
-      )
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
       .then(
         () => {
           setMessage("Message sent successfully!");
