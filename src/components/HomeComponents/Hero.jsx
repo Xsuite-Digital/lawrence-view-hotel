@@ -7,10 +7,9 @@ import BookingEngine from "../BookingEngine/Bookingengine";
 
 import GetInTouch from "./GetInTouch";
 
-const images = [p1, p2 , p3];
+const images = [p1, p2, p3];
 
 const Hero = () => {
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -32,7 +31,9 @@ const Hero = () => {
 
   return (
     <div
-      className="relative w-full  bg-center transition-all duration-1000 flex flex-col items-center bg-contain justify-center
+
+      className="relative w-full bg-contain transition-all duration-1000 flex flex-col items-center  justify-center
+
       h-[80vh] md:h-screen"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
@@ -49,7 +50,6 @@ const Hero = () => {
         </p>
       </div>
       <div className="absolute right-[3rem]  2xl:right-6 2xl:top-1/4 top-1/4    flex justify-center items-center ">
-        
         <GetInTouch />
       </div>
       <div className=" absolute  lg:-bottom-0 -bottom-8   text-white  py-12 ">
