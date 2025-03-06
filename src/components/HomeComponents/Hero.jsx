@@ -38,7 +38,6 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Hero Text */}
       <div className="relative px-6 md:px-24  text-center md:text-left w-full flex flex-col items-center md:items-start justify-center">
         <h1 className="text-white text-3xl md:text-7xl font-bold">
           Lawrence View Hotel
