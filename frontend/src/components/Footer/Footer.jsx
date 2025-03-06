@@ -60,6 +60,22 @@ const Footer = () => {
           answer:
             "Check-in time is 2:00 PM, and check-out time is 12:00 PM. Early check-in and late check-out are subject to availability.",
         },
+        {
+          question:
+            "Does the hotel provide airport pick-up and drop-off services?",
+          answer:
+            "Yes! We offer airport transfer services upon request. Please provide your flight details at least 24 hours in advance to arrange transportation.",
+        },
+        {
+          question: "Is there a cancellation policy for bookings?",
+          answer:
+            "Yes, cancellations made 24 hours before check-in are free of charge. However, late cancellations or no-shows may be subject to a one-night charge.",
+        },
+        {
+          question: "Are pets allowed in the hotel? ",
+          answer:
+            "Unfortunately, we do not allow pets in the hotel premises to maintain hygiene and comfort for all our guests.",
+        },
       ],
     },
   ];
@@ -67,7 +83,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-10 px-4 w-full">
       <div className="max-w-7xl mx-auto">
-        <img src={LOGO} alt="lvh-logo" className="h-12 mx-auto mb-6" />
+        <img src={LOGO} alt="lvh-logo" className="h-32 mx-auto" />
         {sections.map((section, index) => (
           <div key={index} className="border-b border-gray-700 py-4">
             <button
