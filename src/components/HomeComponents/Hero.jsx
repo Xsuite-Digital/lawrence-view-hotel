@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import p1 from "../../assets/LVVH.webp";
-import p2 from "../../assets/LVHH.webp";
+import p1 from "../../assets/1.webp";
+import p2 from "../../assets/2.webp";
+import p3 from "../../assets/3.webp";
 import BookingEngine from "../BookingEngine/Bookingengine";
 
 import GetInTouch from "./GetInTouch";
 
-const images = [p1, p2];
+const images = [p1, p2 , p3];
 
 const Hero = () => {
 
@@ -31,11 +32,10 @@ const Hero = () => {
 
   return (
     <div
-      className="relative w-full bg-cover bg-center transition-all duration-1000 flex flex-col items-center justify-center
+      className="relative w-full bg-cover bg-center transition-all duration-1000 flex flex-col items-center bg-contain justify-center
       h-[80vh] md:h-screen"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Hero Text */}
@@ -49,7 +49,7 @@ const Hero = () => {
           perfect stay.
         </p>
       </div>
-      <div className="absolute right-[3rem]  2xl:right-1/4 2xl:top-1/3 top-1/4    flex justify-center items-center ">
+      <div className="absolute right-[3rem]  2xl:right-6 2xl:top-1/4 top-1/4    flex justify-center items-center ">
         
         <GetInTouch />
       </div>
