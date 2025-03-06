@@ -17,20 +17,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative 2xl:mt-24 mt-0 xl:mt-24 lg:mt-48 ">
-      <div
-        className=" h-[600px] w-[1900px] xl:w-[1345px] 2xl:w-[1900px] 2xl:h-[600px] xl:h-[500px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-      </div>
+    <div className="relative w-full 2xl:mt-24 mt-0 xl:mt-24 lg:mt-48">
+      {/* Image Container */}
+      <div className="relative w-full h-auto">
+        {/* Fading Image Transition */}
+        <img
+          src={images[currentImageIndex]}
+          alt="Hero Slide"
+          className="h-full w-full object-contain transition-opacity duration-1000 ease-in-out"
+        />
 
-      {/* Booking Engine Section */}
-      {/* <div className="absolute bottom-8 w-full flex justify-center px-4">
-        <div className="bg-white/30 backdrop-blur-md p-6 rounded-lg w-full max-w-3xl">
-          <BookingEngine />
-        </div>
-      </div> */}
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
     </div>
   );
 };
