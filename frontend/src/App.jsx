@@ -12,6 +12,10 @@ import TC from "./components/Policies/TC";
 import PrivacyPolicy from "./components/Policies/PrivacyPolicy";
 import Lahore from "./pages/Lahore";
 import MLJ from "./pages/MLJ";
+import Loyalty from "./pages/Loyalty";
+import Offers from "./pages/Offers";
+import Blogs from "./pages/Blogs";
+import { Toaster } from "react-hot-toast";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -26,6 +30,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <BrowserRouter>
+    <Toaster />
       <ScrollToTop />
       <ChatIcon />
       <Routes>
@@ -37,6 +42,10 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="rooms" element={<Rooms />} />
+          <Route path="loyalty" element={<Loyalty />} />
+          <Route path="offers" element={<Offers />} />
+          <Route path="Blog" element={<Blogs />} />
+
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-conditions" element={<TC />} />
           <Route path="rooms/:id" element={<RoomsDetail />} />

@@ -1,13 +1,16 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import contactbanner from "../assets/MLJLVH.webp";
 import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Music2 } from "lucide-react";
+import { toast } from "react-hot-toast"; 
 
 function Contact() {
   const formRef = useRef();
+  const [isSending, setIsSending] = useState(false); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSending(true); 
 
     emailjs
       .sendForm(
@@ -18,14 +21,15 @@ function Contact() {
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!"); 
           formRef.current.reset();
         },
         (error) => {
-          alert("Failed to send message. Try again later.");
+          toast.error("Failed to send message. Try again later.");
           console.error("EmailJS Error:", error);
         }
-      );
+      )
+      .finally(() => setIsSending(false)); 
   };
 
   return (
@@ -125,7 +129,7 @@ function Contact() {
                   type="text"
                   id="name"
                   name="name"
-                  className="mt-1  p-2 focus:outline-none block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
                   required
                 />
               </div>
@@ -137,7 +141,7 @@ function Contact() {
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-1 p-2 focus:outline-none block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
                   required
                 />
               </div>
@@ -149,34 +153,20 @@ function Contact() {
                   id="message"
                   name="message"
                   rows={6}
-                  className="mt-1 p-2 focus:outline-none block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
+                  className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b89628] focus:ring focus:ring-[#b89628] focus:ring-opacity-50 transition-colors duration-300"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#b89628] text-white py-3 px-6 rounded-md hover:bg-[#96791f] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#b89628] focus:ring-opacity-50"
+                className="w-full bg-[#b89628] text-white py-3 px-6 rounded-md hover:bg-[#96791f] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#b89628] focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isSending} 
               >
-                Send Message
+                {isSending ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
         </div>
-      </div>
-
-      {/* Map Section */}
-      <div className="h-[400px] w-full">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.0952683863743!2d74.3261954740379!3d31.548999974200854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ba19c196e3%3A0x54ae9e130d37d85a!2sLawrence%20View%20Hotel%2C%20Lahore!5e0!3m2!1sen!2s!4v1740387355646!5m2!1sen!2s"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-loaded"
-          title="Hotel Location"
-          className="w-full h-full"
-        ></iframe>
       </div>
     </div>
   );
