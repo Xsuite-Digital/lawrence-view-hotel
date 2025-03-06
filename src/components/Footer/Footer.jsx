@@ -83,8 +83,7 @@ const Footer = () => {
         },
       ],
     },
-    
-    
+
     {
       title: "Policies",
       content: [
@@ -96,93 +95,100 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-10 px-4 w-full">
-    <div className="max-w-7xl mx-auto">
-      <img src={LOGO} alt="lvh-logo" className="h-24 lg:h-32 lg:w-32 w-24 mx-auto mb-6" />
-      
-      {sections.map((section, index) => (
-        <div key={index} className="border-b border-gray-700 py-4">
-          <button
-            className="w-full flex justify-between items-center text-lg font-semibold"
-            onClick={() => toggleSection(index)}
-          >
-            {section.title}
-            <ChevronDown
-              className={`h-5 w-5 transition-transform ${
-                openSection === index ? "rotate-180" : ""
+      <div className="max-w-7xl mx-auto">
+        <img
+          src={LOGO}
+          alt="lvh-logo"
+          className="h-24 lg:h-32 lg:w-32 w-24 mx-auto mb-6"
+        />
+
+        {sections.map((section, index) => (
+          <div key={index} className="border-b border-gray-700 py-4">
+            <button
+              className="w-full flex justify-between items-center text-lg font-semibold"
+              onClick={() => toggleSection(index)}
+            >
+              {section.title}
+              <ChevronDown
+                className={`h-5 w-5 transition-transform ${
+                  openSection === index ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            <div
+              className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                openSection === index ? "h-full" : "max-h-0"
               }`}
-            />
-          </button>
-          <div
-            className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
-              openSection === index ? "h-full" : "max-h-0"
-            }`}
-          >
-            <div className="mt-4 flex  flex-col space-y-3">
-              {section.content.map((item, idx) => (
-                <div key={idx} className="text-white flex ">
-             
-                  {item.icon && <span className="mr-2">{item.icon}</span>}
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      className="hover:text-[#c4a053] transition"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.name || item.text}
-                    </a>
-                  ) : item.question ? (
-                    <div>
-                      <p className="font-semibold lg:text-md text-sm">{item.question}</p>
-                      <p className="text-gray-400 lg:text-md text-sm">{item.answer}</p>
-                    </div>
-                  ) : null}
-                </div>
-              ))}
+            >
+              <div className="mt-4 flex  flex-col space-y-3">
+                {section.content.map((item, idx) => (
+                  <div key={idx} className="text-white flex ">
+                    {item.icon && <span className="mr-2">{item.icon}</span>}
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        className="hover:text-[#c4a053] transition"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.name || item.text}
+                      </a>
+                    ) : item.question ? (
+                      <div>
+                        <p className="font-semibold lg:text-md text-sm">
+                          {item.question}
+                        </p>
+                        <p className="text-gray-400 lg:text-md text-sm">
+                          {item.answer}
+                        </p>
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
 
-      <div className="flex justify-between items-center mt-6 flex-wrap">
-        <div className="flex space-x-6">
-          <span className="font-extrabold">Follow Us</span>
-          <a
-            href="https://www.facebook.com/LawrenceViewHotelLahore"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Facebook />
-          </a>
-          <a
-            href="https://www.instagram.com/lawrence.view.hotel.lahore/"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Instagram />
-          </a>
-          <a
-            href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Music2 />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Linkedin />
-          </a>
+        <div className="flex justify-between items-center mt-6 flex-wrap">
+          <div className="flex space-x-6">
+            <span className="font-extrabold">Follow Us</span>
+            <a
+              href="https://www.facebook.com/LawrenceViewHotelLahore"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Facebook />
+            </a>
+            <a
+              href="https://www.instagram.com/lawrence.view.hotel.lahore/"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Music2 />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   );
 };
 
