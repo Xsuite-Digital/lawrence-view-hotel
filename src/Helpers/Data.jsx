@@ -1,5 +1,4 @@
-import P2 from "../assets/P2.webp";
-import P1 from "../assets/P1.webp";
+
 import R1 from "../assets/R1.webp";
 import ES from "../assets/ES.webp";
 import D1 from "../assets/D1.webp";
