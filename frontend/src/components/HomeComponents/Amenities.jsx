@@ -1,4 +1,4 @@
-import { ParkingCircle, Wifi, Camera, Bed, Shirt, Bath, Utensils, Car, Coffee } from "lucide-react";
+import {  Wifi, Camera, Bed, Shirt, Bath, Utensils, Car, Coffee } from "lucide-react";
 
 const amenitiesData = [
   { icon: Car, title: "Pick-Up Service", desc: "Airport & city transfers available." },

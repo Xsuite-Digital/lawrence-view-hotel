@@ -10,6 +10,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import LOGO from "../../assets/logo.webp";
+import FAQ from "../FAQ";
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -51,31 +52,43 @@ const Footer = () => {
       title: "FAQs",
       content: [
         {
-          question: "What amenities does Lawrence View Hotel offer?",
+          question: "What are the check-in and check-out timings?",
           answer:
-            "We offer luxurious rooms, complimentary breakfast, free Wi-Fi, airport transfers, a fitness center, and 24/7 room service to ensure a comfortable stay.",
+            "Check-in time is from 2:00 PM onwards, and check-out time is by 12:00 PM. Early check-in and late check-out are subject to availability and may incur additional charges.",
         },
         {
-          question: "What are the check-in and check-out times?",
+          question: "Do you offer airport pickup and drop-off services?",
           answer:
-            "Check-in time is 2:00 PM, and check-out time is 12:00 PM. Early check-in and late check-out are subject to availability.",
+            "Yes, we provide airport pickup and drop-off services upon request. Please contact our front desk or mention it while booking to arrange transportation.",
         },
         {
-          question:
-            "Does the hotel provide airport pick-up and drop-off services?",
+          question: "Is breakfast included in the room booking?",
           answer:
-            "Yes! We offer airport transfer services upon request. Please provide your flight details at least 24 hours in advance to arrange transportation.",
+            "Yes, we offer complimentary breakfast for all guests staying at the hotel. You can enjoy a variety of delicious options at our in-house restaurant every morning.",
         },
         {
-          question: "Is there a cancellation policy for bookings?",
+          question: "Do you have free Wi-Fi available?",
           answer:
-            "Yes, cancellations made 24 hours before check-in are free of charge. However, late cancellations or no-shows may be subject to a one-night charge.",
+            "Yes, we offer high-speed Wi-Fi access throughout the hotel, including rooms, lobby, and dining areas, free of charge for all our guests.",
         },
         {
-          question: "Are pets allowed in the hotel? ",
+          question: "Can unmarried couples book a room at the hotel?",
           answer:
-            "Unfortunately, we do not allow pets in the hotel premises to maintain hygiene and comfort for all our guests.",
+            "No, we do not allow room bookings for unmarried couples as per our hotel policy.",
         },
+        {
+          question: "What is your cancellation policy?",
+          answer:
+            "Our cancellation policy varies depending on the room type and booking package. Please check the terms while booking or contact our support team for details.",
+        },
+      ],
+    },
+
+    {
+      title: "Policies",
+      content: [
+        { name: "Privacy Policy", link: "/privacy-policy" },
+        { name: "Terms & Conditions", link: "/terms-conditions" },
       ],
     },
   ];
@@ -83,7 +96,12 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-10 px-4 w-full">
       <div className="max-w-7xl mx-auto">
-        <img src={LOGO} alt="lvh-logo" className="h-32 mx-auto" />
+        <img
+          src={LOGO}
+          alt="lvh-logo"
+          className="h-24 lg:h-32 lg:w-32 w-24 mx-auto mb-6"
+        />
+
         {sections.map((section, index) => (
           <div key={index} className="border-b border-gray-700 py-4">
             <button
@@ -97,16 +115,14 @@ const Footer = () => {
                 }`}
               />
             </button>
-            {openSection === index && (
-              <div
-                className={`mt-4 ${
-                  section.title === "FAQs"
-                    ? "flex flex-col space-y-3"
-                    : "grid grid-cols-4 gap-4"
-                }`}
-              >
+            <div
+              className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                openSection === index ? "h-full" : "max-h-0"
+              }`}
+            >
+              <div className="mt-4 flex  flex-col space-y-3">
                 {section.content.map((item, idx) => (
-                  <div key={idx} className="text-white">
+                  <div key={idx} className="text-white flex ">
                     {item.icon && <span className="mr-2">{item.icon}</span>}
                     {item.link ? (
                       <a
@@ -117,52 +133,59 @@ const Footer = () => {
                       >
                         {item.name || item.text}
                       </a>
-                    ) : (
+                    ) : item.question ? (
                       <div>
-                        <p className="font-semibold">{item.question}</p>
-                        <p className="text-gray-400">{item.answer}</p>
+                        <p className="font-semibold lg:text-md text-sm">
+                          {item.question}
+                        </p>
+                        <p className="text-gray-400 lg:text-md text-sm">
+                          {item.answer}
+                        </p>
                       </div>
-                    )}
+                    ) : null}
                   </div>
                 ))}
               </div>
-            )}
+            </div>
           </div>
         ))}
-        <div className="flex justify-start space-x-6 mt-6">
-          <span className="font-extrabold">Follow Us</span>
-          <a
-            href="https://www.facebook.com"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Facebook />
-          </a>
-          <a
-            href="https://www.instagram.com"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Instagram />
-          </a>
-          <a
-            href="https://www.tiktok.com"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Music2 />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            className="hover:text-[#c4a053]"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Linkedin />
-          </a>
+
+        <div className="flex justify-between items-center mt-6 flex-wrap">
+          <div className="flex space-x-6">
+            <span className="font-extrabold">Follow Us</span>
+            <a
+              href="https://www.facebook.com/LawrenceViewHotelLahore"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Facebook />
+            </a>
+            <a
+              href="https://www.instagram.com/lawrence.view.hotel.lahore/"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Music2 />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/"
+              className="hover:text-[#c4a053]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

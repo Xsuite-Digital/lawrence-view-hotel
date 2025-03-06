@@ -3,22 +3,24 @@ import { X, Menu, Facebook, Linkedin, Instagram, Mail, Phone, Music2 } from "luc
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-     const [scroll, setScroll] = useState(false);
-    
-      // Handle Scroll
-      useEffect(() => {
-        const handleScroll = () => {
-          setScroll(window.scrollY > 50);
-        };
-    
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-      }, []);
-    
+  const [scroll, setScroll] = useState(false);
+
+  // Handle Scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-     
-      <button className={`md:hidden p-2 ${scroll ? "text-white" : "text-black "} duration-300 ease-in-out`} onClick={() => setIsOpen(true)}>
+      <button
+        className={`md:hidden p-2 ${scroll ? "text-white" : "text-black "} duration-300 ease-in-out`}
+        onClick={() => setIsOpen(true)}
+      >
         <Menu size={28} />
       </button>
 
@@ -27,9 +29,9 @@ export default function Sidebar() {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsOpen(false)}></div>
       )}
 
-      {/* Sidebar Menu */}
+      {/* Sticky Sidebar Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 transform ${
+        className={`fixed top-0 left-0 h-screen w-72 bg-white shadow-xl z-50 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300`}
       >
@@ -54,6 +56,12 @@ export default function Sidebar() {
             <a href="/contact" className="text-black hover:text-gray-700">
               Contact Us
             </a>
+            <a href="/Lahore" className="text-black hover:text-gray-700">
+              Lahore
+            </a>
+            <a href="/MLJ" className="text-black hover:text-gray-700">
+              Malam Jabba
+            </a>
           </nav>
 
           {/* Contact Info */}
@@ -61,28 +69,41 @@ export default function Sidebar() {
             <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
             <a href="tel:+923206361916" className="flex items-center space-x-2 text-black mb-3">
               <Phone size={20} />
-              <span>+92 (320) 6361-916</span>
+              <span className="text-sm">+92 (320) 6361-916</span>
             </a>
-            <a href="mailto:lawrenceviewhotel@gmail.com" className="flex items-center space-x-2 text-black">
+            <a href="mailto:reservation@lawrenceviewhotel.com" className="flex items-center space-x-2 text-black">
               <Mail size={20} />
-              <span>lawrenceviewhotel@gmail.com</span>
+              <span className="text-sm">reservation@lawrenceviewhotel.com</span>
             </a>
           </div>
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-6">
-          <a href="https://www.facebook.com/LawrenceViewHotelLahore" target="_blank" rel="noopener noreferrer" className="hover:text-[#b89628]">
-            <Facebook size={20} />
-          </a>
-          <a href="https://www.instagram.com/lawrence.view.hotel.lahore/" target="_blank" rel="noopener noreferrer" className="hover:text-[#b89628]">
-            <Instagram size={20} />
-          </a>
-          <a href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1" className="hover:text-[#b89628]">
-            <Music2 size={20} />
-          </a>
+            <a
+              href="https://www.facebook.com/LawrenceViewHotelLahore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#b89628]"
+            >
+              <Facebook size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com/lawrence.view.hotel.lahore/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#b89628]"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
+              className="hover:text-[#b89628]"
+            >
+              <Music2 size={20} />
+            </a>
           </div>
         </div>
       </div>
     </>
   );
-}  
+}
