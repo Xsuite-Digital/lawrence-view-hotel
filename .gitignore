@@ -25,12 +25,5 @@ package-lock.json
 *.sln
 *.sw?
 
-<<<<<<< HEAD
-
-
 .env
 node_modules
-=======
-.env
-node_modules
->>>>>>> 12f656e6596900055ac9be4a829a856b5cf37da1
