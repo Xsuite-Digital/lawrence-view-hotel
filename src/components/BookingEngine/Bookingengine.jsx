@@ -16,11 +16,14 @@ const Bookingengine = () => {
   }, []);
 
   return (
-    <div className="w-[90vw] z-10">
+      <div className="h-32 flex items-center justify-center">
+    <div className="    ">
+
       <style>
         {`@import url(//d2uyahi4tkntqv.cloudfront.net/assets/shared.booknow.css?v=1.0.0);
           @import url(//d2uyahi4tkntqv.cloudfront.net/assets/search_widget.css?v=1.0.0);`}
       </style>
+          </div>
       <div id="hr_search_widget"></div>
     </div>
   );
