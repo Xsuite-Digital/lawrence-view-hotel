@@ -79,7 +79,8 @@ const Contact = () => {
               className="mx-auto w-16 h-16 md:w-24 md:h-24"
             />
             <p className="text-sm mt-2">Call us for any inquiry</p>
-            <p className="text-xl md:text-2xl font-bold">(801) 500 50 088</p>
+            <a href="tel:+92(42)36311574" className="text-xl md:text-2xl font-bold">+92 (42) 36311574
+            </a>
           </div>
         </div>
 
