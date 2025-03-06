@@ -13,10 +13,7 @@ export default function Header() {
 
   const languages = [
     { code: "en", name: "English" },
-    // { code: "zh", name: "中文" },
-    // { code: "fr", name: "Français" },
-    // { code: "de", name: "Deutsch" },
-    // { code: "ur", name: "اردو" },
+   
   ];
   useEffect(() => {
     const handleScroll = () => {

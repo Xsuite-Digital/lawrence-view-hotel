@@ -10,7 +10,6 @@ import {
   Linkedin,
 } from "lucide-react";
 import LOGO from "../../assets/logo.webp";
-import FAQ from "../FAQ";
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);

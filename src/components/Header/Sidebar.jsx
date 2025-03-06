@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { X, Menu, Facebook, Linkedin, Instagram, Mail, Phone, Music2 } from "lucide-react";
+import { X, Menu, Facebook,  Instagram, Mail, Phone, Music2 } from "lucide-react";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
