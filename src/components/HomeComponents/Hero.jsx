@@ -3,7 +3,6 @@ import "tailwindcss/tailwind.css";
 import p1 from "../../assets/1.webp";
 import p2 from "../../assets/2.webp";
 import p3 from "../../assets/3.webp";
-import BookingEngine from "../BookingEngine/Bookingengine";
 
 const images = [p1, p2, p3];
 
@@ -19,11 +18,10 @@ const Hero = () => {
 
   return (
     <div className="relative 2xl:mt-24 mt-0 xl:mt-24 lg:mt-48 ">
-     <div 
-  className=" h-[600px] w-[1900px] xl:w-[1345px] 2xl:w-[1900px] 2xl:h-[600px] xl:h-[500px] bg-cover bg-center"
-  style={{ backgroundImage: `url(${images[currentImageIndex]})`  }}
->
-
+      <div
+        className=" h-[600px] w-[1900px] xl:w-[1345px] 2xl:w-[1900px] 2xl:h-[600px] xl:h-[500px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+      >
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
