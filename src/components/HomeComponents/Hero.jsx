@@ -36,7 +36,6 @@ const Hero = () => {
       h-[80vh] md:h-screen"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Hero Text */}
