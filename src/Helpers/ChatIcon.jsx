@@ -15,7 +15,7 @@ const ChatIcon = () => {
   }, []);
   return (
     <div
-      className={`fixed bottom-4 left-4 z-50 transition-transform duration-500 ease-in-out ${
+      className={`fixed bottom-24 right-4 z-50 transition-transform duration-500 ease-in-out ${
         visible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
       }`}
     >
