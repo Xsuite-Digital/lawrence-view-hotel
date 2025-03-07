@@ -49,8 +49,8 @@ export const StorySection = () => {
               the most prestigious hotels in the region.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our commitment to excellence and attention to detail has earned
-              us numerous accolades and the trust of distinguished guests from
+              Our commitment to excellence and attention to detail has earned us
+              numerous accolades and the trust of distinguished guests from
               around the world. Each corner of our hotel tells a story of
               elegance, tradition, and unwavering dedication to exceptional
               service.
