@@ -7,7 +7,7 @@ import Sidebar from "./Sidebar";
 export default function Header() {
   const [scroll, setScroll] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  let timeoutId = null; // Variable to store timeout ID
+  let timeoutId = null; 
 
   const [languageMenu, setLanguageMenu] = useState(false);
 
