@@ -3,6 +3,9 @@ import P1 from "../../assets/ABOUT1.webp";
 import P2 from "../../assets/ABOUT2.webp";
 import {Link} from 'react-router-dom';
 const HotelFeature = () => {
+
+
+  
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Left Side Content */}
@@ -47,14 +50,19 @@ const HotelFeature = () => {
             There are many variations of Lorem Ipsum majority.
           </li>
         </ul>
-    <Link to='about'>
-        <button className="mt-6 bg-[#c4a053] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#b2954b] transition-all">
-          DISCOVER MORE
-        </button>
-    </Link>
+        <div class="animated-button-container">
+  <a href="/about" class="animated-button">
+    <span>DISCOVER MORE</span>
+    <span class="border-top"></span>
+    <span class="border-right"></span>
+    <span class="border-bottom"></span>
+    <span class="border-left"></span>
+  </a>
+</div>
+
+   
       </div>
 
-      {/* Right Side Images */}
       <div className="relative flex flex-col items-center lg:block">
         <div className="border-t-8 w-56 h-64 border-l-8 border-[#c4a053] absolute bottom-0 left-8 hidden lg:block"></div>
 
@@ -76,7 +84,6 @@ const HotelFeature = () => {
 
         <div className="border-b-8 w-64 h-64 border-r-8 border-[#c4a053] absolute -top-[67.8px] -z-10 right-0 hidden lg:block"></div>
 
-        {/* Mobile Images */}
         <div className="flex flex-col items-center gap-6 lg:hidden">
           <img
             src={P2}

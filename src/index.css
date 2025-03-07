@@ -148,3 +148,94 @@ button.secondary {
 button.secondary:hover {
   background-color: #b89628;
 }
+
+
+
+.animated-button-container {
+  display: inline-block;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.animated-button {
+  display: inline-block;
+  background-color: #c4a053;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  /* border-radius: 0.5rem; */
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  background-color: #b2954b;
+}
+
+/* Border elements */
+.animated-button .border-top,
+.animated-button .border-right,
+.animated-button .border-bottom,
+.animated-button .border-left {
+  position: absolute;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+/* Horizontal borders */
+.animated-button .border-top,
+.animated-button .border-bottom {
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+}
+
+/* Vertical borders */
+.animated-button .border-right,
+.animated-button .border-left {
+  height: 100%;
+  width: 2px;
+  transform: scaleY(0);
+}
+
+/* Position the borders */
+.animated-button .border-top {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.animated-button .border-right {
+  top: 0;
+  right: 0;
+  transform-origin: top;
+  transition-delay: 0.3s;
+}
+
+.animated-button .border-bottom {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+  transition-delay: 0.6s;
+}
+
+.animated-button .border-left {
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+  transition-delay: 0.9s;
+}
+
+/* Hover animations */
+.animated-button:hover .border-top,
+.animated-button:hover .border-bottom {
+  transform: scaleX(1);
+}
+
+.animated-button:hover .border-right,
+.animated-button:hover .border-left {
+  transform: scaleY(1);
+}
