@@ -11,10 +11,7 @@ export default function Header() {
 
   const [languageMenu, setLanguageMenu] = useState(false);
 
-  const languages = [
-    { code: "en", name: "English" },
-   
-  ];
+  const languages = [{ code: "en", name: "English" }];
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 50);
@@ -28,8 +25,8 @@ export default function Header() {
     {
       name: "Destinations",
       dropdown: [
-        { name: "Lahore", path: "/Lahore" },
-        { name: "Malam Jabba", path: "/MLJ" },
+        { name: "Lawrence View Hotel Lahore", path: "/Lahore" },
+        { name: "Lawrence View Hotel Malam Jabba", path: "/MLJ" },
       ],
     },
     { name: "About", path: "/about" },
@@ -46,7 +43,7 @@ export default function Header() {
         <div className=" border-b">
           <Link to="/">
             <img
-            onClick={()=> window.scrollTo({top:0 , behavior:"smooth"})}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               src={logo}
               alt="Lawrence View Hotel Logo"
               width={200}
@@ -62,7 +59,7 @@ export default function Header() {
         <div className="flex justify-evenly items-center  border-b">
           <Link to="/">
             <img
-             onClick={()=> window.scrollTo({top:0 , behavior:"smooth"})}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               src={logo}
               alt="Lawrence View Hotel Logo"
               width={200}
@@ -120,6 +117,7 @@ export default function Header() {
             >
               <Globe size={20} />
             </button>
+
             {languageMenu && (
               <div className="absolute top-full left-0 bg-white border shadow-md w-32">
                 {languages.map((lang) => (
@@ -136,7 +134,7 @@ export default function Header() {
           </div>
         </div>
         {/* Navigation Bar */}
-        <nav className="flex justify-center space-x-6 text-sm py-3 bg-white shadow-md">
+        <nav className="flex justify-center space-x-6 text-sm py-3 bg-white shadow-md font-bold hover:no-underline">
           {navLinks.map((link, index) =>
             link.dropdown ? (
               <div
@@ -150,13 +148,14 @@ export default function Header() {
                   timeoutId = setTimeout(() => setDropdownVisible(false), 300); // 300ms delay before hiding
                 }}
               >
-                <span className="cursor-pointer hover:text-[#b89628]">
+                <span className="cursor-pointer hover:text-[#b89628]  hover:no-underline">
                   {link.name}
                 </span>
+
                 {dropdownVisible && (
                   <div
-                    className="absolute left-0 bg-black text-white mt-2 py-2 w-40"
-                    onMouseEnter={() => clearTimeout(timeoutId)} 
+                    className="absolute left-0 bg-black text-white mt-2 py-2 w-72 "
+                    onMouseEnter={() => clearTimeout(timeoutId)}
                     onMouseLeave={() => {
                       timeoutId = setTimeout(
                         () => setDropdownVisible(false),
@@ -168,7 +167,7 @@ export default function Header() {
                       <Link
                         key={subIndex}
                         to={item.path}
-                        className="block px-4 py-2 hover:bg-[#b89628]"
+                        className="block px-4 py-2 hover:bg-[#b89628] hover:no-underline"
                       >
                         {item.name}
                       </Link>
@@ -177,11 +176,21 @@ export default function Header() {
                 )}
               </div>
             ) : (
-              <Link key={index} to={link.path} className="hover:text-[#b89628]">
+              <Link
+                key={index}
+                to={link.path}
+                className="hover:text-[#b89628] hover:no-underline"
+              >
                 {link.name}
               </Link>
             )
           )}
+          <Link
+            to="#"
+            className="px-4 bg-[#b89628] text-white hover:scale-105 transition-all py-1 hover:no-underline transform translate-x-48"
+          >
+            Book Now!
+          </Link>
         </nav>
       </div>
     </>

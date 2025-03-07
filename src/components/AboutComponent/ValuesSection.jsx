@@ -1,27 +1,31 @@
-import { motion } from 'framer-motion';
-import { Heart, Award, Users, Shield } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Heart, Award, Users, Shield } from "lucide-react";
 
 const values = [
   {
     icon: Heart,
     title: "Genuine Care",
-    description: "We put our heart into every interaction, ensuring each guest feels truly valued and cared for."
+    description:
+      "We put our heart into every interaction, ensuring each guest feels truly valued and cared for.",
   },
   {
     icon: Award,
     title: "Excellence",
-    description: "We strive for perfection in every detail, maintaining the highest standards in hospitality."
+    description:
+      "We strive for perfection in every detail, maintaining the highest standards in hospitality.",
   },
   {
     icon: Users,
     title: "Community",
-    description: "We create meaningful connections with our guests and contribute positively to our community."
+    description:
+      "We create meaningful connections with our guests and contribute positively to our community.",
   },
   {
     icon: Shield,
     title: "Trust",
-    description: "We build lasting relationships through transparency, reliability, and consistent service."
-  }
+    description:
+      "We build lasting relationships through transparency, reliability, and consistent service.",
+  },
 ];
 
 export const ValuesSection = () => {
@@ -34,10 +38,13 @@ export const ValuesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Mission & Values</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Mission & Values
+          </h2>
           <div className="w-20 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our mission is to create extraordinary experiences that delight our guests and set new standards in luxury hospitality.
+            Our mission is to create extraordinary experiences that delight our
+            guests and set new standards in luxury hospitality.
           </p>
         </motion.div>
 
@@ -48,12 +55,14 @@ export const ValuesSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:shadow-[#c4a053]"
             >
               <div className="text-amber-500 mb-4">
                 <value.icon size={32} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {value.title}
+              </h3>
               <p className="text-gray-600">{value.description}</p>
             </motion.div>
           ))}
