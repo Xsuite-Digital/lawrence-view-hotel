@@ -1,11 +1,151 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Users, Award, Gift, CreditCard, Sparkles, ArrowRight, ChevronDown, Check, Clock, MapPin, Mail } from 'lucide-react';
+import { faqs, loyaltyTiers } from '../components/LoyaltyComponents/LoyaltyData';
+import Tabs from '../components/LoyaltyComponents/Tabs';
 
 const Loyalty = () => {
+  const [activeTab, setActiveTab] = useState('benefits');
+  const [expandedFaq, setExpandedFaq] = useState(null);
+  
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+  
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+  
+  const itemAnimation  = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+  
+  const toggleFaq = (index) => {
+    setExpandedFaq(expandedFaq === index ? null : index);
+  };
+  
+ 
+  
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, ipsa dolor? Beatae quos vel suscipit sunt, incidunt quas obcaecati corrupti blanditiis omnis tempore eos. Assumenda commodi dolor facere excepturi sunt pariatur dignissimos officia. Excepturi modi, qui exercitationem ullam, minus possimus, rem deleniti unde quibusdam tempore blanditiis aperiam quas vel error cumque consequuntur accusamus maxime laudantium rerum aliquam. Hic veniam accusamus obcaecati repellendus rerum quo tempora officia repudiandae sit, maiores esse illum mollitia in nesciunt, porro quia at possimus aliquam ratione, sed odio ullam. Nesciunt quisquam repudiandae voluptate odio distinctio debitis, corrupti maxime aut eligendi fugit mollitia voluptates voluptatem nemo dicta magnam quis harum officiis cupiditate. Id deserunt eligendi tempora labore laudantium, provident et ipsam corporis dolorum ad reprehenderit itaque adipisci doloremque repudiandae officia quos eum quasi distinctio, voluptate sed modi porro recusandae explicabo? Porro eius maxime laudantium recusandae sint dicta labore aperiam? Officiis expedita hic iure animi praesentium molestiae? Suscipit amet aliquam vero minus hic autem error labore vitae ratione praesentium explicabo ad voluptas dolorem, pariatur similique odio provident, ea eaque. Molestias ullam sint quaerat omnis quo magnam obcaecati velit dolorum dolor, accusantium sequi fuga? Et distinctio nisi quas facere sed, pariatur quibusdam amet dolores. Rem quod ad unde. Reprehenderit inventore doloribus rem tenetur numquam delectus quia laboriosam quisquam, soluta, ducimus adipisci sint cumque commodi facere natus nam optio voluptatum vero quae aliquam cupiditate! Ipsa quibusdam nostrum molestiae doloribus, nisi impedit corporis tempore porro totam? Repellat beatae adipisci aliquid tempore quam iure assumenda iste voluptas recusandae qui error pariatur eius inventore dignissimos ipsam autem molestias obcaecati vero, illo sequi sed. Quasi nobis tempora, aspernatur pariatur doloremque beatae ex. Mollitia magnam, odio ut, dolores voluptates ipsam quas quae ipsa doloremque eos expedita earum impedit, corporis natus unde? Laboriosam dolore saepe harum deserunt recusandae tempora eum, quidem adipisci commodi tempore minima nesciunt velit numquam dolorum reprehenderit expedita ipsam. Perspiciatis tenetur quae assumenda dolor reprehenderit reiciendis, aperiam quibusdam quia earum facere rerum blanditiis tempora commodi. Expedita a qui facere vel esse ab saepe consequuntur quia dicta at! Hic neque sapiente quas, adipisci ea necessitatibus numquam doloremque deleniti voluptatem quaerat laboriosam nesciunt labore iste nam excepturi, ut beatae placeat dolore explicabo maxime recusandae vero repudiandae alias. Officiis hic mollitia sunt incidunt sed totam in, a, eum optio blanditiis laboriosam itaque repellendus quibusdam tempora harum! Eius voluptatibus assumenda distinctio, ad earum et tempore, hic soluta molestiae doloribus harum voluptatem accusantium facere quibusdam, beatae explicabo aut ut mollitia recusandae doloremque! Molestias, fuga assumenda debitis quidem harum in itaque saepe illum recusandae deleniti adipisci? Cumque amet repellat nesciunt odit, facere hic deleniti maxime sequi non, veniam possimus atque delectus iure quis natus sed illo at est nisi exercitationem! Ut unde aliquid nulla nam autem neque beatae esse sit dolores odit qui fugiat, commodi quo similique mollitia ipsum ratione hic labore laborum vero sapiente voluptas exercitationem consectetur. Praesentium eligendi blanditiis suscipit expedita est aspernatur sit tenetur asperiores consequuntur, debitis, quos rem accusamus quae vel at aut delectus fugit incidunt. Explicabo vitae, sunt ab a corrupti voluptatem harum voluptate.
+    <div className="bg-stone-50 min-h-screen">
+      {/* Hero Section */}
+      <motion.div 
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="relative h-96 mt-12 bg-cover bg-center"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')" }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-4 text-center">
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold text-white mb-4"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            Lawrence View Rewards
+          </motion.h1>
+          <motion.p 
+            className="text-xl text-white mb-8 max-w-2xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            Join our exclusive loyalty program and enjoy premium benefits, exclusive offers, and unforgettable experiences.
+          </motion.p>
+          <motion.button 
+            className="bg-[#c4a053] hover:bg-[#c4a053] text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Join Now <ArrowRight className="ml-2 h-5 w-5" />
+          </motion.button>
+        </div>
+      </motion.div>
+      
+      {/* Main Content Section */}
+      <div className="container mx-auto py-16 px-4">
+        {/* Quick Stats */}
+        <motion.div 
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
+          <motion.div variants={itemAnimation} className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
+              <Users className="h-8 w-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-semibold mb-2">10,000+</h3>
+            <p className="text-gray-600">Loyal Members</p>
+          </motion.div>
+          
+          <motion.div variants={itemAnimation} className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
+              <Award className="h-8 w-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-semibold mb-2">3 Tiers</h3>
+            <p className="text-gray-600">Of Exclusive Benefits</p>
+          </motion.div>
+          
+          <motion.div variants={itemAnimation} className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
+              <Gift className="h-8 w-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-semibold mb-2">£50,000+</h3>
+            <p className="text-gray-600">In Rewards Given</p>
+          </motion.div>
+          
+          <motion.div variants={itemAnimation} className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
+              <CreditCard className="h-8 w-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-semibold mb-2">10 Points</h3>
+            <p className="text-gray-600">Per £1 Spent</p>
+          </motion.div>
+        </motion.div>
+        
+       
+        <Tabs expandedFaq={expandedFaq} setExpandedFaq={setExpandedFaq}  itemAnimation={itemAnimation} toggleFaq={toggleFaq} staggerContainer={staggerContainer} activeTab={activeTab } setActiveTab={setActiveTab} />
+        
+        <motion.div 
+          className="bg-gradient-to-r from-[#c4a053] to-[#c4a053] rounded-xl p-8 text-white text-center relative overflow-hidden"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute transform -rotate-12 -left-10 -top-10 w-40 h-40 rounded-lg bg-white"></div>
+            <div className="absolute transform rotate-12 -right-10 -bottom-10 w-40 h-40 rounded-lg bg-white"></div>
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold mb-4">Ready to Start Earning Rewards?</h2>
+            <p className="text-lg mb-6 max-w-2xl mx-auto">Join Lawrence View Rewards today and start earning points with your very next stay. It takes less than a minute to sign up.</p>
+            <motion.button 
+              className="bg-white text-[#c4a053] hover:bg-gray-100 font-bold py-3 px-8 rounded-full inline-flex items-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Join Now <ArrowRight className="ml-2 h-5 w-5" />
+            </motion.button>
+          </div>
+        </motion.div>
+      </div>
+      
+      {/* Footer */}
+    
     </div>
-  )
-}
+  );
+};
 
-export default Loyalty
+export default Loyalty;
