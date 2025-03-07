@@ -3,13 +3,10 @@ import "tailwindcss/tailwind.css";
 import p1 from "../../assets/LVVH.webp";
 import p2 from "../../assets/LVHH.webp";
 import BookingEngine from "../BookingEngine/Bookingengine";
-import GetInTouch from "../HomeComponents/GetInTouch";
-
 
 const images = [p1, p2];
 
 const LahoreHero = () => {
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -49,7 +46,7 @@ const LahoreHero = () => {
           perfect stay.
         </p>
       </div>
-      
+
       <div className=" absolute  lg:-bottom-0 -bottom-8   text-white  py-12 ">
         <BookingEngine />
       </div>

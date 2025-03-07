@@ -3,6 +3,8 @@ import P2 from "../assets/p2.webp";
 import shape from "../assets/shape.webp";
 import logor from "../assets/logor.webp";
 import GetInTouch from "./HomeComponents/GetInTouch";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -53,14 +55,36 @@ const Contact = () => {
         </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {features.map(({ icon: Icon, title, description }, index) => (
-            <FeatureCard
-              key={index}
-              Icon={Icon}
-              title={title}
-              description={description}
-            />
-          ))}
+          {features.map(({ icon: Icon, title, description }, index) => {
+            const [isHovered, setIsHovered] = useState(false);
+
+            return (
+              <motion.div
+                key={index}
+                className="hover:shadow-[#c4a053] p-6 rounded-2xl shadow-lg transition-all cursor-pointer relative overflow-hidden"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <motion.div
+                  className="text-4xl text-gold-500 mb-4 flex justify-center"
+                  animate={isHovered ? { rotate: [0, 360] } : { rotate: 0 }}
+                  transition={
+                    isHovered
+                      ? { repeat: Infinity, duration: 1.5, ease: "linear" }
+                      : {}
+                  }
+                >
+                  <Icon />
+                </motion.div>
+                <h3 className="text-xl font-semibold text-gray-900 text-center">
+                  {title}
+                </h3>
+                <p className="text-gray-600 text-center mt-2">{description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
@@ -79,7 +103,11 @@ const Contact = () => {
               className="mx-auto w-16 h-16 md:w-24 md:h-24"
             />
             <p className="text-sm mt-2">Call us for any inquiry</p>
-            <a href="tel:+92(42)36311574" className="text-xl md:text-2xl font-bold">+92 (42) 36311574
+            <a
+              href="tel:+92(42)36311574"
+              className="text-xl md:text-2xl font-bold"
+            >
+              +92 (42) 36311574
             </a>
           </div>
         </div>

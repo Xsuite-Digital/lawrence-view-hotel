@@ -1,7 +1,7 @@
-import { Lightbulb, Waves, CheckCircle, Table } from "lucide-react";
+import { Lightbulb, CheckCircle, Table } from "lucide-react";
 import P1 from "../../assets/ABOUT1.webp";
 import P2 from "../../assets/ABOUT2.webp";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 const HotelFeature = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -47,11 +47,11 @@ const HotelFeature = () => {
             There are many variations of Lorem Ipsum majority.
           </li>
         </ul>
-    <Link to='about'>
-        <button className="mt-6 bg-[#c4a053] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#b2954b] transition-all">
-          DISCOVER MORE
-        </button>
-    </Link>
+        <Link to="about">
+          <button className="mt-6 bg-[#c4a053] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#b2954b] transition-all">
+            DISCOVER MORE
+          </button>
+        </Link>
       </div>
 
       {/* Right Side Images */}
