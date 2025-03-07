@@ -28,10 +28,10 @@ const Hero = () => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* <div className="absolute inset-0 bg-black/30"></div> */}
       </div>
     </div>
   );
 };
 
-export default Hero;   
+export default Hero;
