@@ -88,7 +88,7 @@ const Loyalty = () => {
         >
           <motion.div
             variants={itemAnimation}
-            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#c4a053]"
+            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#000]"
           >
             <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
               <Users className="h-8 w-8 text-white" />
@@ -99,7 +99,7 @@ const Loyalty = () => {
 
           <motion.div
             variants={itemAnimation}
-            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#c4a053]"
+            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#000]"
           >
             <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
               <Award className="h-8 w-8 text-white" />
@@ -110,7 +110,7 @@ const Loyalty = () => {
 
           <motion.div
             variants={itemAnimation}
-            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#c4a053]"
+            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#000]"
           >
             <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
               <Gift className="h-8 w-8 text-white" />
@@ -121,7 +121,7 @@ const Loyalty = () => {
 
           <motion.div
             variants={itemAnimation}
-            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#c4a053]"
+            className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-[#000]"
           >
             <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
               <CreditCard className="h-8 w-8 text-white" />

@@ -7,7 +7,7 @@ import Sidebar from "./Sidebar";
 export default function Header() {
   const [scroll, setScroll] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  let timeoutId = null; 
+  let timeoutId = null;
 
   const [languageMenu, setLanguageMenu] = useState(false);
 
@@ -105,6 +105,8 @@ export default function Header() {
             </a>
             <a
               href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-[#b89628]"
             >
               <Music2 size={20} />

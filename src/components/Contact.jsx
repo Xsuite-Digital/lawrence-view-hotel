@@ -33,14 +33,6 @@ const features = [
   },
 ];
 
-const FeatureCard = ({ Icon, title, description }) => (
-  <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
-    <Icon className="text-[#c4a053]" size={40} />
-    <h3 className="text-lg font-semibold mt-4">{title}</h3>
-    <p className="text-gray-600 text-center mt-2">{description}</p>
-  </div>
-);
-
 const Contact = () => {
   return (
     <section className="relative w-full bg-white lg:mb-28 mb-0">
@@ -55,36 +47,25 @@ const Contact = () => {
         </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {features.map(({ icon: Icon, title, description }, index) => {
-            const [isHovered, setIsHovered] = useState(false);
-
-            return (
+          {features.map(({ icon: Icon, title, description }, index) => (
+            <motion.div
+              key={index}
+              className="hover:shadow-[#c4a053] p-6 rounded-2xl shadow-lg transition-all cursor-pointer relative overflow-hidden"
+              whileTap={{ scale: 0.98 }} // Slight shrink on tap
+            >
               <motion.div
-                key={index}
-                className="hover:shadow-[#c4a053] p-6 rounded-2xl shadow-lg transition-all cursor-pointer relative overflow-hidden"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+                className="text-4xl text-gold-500 mb-4 flex justify-center"
+                whileHover={{ scale: 1.2 }} // Only zooms in on hover
+                transition={{ duration: 0.3 }}
               >
-                <motion.div
-                  className="text-4xl text-gold-500 mb-4 flex justify-center"
-                  animate={isHovered ? { rotate: [0, 360] } : { rotate: 0 }}
-                  transition={
-                    isHovered
-                      ? { repeat: Infinity, duration: 1.5, ease: "linear" }
-                      : {}
-                  }
-                >
-                  <Icon />
-                </motion.div>
-                <h3 className="text-xl font-semibold text-gray-900 text-center">
-                  {title}
-                </h3>
-                <p className="text-gray-600 text-center mt-2">{description}</p>
+                <Icon />
               </motion.div>
-            );
-          })}
+              <h3 className="text-xl font-semibold text-gray-900 text-center">
+                {title}
+              </h3>
+              <p className="text-gray-600 text-center mt-2">{description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
 
