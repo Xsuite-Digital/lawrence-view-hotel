@@ -16,6 +16,7 @@ import Loyalty from "./pages/Loyalty";
 import Offers from "./pages/Offers";
 import Blogs from "./pages/Blogs";
 import { Toaster } from "react-hot-toast";
+import BlogDetail from "./components/BLOGSCOMPONENT/BlogDetail";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -36,7 +37,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
-          
+          <Route path="/blog/:slug" element={<BlogDetail/>} />
           <Route path="Lahore" element={<Lahore />} />
           <Route path="MLJ" element={<MLJ />} />
           <Route path="contact" element={<Contact />} />

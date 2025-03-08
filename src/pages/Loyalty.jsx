@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Users, Award, Gift, CreditCard, Sparkles, ArrowRight, ChevronDown, Check, Clock, MapPin, Mail } from 'lucide-react';
 import { faqs, loyaltyTiers } from '../components/LoyaltyComponents/LoyaltyData';
 import Tabs from '../components/LoyaltyComponents/Tabs';
+import { Link } from 'react-router-dom';
 
 const Loyalty = () => {
   const [activeTab, setActiveTab] = useState('benefits');
@@ -61,13 +62,15 @@ const Loyalty = () => {
           >
             Join our exclusive loyalty program and enjoy premium benefits, exclusive offers, and unforgettable experiences.
           </motion.p>
+          <Link to='/contact' >
           <motion.button 
             className="bg-[#c4a053] hover:bg-[#c4a053] text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          >
+            >
             Join Now <ArrowRight className="ml-2 h-5 w-5" />
           </motion.button>
+            </Link>
         </div>
       </motion.div>
       
@@ -131,13 +134,15 @@ const Loyalty = () => {
           <div className="relative z-10">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Earning Rewards?</h2>
             <p className="text-lg mb-6 max-w-2xl mx-auto">Join Lawrence View Rewards today and start earning points with your very next stay. It takes less than a minute to sign up.</p>
+           <Link to='/contact'>
             <motion.button 
               className="bg-white text-[#c4a053] hover:bg-gray-100 font-bold py-3 px-8 rounded-full inline-flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            >
+              >
               Join Now <ArrowRight className="ml-2 h-5 w-5" />
             </motion.button>
+              </Link>
           </div>
         </motion.div>
       </div>
