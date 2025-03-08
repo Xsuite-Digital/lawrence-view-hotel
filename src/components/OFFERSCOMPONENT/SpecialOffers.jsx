@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import OfferCard from "./OfferCard";
-
+import b1 from "../../assets/b1.webp"
+import Dining1 from "../../assets/Dining1.webp"
 const SpecialOffers = () => {
   const specialOffers = [
     {
@@ -10,21 +11,19 @@ const SpecialOffers = () => {
       description:
         "Escape for the weekend with our special package including breakfast and dinner for two.",
       price: "Starting from 25,000 PKR",
-      // icon: <Gift className="text-[#c4a053]" size={24} />,
       image:
         "https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["2 nights stay", "Breakfast included", "Dinner for 2", "Late checkout"],
+      features: [ "Breakfast included", "Dinner for 2", "Late checkout"],
     },
     {
       id: 2,
-      title: "Breakfast Package",
+      title: "Buffet Breakfast ",
       description:
-        "Start your day right with our breakfast package, including our signature morning buffet.",
+        "Start your day right with our buffet breakfast , including our signature morning buffet.",
       price: "Starting from 22,000 PKR",
-      // icon: <CoffeeCup className="text-[#c4a053]" size={24} />,
       image:
-        "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["Luxury accommodation", "Breakfast buffet", "Access to pool", "Free WiFi"],
+        b1,
+      features: ["Luxury accommodation", "Breakfast buffet", "Free WiFi"],
     },
     {
       id: 3,
@@ -32,22 +31,11 @@ const SpecialOffers = () => {
       description:
         "Enjoy a romantic evening with our dinner and stay package in our luxurious rooms.",
       price: "Starting from 27,000 PKR",
-      // icon: <Drumstick className="text-[#c4a053]" size={24} />,
       image:
-        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["1 night stay", "3-course dinner", "Complimentary wine", "Breakfast included"],
+        Dining1,
+      features: ["1 night stay", "3-course dinner", "Breakfast included"],
     },
-    {
-      id: 4,
-      title: "Spa & Relaxation",
-      description:
-        "Indulge in a rejuvenating spa experience with our exclusive relaxation package.",
-      price: "Starting from 30,000 PKR",
-      // icon: <Sparkles className="text-[#c4a053]" size={24} />,
-      image:
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: ["Spa treatment", "Luxury suite", "Welcome drink", "Breakfast included"],
-    },
+    
   ];
 
   return (

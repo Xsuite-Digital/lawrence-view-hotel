@@ -186,7 +186,7 @@ export default function Header() {
             )
           )}
           <Link
-            to="#"
+            to="/contact"
             className="px-4 bg-[#b89628] text-white hover:scale-105 transition-all py-1 hover:no-underline transform translate-x-48"
           >
             Book Now!

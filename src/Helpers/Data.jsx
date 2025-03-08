@@ -23,7 +23,7 @@ import Studio from "../assets/Studio.webp";
 
 export const rooms = [
   {
-    image:Deluxe,
+    image:[Deluxe , D3, D2, D1, D4],
     id: 1,
     title: "Deluxe Double Room",
     guests: "2 Guests",
@@ -62,7 +62,7 @@ export const rooms = [
     images: [D3, D2, D1, D4],  
   },
   {
-    image:R1,
+    image:[R1 , S1, S2, S3],
 
     id: 2,
     title: "Superior Suite Room",
@@ -106,7 +106,7 @@ export const rooms = [
     images: [R1, S1, S2, S3],
   },
   {
-    image:ES,
+    image:[ES , E1, E2, E3],
 
     id: 3,
     title: "Executive Suite Room",
@@ -149,7 +149,7 @@ export const rooms = [
     images: [ES, E1, E2, E3],
   },
   {
-    image:Studio,
+    image:[Studio ,  SA1, SA2, SA3],
 
     id: 4,
     title: "Studio Apartment",
@@ -189,7 +189,7 @@ export const rooms = [
     images: [Studio, SA1, SA2, SA3],
   },
   {
-    image:T1,
+    image:[T1 ,  T2 , T3],
 
     id: 5,
     title: "Twin Sharing",
