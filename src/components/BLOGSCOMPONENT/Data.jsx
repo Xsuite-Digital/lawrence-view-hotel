@@ -120,56 +120,20 @@ export const blogPosts = [
     category: "Restaurant",
   },
 ]
-
 export const categories = [
-  {
-    id: 1,
-    name: "Accommodation",
-    slug: "accommodation",
-    count: 12,
-  },
-  {
-    id: 2,
-    name: "Holidays",
-    slug: "holidays",
-    count: 8,
-  },
-  {
-    id: 3,
-    name: "Hotel Zanzi Rooms",
-    slug: "hotel-zanzi-rooms",
-    count: 15,
-  },
-  {
-    id: 4,
-    name: "News",
-    slug: "news",
-    count: 6,
-  },
-  {
-    id: 5,
-    name: "Restaurant",
-    slug: "restaurant",
-    count: 10,
-  },
-  {
-    id: 6,
-    name: "Swimming Pool",
-    slug: "swimming-pool",
-    count: 5,
-  },
-  {
-    id: 7,
-    name: "Uncategorized",
-    slug: "uncategorized",
-    count: 3,
-  },
-]
+  { id: 1, name: "Accommodation", slug: "accommodation", count: 12 },
+  { id: 2, name: "Holidays", slug: "holidays", count: 8 },
+  { id: 3, name: "Hotel Zanzi Rooms", slug: "hotel-zanzi-rooms", count: 15 },
+  { id: 4, name: "News", slug: "news", count: 6 },
+  { id: 5, name: "Restaurant", slug: "restaurant", count: 10 },
+  { id: 6, name: "Swimming Pool", slug: "swimming-pool", count: 5 },
+  { id: 7, name: "Uncategorized", slug: "uncategorized", count: 3 },
+];
 
 export const recentPosts = [
   {
     id: 1,
-    title: "Grand Millennium in pictures",
+    title: "Grand Millennium in Pictures",
     slug: "grand-millennium-in-pictures",
     image:
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -193,11 +157,10 @@ export const recentPosts = [
   },
   {
     id: 4,
-    title: "Live your myth in Millennium",
+    title: "Live Your Myth in Millennium",
     slug: "live-your-myth-in-millennium",
     image:
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     date: "February 10, 2023",
   },
-]
-
+];
