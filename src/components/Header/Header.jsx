@@ -186,8 +186,7 @@ export default function Header() {
             )
           )}
           <Link
-          target="_blank"
-            to="lawrence-view-hotel-apartments-lahore.hotelrunner.com/widgets/7049b834575160d7141d/search_widget.js?v=1.0.0"
+            to="/contact"
             className="px-4 bg-[#b89628] text-white hover:scale-105 transition-all py-1 hover:no-underline transform translate-x-48"
           >
             Book Now!
