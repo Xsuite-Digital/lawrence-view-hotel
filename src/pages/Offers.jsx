@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import OffersHero from '../components/OFFERSCOMPONENT/OffersHero';
 import SpecialOffers from '../components/OFFERSCOMPONENT/SpecialOffers';
 import SeasonalPromotions from '../components/OFFERSCOMPONENT/SeasonalPromotions';
-import CorporatePackages from '../components/OFFERSCOMPONENT/CorporatePackages';
+// import CorporatePackages from '../components/OFFERSCOMPONENT/CorporatePackages';
 
 const Offers = () => {
   return (
@@ -17,7 +17,7 @@ const Offers = () => {
       >
         <SpecialOffers />
         <SeasonalPromotions />
-        <CorporatePackages />
+        {/* <CorporatePackages /> */}
       </motion.div>
     </div>
   );

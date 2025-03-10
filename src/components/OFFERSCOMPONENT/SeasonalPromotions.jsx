@@ -1,161 +1,153 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Gift, Snowflake, Sun  , Check} from 'lucide-react';
+import { Calendar, Sun, Snowflake, ArrowRight, Star, Users, Coffee, Wifi } from 'lucide-react';
 
-const SeasonalPromotions = () => {
+const promotions = [
+  {
+    id: 'holiday-special',
+    title: 'Holiday Special',
+    description: 'Celebrate the festive season with our exclusive holiday package including spa treatments and gourmet dining.',
+    price: 599,
+    duration: '3 nights',
+    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1470',
+    icon: Calendar,
+    features: ['Luxury Suite', 'Spa Access', 'Gourmet Dining', 'Airport Transfer'],
+    accent: 'from-[#c4a053] to-amber-600'
+  },
+  {
+    id: 'winter-escape',
+    title: 'Winter Escape',
+    description: 'Cozy up this winter with our specially curated package featuring indoor activities and warming treats.',
+    price: 499,
+    duration: '2 nights',
+    image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=1470',
+    icon: Snowflake,
+    features: ['Fireplace Suite', 'Hot Chocolate Bar', 'Spa Treatment', 'Winter Activities'],
+    accent: 'from-[#c4a053] to-amber-500'
+  },
+  {
+    id: 'summer-delight',
+    title: 'Summer Delight',
+    description: 'Experience the perfect summer getaway with outdoor activities and refreshing amenities.',
+    price: 699,
+    duration: '4 nights',
+    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=1470',
+    icon: Sun,
+    features: ['Ocean View Suite', 'Pool Access', 'Beach Activities', 'Sunset Dinner'],
+    accent: 'from-[#c4a053] to-amber-400'
+  }
+];
+
+const PromotionCard = ({ promotion, index }) => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="mb-20"
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      className="bg-white rounded-2xl shadow-xl overflow-hidden"
     >
-      <h2 className="text-3xl font-bold mb-2 text-black">Seasonal Promotions</h2>
-      <div className="h-1 w-24 bg-[#c4a053] mb-10"></div>
+      <div className="relative h-64 overflow-hidden">
+        <img
+          src={promotion.image}
+          alt={promotion.title}
+          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+        />
+      </div>
       
-      <div className="bg-gray-50 rounded-xl overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="p-8 lg:p-12">
-            <div className="flex items-center mb-4">
-              <Gift size={28} className="text-[#c4a053]" />
-              <h3 className="text-2xl font-bold ml-3 text-black">Holiday Season Special</h3>
-            </div>
-            <p className="text-gray-700 mb-6">
-              Celebrate the holiday season with us and enjoy special rates, festive decorations, 
-              and seasonal treats. Book our Holiday Season package and receive complimentary 
-              airport transfers and a special gift upon arrival.
-            </p>
-            
-            <ul className="mb-8 space-y-3">
-              <motion.li 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <span className="bg-[#c4a053] text-white rounded-full p-1 mr-3 mt-1">
-                  <Check size={12} />
-                </span>
-                <span className="text-gray-700">20% off on room rates</span>
-              </motion.li>
-              <motion.li 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <span className="bg-[#c4a053] text-white rounded-full p-1 mr-3 mt-1">
-                  <Check size={12} />
-                </span>
-                <span className="text-gray-700">Complimentary airport transfers</span>
-              </motion.li>
-              <motion.li 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <span className="bg-[#c4a053] text-white rounded-full p-1 mr-3 mt-1">
-                  <Check size={12} />
-                </span>
-                <span className="text-gray-700">Festive welcome drink and treats</span>
-              </motion.li>
-              <motion.li 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <span className="bg-[#c4a053] text-white rounded-full p-1 mr-3 mt-1">
-                  <Check size={12} />
-                </span>
-                <span className="text-gray-700">Special holiday dinner</span>
-              </motion.li>
-            </ul>
-            
-            <div className="flex items-center">
-              <p className="text-2xl font-bold text-[#c4a053] mr-4">30,000 PKR</p>
-              <p className="text-gray-500 line-through">38,000 PKR</p>
-            </div>
-            
-            <motion.button 
-              className="mt-6 bg-black text-white px-6 py-3 rounded-md hover:bg-[#c4a053] transition-colors duration-300"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
+      <div className="p-8">
+        <div className="flex items-center gap-3 mb-4">
+          <promotion.icon className="w-6 h-6 text-[#c4a053]" />
+          <h3 className="text-2xl font-semibold">{promotion.title}</h3>
+        </div>
+        
+        <p className="text-gray-600 mb-6">{promotion.description}</p>
+        
+        <div className="flex flex-col gap-4 mb-8">
+          {promotion.features.map((feature, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.1 + 0.5 }}
+              className="flex items-center gap-2"
             >
-              Book This Offer
-            </motion.button>
+              <Star className="w-5 h-5 text-[#c4a053]" />
+              <span className="text-gray-700">{feature}</span>
+            </motion.div>
+          ))}
+        </div>
+        
+        <div className="flex items-end justify-between">
+          <div>
+            <p className="text-sm text-gray-500">Starting from</p>
+            <p className="text-3xl font-bold text-[#c4a053]">${promotion.price}</p>
+            <p className="text-sm text-gray-500">{promotion.duration}</p>
           </div>
           
-          <div className="relative h-96 lg:h-auto">
-            <img 
-              src="https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-              alt="Holiday Season Special" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute top-4 right-4 bg-black text-white py-2 px-4 rounded-lg font-medium">
-              Limited Availability
-            </div>
-          </div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-[#c4a053] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#b38f42] transition-colors duration-300"
+          >
+            Book Now
+            <ArrowRight className="w-4 h-4" />
+          </motion.button>
         </div>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-        <motion.div 
-          className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-          whileHover={{ y: -5 }}
-        >
-          <div className="p-6">
-            <div className="flex items-center mb-3">
-              <Snowflake size={24} className="text-[#c4a053]" />
-              <h3 className="text-xl font-bold ml-2 text-black">Winter Escape</h3>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Escape the cold with our winter special package, including room upgrades and hot beverages.
-            </p>
-            <p className="text-[#c4a053] font-semibold">Starting from 20,000 PKR</p>
-            <motion.button 
-              className="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-[#c4a053] transition-colors duration-300"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Learn More
-            </motion.button>
-          </div>
-        </motion.div>
-        
-        <motion.div 
-          className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-          whileHover={{ y: -5 }}
-        >
-          <div className="p-6">
-            <div className="flex items-center mb-3">
-              <Sun size={24} className="text-[#c4a053]" />
-              <h3 className="text-xl font-bold ml-2 text-black">Summer Delight</h3>
-            </div>
-            <p className="text-gray-700 mb-4">
-              Beat the heat with our summer package, featuring poolside services and refreshing cocktails.
-            </p>
-            <p className="text-[#c4a053] font-semibold">Starting from 23,000 PKR</p>
-            <motion.button 
-              className="mt-4 w-full bg-black text-white py-2 rounded-md hover:bg-[#c4a053] transition-colors duration-300"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Learn More
-            </motion.button>
-          </div>
-        </motion.div>
-      </div>
-    </motion.section>
+    </motion.div>
   );
 };
 
-export default SeasonalPromotions;
+const Amenities = () => {
+  const amenities = [
+    { icon: Users, label: 'Family Friendly' },
+    { icon: Coffee, label: 'Room Service' },
+    { icon: Wifi, label: 'Free Wi-Fi' }
+  ];
 
-// Note: Import the Check component at the top
+  return (
+    <div className="flex justify-center gap-12 mt-16">
+      {amenities.map((amenity, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.2 + 1 }}
+          className="flex flex-col items-center gap-2"
+        >
+          <amenity.icon className="w-8 h-8 text-[#c4a053]" />
+          <span className="text-gray-600">{amenity.label}</span>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
+export default function PromotionsPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Seasonal Promotions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Discover our carefully curated seasonal packages designed for unforgettable stays
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {promotions.map((promotion, index) => (
+            <PromotionCard key={promotion.id} promotion={promotion} index={index} />
+          ))}
+        </div>
+
+        <Amenities />
+      </div>
+    </div>
+  );
+}

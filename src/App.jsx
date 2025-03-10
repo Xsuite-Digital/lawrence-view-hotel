@@ -47,7 +47,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
-          
+          <Route path="/blog/:slug" element={<BlogDetail/>} />
           <Route path="Lahore" element={<Lahore />} />
           <Route path="MLJ" element={<MLJ />} />
           <Route path="contact" element={<Contact />} />

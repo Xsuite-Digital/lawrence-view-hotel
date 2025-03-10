@@ -16,7 +16,7 @@ const Bookingengine = () => {
   }, []);
 
   return (
-      <div className="h-32 flex items-center justify-center">
+      <div className=" lg:p-8 p-6 flex items-center justify-center">
     <div className="    ">
 
       <style>
