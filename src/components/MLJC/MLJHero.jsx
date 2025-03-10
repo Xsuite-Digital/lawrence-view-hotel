@@ -50,9 +50,7 @@ const MLJHero = () => {
         </p>
       </div>
       
-      <div className=" absolute  lg:-bottom-0 -bottom-8   text-white  py-12 ">
-        <BookingEngine />
-      </div>
+     
     </div>
   );
 };
