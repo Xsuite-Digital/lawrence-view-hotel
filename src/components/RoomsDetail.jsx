@@ -65,7 +65,7 @@ export default function RoomsDetail() {
 
         {/* Room Details */}
         <div>
-          <h1 className="text-5xl font-bold text-gray-800">{room.title}</h1>
+          <h1 className="lg:text-5xl text-3xl font-bold text-gray-800">{room.title}</h1>
           <p className="text-gray-600 mt-2 text-lg">
             {room.guests} • {room.size}
           </p>

@@ -69,12 +69,7 @@ const Contact = () => {
               >
                 <motion.div
                   className="text-4xl text-gold-500 mb-4 flex justify-center"
-                  animate={isHovered ? { rotate: [0, 360] } : { rotate: 0 }}
-                  transition={
-                    isHovered
-                      ? { repeat: Infinity, duration: 1.5, ease: "linear" }
-                      : {}
-                  }
+                  
                 >
                   <Icon />
                 </motion.div>

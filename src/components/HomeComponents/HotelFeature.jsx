@@ -67,28 +67,30 @@ const HotelFeature = () => {
       <div className="relative flex flex-col items-center lg:block">
   <div className="border-t-8 w-56 h-64 border-l-8 border-[#c4a053] absolute bottom-0 left-8 hidden lg:block"></div>
 
-  <motion.div
-    className="absolute left-64 -bottom-10 object-cover overflow-hidden hidden lg:block"
-    whileHover={{ scale: 1.05, rotate: 2, filter: "brightness(1.1)" }}
+  <motion.div className="absolute left-64 -bottom-10 w-[400px] h-[300px] overflow-hidden hidden lg:block">
+  <motion.img
+    src={P1}
+    alt="Luxury Hotel Interior"
+    className="w-full h-full object-cover"
+    whileHover={{ scale: 1.2 }} // Zoom in image inside
     transition={{ duration: 0.3 }}
-  >
-    <img
-      src={P1}
-      alt="Luxury Hotel Interior"
-      className="w-[400px] h-[300px] object-cover"
-    />
-  </motion.div>
+  />
+</motion.div>
+
 
   <motion.div
     className="absolute -top-28 left-8 object-cover overflow-hidden hidden lg:block"
-    whileHover={{ scale: 1.05, rotate: -2, filter: "brightness(1.1)" }}
+    whileHover={{   filter: "brightness(1.1)" }}
     transition={{ duration: 0.3 }}
   >
-    <img
-      src={P2}
-      alt="Hotel Hallway"
-      className="w-[400px] h-[300px] object-cover"
-    />
+     <motion.img
+    src={P2}
+    alt="Luxury Hotel Interior"
+    className="w-[400px] h-[300px] object-cover"
+    whileHover={{ scale: 1.2 }} // Zoom in image inside
+    transition={{ duration: 0.3 }}
+
+  />
   </motion.div>
 
   <div className="border-b-8 w-64 h-64 border-r-8 border-[#c4a053] absolute -top-[67.8px] -z-10 right-0 hidden lg:block"></div>
@@ -110,7 +112,7 @@ const HotelFeature = () => {
       transition={{ duration: 0.3 }}
     />
   </div>
-</div>;
+</div>
     </section>
   );
 };
