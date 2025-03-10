@@ -19,7 +19,7 @@ import { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import ChatbotInterface from "./components/ChatbotComponent/ChatInterface";
 import ChatbotButton from "./components/ChatbotComponent/ChatButton";
-
+import BlogDetail from "./components/BLOGSCOMPONENT/BlogDetail";
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
