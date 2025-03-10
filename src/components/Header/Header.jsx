@@ -185,12 +185,12 @@ export default function Header() {
               </Link>
             )
           )}
-          <Link
-            to="/contact"
+          <a
+            href="https://lawrence-view-hotel-apartments-lahore.hotelrunner.com/bv3/search?checkin_date=2025-03-10&checkout_date=2025-03-11&currency=PKR&guest_rooms%5B0%5D%5Badult_count%5D=2&guest_rooms%5B0%5D%5Bchild_count%5D=0&guest_rooms%5B0%5D%5Bguest_count%5D=2&locale=en-US&meta%5Brate_code%5D=HR:925797&meta%5Broom_code%5D=HR:925797&rooms%5Bcount%5D=1&search_made=true"
             className="px-4 bg-[#b89628] text-white hover:scale-105 transition-all py-1 hover:no-underline transform translate-x-48"
           >
             Book Now!
-          </Link>
+          </a>
         </nav>
       </div>
     </>
