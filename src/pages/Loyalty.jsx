@@ -102,7 +102,7 @@ const Loyalty = () => {
     <motion.div
       key={index}
       variants={itemAnimation}
-      className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-black"
+      className="bg-white p-6 rounded-lg shadow-md  duration-300 ease-in-out text-center hover:shadow-black"
     >
       <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
         <item.icon className="h-8 w-8 text-white" />
