@@ -41,12 +41,11 @@ const MLJHero = () => {
       {/* Hero Text */}
       <div className="relative px-6 md:px-24  text-center md:text-left w-full flex flex-col items-center md:items-start justify-center">
         <h1 className="text-white text-3xl md:text-7xl font-bold">
-          Lawrence View Hotel
+        Lawrence View Hotel Malam Jabba!
         </h1>
         <p className="text-white text-base md:text-lg max-w-lg mt-4">
-          Experience comfort and luxury at Lawrence View Hotel, opposite Jinnah
-          Garden—where elegance, modern amenities, and warm hospitality ensure a
-          perfect stay.
+        Nestled amidst the breathtaking mountains of Malam Jabba, Lawrence View Hotel is your ultimate getaway for relaxation and adventure. Enjoy premium accommodations, thrilling outdoor activities, and mesmerizing views, all while being surrounded by nature’s beauty. Indulge in warm hospitality, luxury conveniences, and an unforgettable mountain retreat.
+
         </p>
       </div>
       

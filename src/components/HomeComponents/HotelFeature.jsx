@@ -65,7 +65,7 @@ const HotelFeature = () => {
       </div>
 
       <div className="relative flex flex-col items-center lg:block">
-  <div className="border-t-8 w-56 h-64 border-l-8 border-[#c4a053] absolute bottom-0 left-8 hidden lg:block"></div>
+  <div className="border-t-8 w-72 h-64 border-l-8 border-[#c4a053] absolute bottom-0 left-2 hidden lg:block"></div>
 
   <motion.div className="absolute left-64 -bottom-10 w-[400px] h-[300px] overflow-hidden hidden lg:block">
   <motion.img
@@ -79,7 +79,7 @@ const HotelFeature = () => {
 
 
   <motion.div
-    className="absolute -top-28 left-8 object-cover overflow-hidden hidden lg:block"
+    className="absolute -top-28 left-2 object-cover overflow-hidden hidden lg:block"
     whileHover={{   filter: "brightness(1.1)" }}
     transition={{ duration: 0.3 }}
   >
@@ -93,21 +93,21 @@ const HotelFeature = () => {
   />
   </motion.div>
 
-  <div className="border-b-8 w-64 h-64 border-r-8 border-[#c4a053] absolute -top-[67.8px] -z-10 right-0 hidden lg:block"></div>
+  <div className="border-b-8 w-96 h-64 border-r-8 border-[#c4a053] absolute -top-[67.8px] -z-10 -right-16 hidden lg:block"></div>
 
   {/* Mobile View Images with Hover Effect */}
   <div className="flex flex-col items-center gap-6 lg:hidden">
     <motion.img
       src={P2}
       alt="Hotel Hallway"
-      className="w-[90%] h-auto object-cover rounded-lg shadow-lg"
+      className="w-[100%] h-auto object-cover rounded-lg shadow-lg"
       whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
       transition={{ duration: 0.3 }}
     />
     <motion.img
       src={P1}
       alt="Luxury Hotel Interior"
-      className="w-[90%] h-auto object-cover rounded-lg shadow-lg"
+      className="w-[100%] h-auto object-cover rounded-lg shadow-lg"
       whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
       transition={{ duration: 0.3 }}
     />

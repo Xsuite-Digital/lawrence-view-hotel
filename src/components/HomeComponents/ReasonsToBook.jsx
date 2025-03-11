@@ -6,18 +6,18 @@ import { DollarSign, Clock, Shield } from 'lucide-react';
 const features = [
   {
     icon: <DollarSign className="h-8 w-8" />, 
-    title: 'Best Rates',
-    description: 'We offer the best deals and the lowest rates.',
+    title: 'Best Hotel Prices:',
+    description: 'Enjoy exclusive offers and the lowest rates when you book directly from Lawrence View Hotel Lahore.',
   },
   {
     icon: <Clock className="h-8 w-8" />, 
-    title: 'Easy Booking',
-    description: 'We make online booking simple and easy.',
+    title: 'Easy & Instant room Booking:',
+    description: 'Reserve your luxury hotel room in just a few clicks with instant confirmation and zero hidden charges.',
   },
   {
     icon: <Shield className="h-8 w-8" />, 
-    title: 'Safe & Secure',
-    description: 'We ensure your personal information is kept safe and secure.',
+    title: 'Safe & Secure Reservations:',
+    description: 'Your personal information and payment details are fully protected with advanced security measures.',
   },
 ];
 

@@ -41,9 +41,8 @@ const LahoreHero = () => {
           Lawrence View Hotel
         </h1>
         <p className="text-white text-base md:text-lg max-w-lg mt-4">
-          Experience comfort and luxury at Lawrence View Hotel, opposite Jinnah
-          Garden—where elegance, modern amenities, and warm hospitality ensure a
-          perfect stay.
+        Located in the heart of Lahore, Lawrence View Hotel Lahore, opposite Jinnah Garden, offers a luxurious retreat with stunning views, elegant accommodations, and exceptional hospitality. Stay close to Lahore’s cultural landmarks, historic sites, and vibrant markets while enjoying unparalleled comfort, modern amenities, and world-class service at the best hotel with city views.
+
         </p>
       </div>
 
