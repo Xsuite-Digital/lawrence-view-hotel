@@ -4,27 +4,27 @@ import { Heart, Award, Users, Shield } from "lucide-react";
 const values = [
   {
     icon: Heart,
-    title: "Genuine Care",
+    title: "Unparalleled Hospitality:",
     description:
-      "We put our heart into every interaction, ensuring each guest feels truly valued and cared for.",
+      "We ensure every guest enjoys premium service, personalized care, and a warm, welcoming atmosphere.",
   },
   {
     icon: Award,
-    title: "Excellence",
+    title: "Luxury & Elegance:",
     description:
-      "We strive for perfection in every detail, maintaining the highest standards in hospitality.",
+      "Our stylish accommodations and modern amenities create a sophisticated retreat for all travelers.",
   },
   {
     icon: Users,
-    title: "Community",
+    title: "Community Connection:",
     description:
-      "We create meaningful connections with our guests and contribute positively to our community.",
+      "We embrace local culture, enrich guest experiences, and build meaningful connections with our surroundings.",
   },
   {
     icon: Shield,
-    title: "Trust",
+    title: "Trust & Commitment:",
     description:
-      "We build lasting relationships through transparency, reliability, and consistent service.",
+      "With transparency and security, we guarantee a seamless stay where your comfort, privacy, and satisfaction come first.",
   },
 ];
 
@@ -43,8 +43,8 @@ export const ValuesSection = () => {
           </h2>
           <div className="w-20 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our mission is to create extraordinary experiences that delight our
-            guests and set new standards in luxury hospitality.
+          At Lawrence View Hotel, we are dedicated to providing exceptional hospitality, seamless comfort, and a memorable experience for every guest.
+
           </p>
         </motion.div>
 
