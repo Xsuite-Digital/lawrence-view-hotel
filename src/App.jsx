@@ -16,8 +16,10 @@ import Loyalty from "./pages/Loyalty";
 import Offers from "./pages/Offers";
 import Blogs from "./pages/Blogs";
 import { Toaster } from "react-hot-toast";
+import { useState } from "react";
+import ChatbotInterface from "./components/ChatbotComponent/ChatInterface";
+import ChatbotButton from "./components/ChatbotComponent/ChatButton";
 import BlogDetail from "./components/BLOGSCOMPONENT/BlogDetail";
-
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -29,11 +31,19 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const toggleChat = () => {
+    setIsChatOpen(!isChatOpen);
+  };
   return (
     <BrowserRouter>
     <Toaster />
       <ScrollToTop />
       <ChatIcon />
+       {/* Chatbot Button and Interface */}
+       <ChatbotButton isOpen={isChatOpen} onClick={toggleChat} />
+      {isChatOpen && <ChatbotInterface onClose={toggleChat} />}
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
