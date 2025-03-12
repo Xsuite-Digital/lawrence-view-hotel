@@ -27,8 +27,6 @@ const Hero = () => {
           className="h-full w-full object-contain transition-opacity duration-1000 ease-in-out"
         />
 
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black/30"></div> */}
       </div>
     </div>
   );
