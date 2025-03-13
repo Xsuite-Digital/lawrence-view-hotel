@@ -3,14 +3,10 @@ import { motion } from 'framer-motion';
 import O1 from "../../assets/O1.webp"
 const OffersHero = () => {
   return (
-    <div className="relative h-96 overflow-hidden">
-    <img 
-      src={O1} 
-      alt="Lawrence View Hotel Offers" 
-      className="w-full h-full object-cover"
-    />
+    <div className="bg-black mt-24 p-8  overflow-hidden">
+    
   
-      <div className="absolute inset-0 mt-12 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
+      <div className=" inset-0  bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
         <motion.h1 
           className="text-4xl text-white md:text-6xl font-bold mb-4 text-center"
           initial={{ y: -50, opacity: 0 }}
