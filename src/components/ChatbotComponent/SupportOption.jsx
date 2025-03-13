@@ -28,7 +28,6 @@ export default function SupportOptions({ onBackToChat }) {
       </p>
 
       <div className="space-y-3">
-        {/* Toggle Call Options Button */}
         <button
           onClick={handleToggleCallOptions}
           className="w-full bg-black text-white py-3 rounded-lg font-medium flex items-center justify-center"

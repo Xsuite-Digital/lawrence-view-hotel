@@ -5,16 +5,16 @@ import b1 from "../../assets/b1.webp"
 import Dining1 from "../../assets/Dining1.webp"
 const SpecialOffers = () => {
   const specialOffers = [
-    {
-      id: 1,
-      title: "Weekend Getaway",
-      description:
-        "Escape for the weekend with our special package including breakfast and dinner for two.",
-      price: "Starting from 25,000 PKR",
-      image:
-        "https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      features: [ "Breakfast included", "Dinner for 2", "Late checkout"],
-    },
+    // {
+    //   id: 1,
+    //   title: "Weekend Getaway",
+    //   description:
+    //     "Escape for the weekend with our special package including breakfast and dinner for two.",
+    //   price: "Starting from 25,000 PKR",
+    //   image:
+    //     "https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    //   features: [ "Breakfast included", "Dinner for 2", "Late checkout"],
+    // },
     {
       id: 2,
       title: "Buffet Breakfast ",
