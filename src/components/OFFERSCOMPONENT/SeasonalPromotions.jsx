@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Sun, Snowflake, ArrowRight, Star, Users, Coffee, Wifi } from 'lucide-react';
-
+import MLJH2 from "../../assets/MLJH2.webp"
+import LVHL from "../../assets/LVHL.webp"
+import Deluxe from "../../assets/Deluxe.webp"
 const promotions = [
   {
     id: 'holiday-special',
@@ -9,9 +11,9 @@ const promotions = [
     description: 'Celebrate the festive season with our exclusive holiday package including spa treatments and gourmet dining.',
     price: 599,
     duration: '3 nights',
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1470',
+    image: Deluxe,
     icon: Calendar,
-    features: ['Luxury Suite', 'Spa Access', 'Gourmet Dining', 'Airport Transfer'],
+    features: ['Luxury Suite', 'Gourmet Dining', 'Airport Transfer'],
     accent: 'from-[#c4a053] to-amber-600'
   },
   {
@@ -20,9 +22,9 @@ const promotions = [
     description: 'Cozy up this winter with our specially curated package featuring indoor activities and warming treats.',
     price: 499,
     duration: '2 nights',
-    image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80&w=1470',
+    image: MLJH2,
     icon: Snowflake,
-    features: ['Fireplace Suite', 'Hot Chocolate Bar', 'Spa Treatment', 'Winter Activities'],
+    features: ['Fireplace Suite', 'Hot Chocolate Bar',  'Winter Activities'],
     accent: 'from-[#c4a053] to-amber-500'
   },
   {
@@ -31,9 +33,9 @@ const promotions = [
     description: 'Experience the perfect summer getaway with outdoor activities and refreshing amenities.',
     price: 699,
     duration: '4 nights',
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=1470',
+    image: LVHL,
     icon: Sun,
-    features: ['Ocean View Suite', 'Pool Access', 'Beach Activities', 'Sunset Dinner'],
+    features: [ 'Beach Activities', 'Sunset Dinner'],
     accent: 'from-[#c4a053] to-amber-400'
   }
 ];
