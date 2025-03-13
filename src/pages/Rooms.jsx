@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 
 export default function Rooms() {
   return (
-    <div className="bg-gray-100 py-12">
-      <h2 className="text-3xl font-bold mt-4 2xl:mt-0 text-center mb-8">Rooms</h2>
+    <div className="bg-gray py-12  mt-12">
+      <h2 className="text-3xl font-bold lg:mt-24 -mt-12 p-12 text-white  bg-black  2xl:mt-0 text-center mb-8">Rooms</h2>
       <div className="grid lg:grid-cols-3 max-w-5xl w-full mx-auto grid-cols-1 gap-y-8">
         {rooms.map((room) => {
           const [currentImageIndex, setCurrentImageIndex] = useState(0);

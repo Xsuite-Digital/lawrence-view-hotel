@@ -33,15 +33,11 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className=" bg-white">
       {/* Hero Section */}
-      <div className="relative h-[40vh] w-full">
-        <img
-          src={contactbanner}
-          alt="Lawrence View Hotel Lobby"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <div className="    w-full">
+      
+        <div className=" bg-black lg:mt-24 -mt-1 p-12 flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl text-white font-light tracking-wide">
             Get in Touch
           </h1>
