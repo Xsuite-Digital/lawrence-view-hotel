@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useChat } from "@ai-sdk/react";
-import { ChevronLeft, Send, X } from "lucide-react";
+import { ChevronLeft, Send, X , MapPin } from "lucide-react";
 import QuickActionButton from "./ActionButton";
 import RoomOption from "./RoomOption";
 import LocationInfo from "./LocationInfo";
@@ -46,20 +45,108 @@ export default function ChatbotInterface({ onClose }) {
           responseContent = "I'm here to help you with any inquiries you have about the hotel.";
         } else if (userInput === "bye" || userInput === "goodbye") {
           responseContent = "Goodbye! Have a wonderful day.";
-        } else if (userInput.includes("room")) {
-          responseContent = "Our hotel offers luxurious rooms with complimentary breakfast, Wi-Fi, and access to the swimming pool.";
+        
         } else if (userInput.includes("location")) {
-          responseContent = "The hotel is located at 123 Luxury Avenue, just 5 minutes away from the city center.";
-        } else if (userInput.includes("contact")) {
-          responseContent = "You can reach us at +1 (123) 456-7890 or email us at contact@lvh.com.";
+          responseContent = (
+              <>
+                  <span>The hotel is located at 54-A Lawrence Road, opposite Jinnah Garden, Lahore, Pakistan.</span>
+                  <br />
+                  <br />
+                  <span>Other locations:</span>
+                  <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>
+                      <li>  Close to Lahore Zoo</li>
+                      <li>Close to Examination Hall BISE Lahore</li>
+                      <li>Near Pearl Continental Hotel, Lahore</li>
+                      <li>Near China Chowk, Lahore</li>
+                      <div className="flex mt-4 items-start space-x-4 mb-4">
+        <MapPin className="w-6 h-6 text-[#b89628] flex-shrink-0 hover:text-black" />
+        <a href="https://maps.app.goo.gl/bSAT2zHBW9SRgaRr7" target="_blank" className="text-gray-600">
+          54-A Lawrence Road, opposite Jinnah Garden, Lahore, Pakistan
+        </a>
+      </div>
+                  </ul>
+              </>
+          );
+      }
+      else if (userInput.includes("contact")) {
+        responseContent = 
+          <div>
+            
+            <SupportOptions/>
+          </div>
+        
+      
         } else if (userInput.includes("menu") || userInput.includes("dining")) {
           responseContent = "Our dining services include a variety of continental and traditional dishes available 24/7.";
+        } else if (userInput.includes("couple") || userInput.includes("unmarried")) {
+          responseContent = "As per our hotel policy, we accommodate only married couples. Guests are required to provide valid proof of marriage, such as a marriage certificate, along with their national ID cards at check-in. Unmarried couples are not allowed to stay.";
+        } else if (userInput.includes("minibar") || userInput.includes("fridge")) {
+          responseContent = 
+            <div>
+              <p>Minibar include:</p>
+              
+              <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>
+                <li>Red Bull</li>
+                <li>Coke / Sprite / Diet</li>
+                <li>Rani Juice</li>
+                <li>Chocolate</li>
+                <li>Mineral Water (Small)</li>
+                <li>Sting</li>
+                <li>Cookies</li>
+                <li>Chips</li>
+                <li>Popcorn</li>
+              </ul>
+            </div>
+          ;
+        
+        
+        } else if (userInput.includes("parking") ) {
+          responseContent = "Secure parking is available for all guests, ensuring safety and convenience throughout your stay";
+        } else if (userInput.includes("reserve room") ||userInput.includes("book ")  ||userInput.includes("book a room") ||userInput.includes("reserved") ) {
+          responseContent =  <div>
+          <p>Step 1: Select the Room below</p>
+          <p>Step 2: Click On Book Now</p>
+         
+          <RoomOption/>
+        </div>;
+        } else if (userInput.includes("bridal room") || userInput.includes("honeymoon")) {
+          responseContent = "Our hotel offers a beautifully designed bridal room, perfect for newlyweds seeking luxury, comfort, and privacy. Elegantly decorated with premium amenities.Enjoy a serene atmosphere, personalized services, and a touch of elegance to make your special moments truly unforgettable.";
+        } else if (userInput.includes("wifi") || userInput.includes("internet")) {
+          responseContent = "WiFi and internet are available throughout our hotel for your convenience.";
+        } else if (userInput.includes("car") || userInput.includes("rent a car")) {
+          responseContent = "Our hotel offers a Rent-A-Car service on a daily and monthly basis, with cars available only with a driver.";
+        } else if (userInput.includes("payment") || userInput.includes("advance")|| userInput.includes("cash")|| userInput.includes("pay")|| userInput.includes("debit card")|| userInput.includes("foreign currency")) {
+          responseContent =<div> 
+            <p>We Accept Foreign Currency and Debit & Credit Cards. We also accept advance payments for reservations.</p>
+            <p>Meezan Bank - Shadman Branch</p>
+            <ul >
+            
+            <li>Account Number:02090108828711</li>
+            {/* <li className="pr-8">IBAN:PK12MEZN0002090108828711</li> */}
+            </ul>
+          </div> ; 
+        } else if (userInput.includes("water") || userInput.includes("bottles")) {
+          responseContent = "We provide two small water bottles for your convenience during your stay. ";
+        } else if (userInput.includes("laundry") || userInput.includes("washing")) {
+          responseContent = <div>
+            <p>Our hotel offers convenient and professional laundry services to ensure you enjoy a fresh and comfortable stay.</p>
+          <p>Laundry Services include:</p>
+          
+          <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>
+            <li>Washing</li>
+            <li>Pressing</li>
+            <li>Dry Cleaing</li>
+           
+          </ul>
+        </div>;
+        } else if (userInput.includes("Triple ") || userInput.includes("sharing room")) {
+          responseContent = "Our hotel offers spacious triple-sharing rooms, perfect for groups or families seeking comfort and convenience. Equipped with modern amenities, cozy bedding, and ample space, these rooms ensure a relaxing and enjoyable stay for all guests.";
         } else {
           // Default response for anything else
           responseContent = "Thank you for your message. I'm here to help you with any questions about our hotel.";
         }
         
-        // Add assistant response
+        // Add assistant response 
         setTimeout(() => {
           setCustomMessages(prevMessages => [
             ...prevMessages, 
@@ -106,14 +193,19 @@ export default function ChatbotInterface({ onClose }) {
 
   const getQuickActionContent = (actionType) => {
     switch(actionType) {
-      case "rooms":
-        return "Our hotel offers luxurious rooms with complimentary breakfast, Wi-Fi, and access to the swimming pool.";
+      
       case "menu":
-        return "Our dining services include a variety of continental and traditional dishes available 24/7.";
+        return "Our dining services include a variety of continental and traditional dishes available .";
       case "support":
-        return "You can reach us at +1 (123) 456-7890 or email us at contact@lvh.com.";
+        return "For any inquiries or reservations, feel free to contact us at:📞 Landline: +92 (42) 36311574📱 Mobile: +92 (320)6361-916 Our team is available to assist you with your queries.";
       case "location":
-        return "The hotel is located at 123 Luxury Avenue, just 5 minutes away from the city center.";
+        return "The hotel is located at 54-A Lawrence Road, opposite Jinnah Garden, Lahore, Pakistan \n\n" +
+                            "Other locations:\n" +
+                            "• Close to Lahore Zoo \n" +
+                            "• Close to  Examination Hall Bise Lahore\n" +
+                            "• Near Hayyat Luxury Hotel Apartments , Lahore\n" +
+                            "• Near Pearl Continental Hotel, Lahore\n" +
+                            "• Near China Chownk, Lahore\n";
       default:
         return "I'm here to help you with any questions about our hotel. Please let me know what you need!";
     }
@@ -177,8 +269,10 @@ export default function ChatbotInterface({ onClose }) {
             {messages.map((message, index) => (
               <div key={message.id || index} className={`mb-3 ${message.role === "user" ? "flex justify-end" : "flex justify-start"}`}>
                 <div className={`p-3 rounded-lg ${message.role === "user" ? "bg-black text-white" : "bg-gray-200"} max-w-[80%]`}>
+                  
                   {message.content}
                 </div>
+                
               </div>
 
             ))}

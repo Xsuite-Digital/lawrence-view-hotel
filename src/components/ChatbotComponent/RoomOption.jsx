@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
-import Bookingengine from "../Bookingengine/Bookingengine"; 
+
 import D3 from "../../assets/D3.webp";
 import R1 from "../../assets/R1.webp";
 import ES from "../../assets/ES.webp";
@@ -13,8 +13,8 @@ const roomCategories = [
     id: "executive",
     name: "Executive Suite Room",
     image: ES,
-    description: ["King", "Garden view", "City view", "Street view", "Bathroom with jacuzzi", "Park view"],
-    price: "$120/night",
+    description: ["King", "Garden view", "City view", "Street view", "Bathroom with jacuzzi", "Park view","Two small minral water bottles"],
+    amenties: "buffet/breakfast complimentary",
   },
   {
     id: "deluxe",
@@ -27,8 +27,9 @@ const roomCategories = [
       "Bathroom with shower",
       "Wireless internet",
       "Fridge",
+      "Two small minral water bottles",
     ],
-    price: "$250/night",
+    amenties: "buffet breakfast is complimentary",
   },
   {
     id: "superior",
@@ -42,8 +43,9 @@ const roomCategories = [
       "Seating area",
       "Separate luggage store",
       "Cable TV",
+      "Two small minral water bottles",
     ],
-    price: "$250/night",
+    amenties: "buffet breakfast is complimentary",
   },
   {
     id: "apartment",
@@ -56,8 +58,9 @@ const roomCategories = [
       "Kitchenette",
       "Breakfast area",
       "Equipped kitchen",
+      "Two small minral water bottles",
     ],
-    price: "$250/night",
+    amenties: "buffet breakfast is complimentary",
   },
   {
     id: "twin",
@@ -69,9 +72,10 @@ const roomCategories = [
       "Dishwasher",
       "Smart Home Controls",
       "Living Room",
+      "Two small minral water bottles",
       
     ],
-    price: "$250/night",
+    amenties: "buffet breakfast is complimentary",
   },
   {
     id: "quad Room",
@@ -84,8 +88,9 @@ const roomCategories = [
       "Kitchenette",
       "High-Speed WiFi",
       "Remote control TV",
+      "Two small minral water bottles",
     ],
-    price: "$250/night",
+    amenties: "buffet breakfast is complimentary",
   },
 
 ];
@@ -129,7 +134,7 @@ export default function RoomOption({ onBackToChat }) {
                   className="w-full text-left p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <div className="font-medium">{room.name}</div>
-                  <div className="text-sm text-gray-600">{room.price}</div>
+                  {/* <div className="text-sm text-gray-600">{room.amenties}</div> */}
                 </button>
               ))}
             </div>
@@ -144,7 +149,7 @@ export default function RoomOption({ onBackToChat }) {
                     </div>
 
                     <h4 className="font-bold text-lg">{room.name}</h4>
-                    <p className="text-black font-medium mb-2">{room.price}</p>
+                    <p className="text-black font-medium mb-2">{room.amenties}</p>
 
                     <ul className="mb-4">
                       {room.description.map((item, index) => (
@@ -175,9 +180,9 @@ export default function RoomOption({ onBackToChat }) {
             </div>
           )}
 
-          <button onClick={onBackToChat} className="w-full border border-black text-black py-2 rounded-lg font-medium mt-4">
+          {/* <button onClick={onBackToChat} className="w-full border border-black text-black py-2 rounded-lg font-medium mt-4">
             Back to Conversation
-          </button>
+          </button> */}
         </>
       )}
     </div>

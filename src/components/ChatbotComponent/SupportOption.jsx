@@ -9,15 +9,15 @@ export default function SupportOptions({ onBackToChat }) {
   };
 
   const handleCallNumber = () => {
-    window.location.href = "tel:+12345678900";
+    window.location.href = "tel:+92 (320) 6361-916";
   };
 
   const handleCallLandline = () => {
-    window.location.href = "tel:+1122334455"; // Replace with actual landline number
+    window.location.href = "tel:+92 (42) 36311574"; // Replace with actual landline number
   };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/1234567890", "_blank");
+    window.open("https://wa.me/+923206361916", "_blank");
   };
 
   return (
@@ -78,9 +78,9 @@ export default function SupportOptions({ onBackToChat }) {
       </div>
 
       {/* Back to Chat Button */}
-      <button onClick={onBackToChat} className="w-full border border-black text-black py-2 rounded-lg font-medium mt-4">
+      {/* <button onClick={onBackToChat} className="w-full border border-black text-black py-2 rounded-lg font-medium mt-4">
         Back to Conversation
-      </button>
+      </button> */}
     </div>
   );
 }
