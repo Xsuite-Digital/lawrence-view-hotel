@@ -50,13 +50,8 @@ const Loyalty = () => {
   initial="hidden"
   animate="visible"
   variants={fadeIn}
-  className="relative min-h-[500px] mt-12 bg-cover bg-center"
-  style={{
-    backgroundImage: `url(${L1})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
+  className="relative bg-black  h-96 mt-12 bg-cover bg-center"
+  
 >
   <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-4 text-center">
     <motion.h1

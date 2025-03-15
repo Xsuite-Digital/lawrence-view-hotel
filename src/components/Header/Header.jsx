@@ -148,7 +148,7 @@ export default function Header() {
                   timeoutId = setTimeout(() => setDropdownVisible(false), 300); // 300ms delay before hiding
                 }}
               >
-                <span className="cursor-pointer hover:text-[#b89628]  hover:no-underline">
+                <span onClick={()=> window.scrollTo({top:0 , behavior:'smooth'})} className="cursor-pointer hover:text-[#b89628]  hover:no-underline">
                   {link.name}
                 </span>
 

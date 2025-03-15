@@ -11,45 +11,51 @@ const HotelFeature = () => {
     <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Left Side Content */}
       <div className="tracking-widest space-y-7 text-center lg:text-left">
-        <h3 className="text-lg font-semibold text-[#c4a053] uppercase">
-          Lawrence View Hotel
+        <h3 className="text-lg flex flex-col font-semibold text-[#c4a053] uppercase">
+        Lawrence View Hotel
+        <span>
+
+Luxury Hotel | City Views | Exceptional Comfort
+        </span>
+
         </h3>
         <h2 className="lg:text-5xl text-xl font-semibold mt-2 text-gray-900">
-          We Provide Outdoor Activities To All Visitors
+        Experience Comfort & Luxury at Lawrence View Hotel
         </h2>
         <p className="mt-4 text-gray-600 leading-relaxed">
-          San Francisco has hills with views, the coast, excellent food & has
-          been voted the happiest, healthiest, and fittest city in the States
-          many times.
+        Discover a world of luxury, comfort, and hospitality at Lawrence View Hotel. Whether you’re staying in the heart of Lahore or the breathtaking heights of Malam Jabba, every moment is designed for your relaxation and joy.
+
         </p>
 
         {/* Featured */}
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 mt-6 items-center lg:items-start">
           <div className="flex items-center gap-2">
             <Lightbulb className="w-6 h-6 text-[#c4a053]" />
-            <span className="font-medium text-gray-900">The Best Lighting</span>
+            <span className="font-medium text-gray-900">Elegant Hotel Ambiance
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <Table className="w-6 h-6 text-[#c4a053]" />
-            <span className="font-medium text-gray-900">The Best Dining</span>
+            <span className="font-medium text-gray-900">Exquisite Dining Experience</span>
           </div>
         </div>
 
         {/* Bullet Points */}
         <ul className="mt-6 space-y-2 text-center lg:text-left">
-          <li className="flex items-center justify-center lg:justify-start gap-2 text-gray-700">
-            <CheckCircle className="text-[#c4a053] w-5 h-5" />
-            It is a long fact that a reader will be distracted by readable
-            content.
+          <li className="flex  justify-center lg:justify-start gap-2 text-gray-700">
+            <CheckCircle className="text-[#c4a053] w-8 h-8" />
+            Seamless room booking for an unmatched stay
+Enjoy breathtaking city views from your hotel room
+Stay at the best hotel, where luxury meets comfort
+
           </li>
           <li className="flex items-center justify-center lg:justify-start gap-2 text-gray-700">
-            <CheckCircle className="text-[#c4a053] w-5 h-5" />
-            Lorem Ipsum is simply dummy text of the printing and industry.
+            <CheckCircle className="text-[#c4a053] w-10 h-10" />
+            Book your stay at Lawrence View Hotel, the best hotel in Lahore and hotel in Malam Jabba, where every stay promises a luxurious retreat with the finest hospitality.
+
+
           </li>
-          <li className="flex items-center justify-center lg:justify-start gap-2 text-gray-700">
-            <CheckCircle className="text-[#c4a053] w-5 h-5" />
-            There are many variations of Lorem Ipsum majority.
-          </li>
+         
         </ul>
         <div class="animated-button-container">
   <a href="/about" class="animated-button">
