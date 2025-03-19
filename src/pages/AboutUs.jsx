@@ -6,11 +6,6 @@ import { TestimonialsSection } from "../components/AboutComponent/TestimonialsSe
 import { Link } from "react-router-dom";
 import Loader from "../Helpers/Loader";
 
-const TeamSection = lazy(() => 
-  import("../components/AboutComponent/TeamSection").then(module => ({
-    default: module.TeamSection
-  }))
-);
 const ValuesSection = lazy(() => 
   import("../components/AboutComponent/ValuesSection").then(module => ({
     default: module.ValuesSection
@@ -35,7 +30,6 @@ export default function AboutUs() {
 
         <Suspense fallback={<Loader />}>
           <ValuesSection />
-          <TeamSection />
         </Suspense>
 
         <StorySection />

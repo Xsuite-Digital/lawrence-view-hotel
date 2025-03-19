@@ -42,15 +42,18 @@ Luxury Hotel | City Views | Exceptional Comfort
 
         {/* Bullet Points */}
         <ul className="mt-6 space-y-2 text-center lg:text-left">
-          <li className="flex  justify-center lg:justify-start gap-2 text-gray-700">
-            <CheckCircle className="text-[#c4a053] w-8 h-8" />
-            Seamless room booking for an unmatched stay
-Enjoy breathtaking city views from your hotel room
-Stay at the best hotel, where luxury meets comfort
+          <li className="flex flex-col justify-center lg:justify-start gap-2 text-gray-700">
+            
+            <li>Seamless room booking for an unmatched stay.
+            </li>
+            <li>Enjoy breathtaking city views from your hotel room.
+            </li>
+            <li>Stay at the best hotel, where luxury meets comfort.
+            </li>
 
           </li>
           <li className="flex items-center justify-center lg:justify-start gap-2 text-gray-700">
-            <CheckCircle className="text-[#c4a053] w-10 h-10" />
+          
             Book your stay at Lawrence View Hotel, the best hotel in Lahore and hotel in Malam Jabba, where every stay promises a luxurious retreat with the finest hospitality.
 
 
@@ -70,33 +73,31 @@ Stay at the best hotel, where luxury meets comfort
    
       </div>
 
-      <div className="relative flex flex-col items-center lg:block">
+   <div className="relative flex flex-col items-center lg:block">
   <div className="border-t-8 w-72 h-64 border-l-8 border-[#c4a053] absolute bottom-0 left-2 hidden lg:block"></div>
 
   <motion.div className="absolute left-64 -bottom-10 w-[400px] h-[300px] overflow-hidden hidden lg:block">
-  <motion.img
-    src={P1}
-    alt="Luxury Hotel Interior"
-    className="w-full h-full object-cover"
-    whileHover={{ scale: 1.2 }} // Zoom in image inside
-    transition={{ duration: 0.3 }}
-  />
-</motion.div>
-
+    <motion.img
+      src={P1}
+      alt="Luxury Hotel Interior"
+      className="w-full h-full object-cover border-animated"
+      whileHover={{ scale: 1.2 }} // Zoom in image inside
+      transition={{ duration: 0.3 }}
+    />
+  </motion.div>
 
   <motion.div
     className="absolute -top-28 left-2 object-cover overflow-hidden hidden lg:block"
-    whileHover={{   filter: "brightness(1.1)" }}
+    whileHover={{ filter: "brightness(1.1)" }}
     transition={{ duration: 0.3 }}
   >
-     <motion.img
-    src={P2}
-    alt="Luxury Hotel Interior"
-    className="w-[400px] h-[300px] object-cover"
-    whileHover={{ scale: 1.2 }} // Zoom in image inside
-    transition={{ duration: 0.3 }}
-
-  />
+    <motion.img
+      src={P2}
+      alt="Luxury Hotel Interior"
+      className="w-[400px] h-[300px] object-cover border-animated"
+      whileHover={{ scale: 1.2 }} // Zoom in image inside
+      transition={{ duration: 0.3 }}
+    />
   </motion.div>
 
   <div className="border-b-8 w-96 h-64 border-r-8 border-[#c4a053] absolute -top-[67.8px] -z-10 -right-16 hidden lg:block"></div>
@@ -106,19 +107,20 @@ Stay at the best hotel, where luxury meets comfort
     <motion.img
       src={P2}
       alt="Hotel Hallway"
-      className="w-[100%] h-auto object-cover rounded-lg shadow-lg"
+      className="w-[100%] h-auto object-cover rounded-lg shadow-lg border-animated"
       whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
       transition={{ duration: 0.3 }}
     />
     <motion.img
       src={P1}
       alt="Luxury Hotel Interior"
-      className="w-[100%] h-auto object-cover rounded-lg shadow-lg"
+      className="w-[100%] h-auto object-cover rounded-lg shadow-lg border-animated"
       whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
       transition={{ duration: 0.3 }}
     />
   </div>
 </div>
+
     </section>
   );
 };

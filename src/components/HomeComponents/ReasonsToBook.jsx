@@ -72,12 +72,14 @@ const ReasonsToBook = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center text-center"
+              className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md cursor-pointer"
               variants={itemVariants}
+              whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.15)" }}
+              transition={{ duration: 0.3 }}
             >
               <motion.div
                 className="w-20 h-20 rounded-full bg-[#c4a053] text-white flex items-center justify-center mb-4"
-                whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" }}
+                whileHover={{ scale: 1.1 }}
               >
                 {feature.icon}
               </motion.div>

@@ -1,146 +1,109 @@
 export const blogPosts = [
   {
     id: 1,
-    title: "10 THINGS YOU SHOULD KNOW ABOUT LAWRENCE VIEW HOTEL",
-    slug: "10-things-you-should-know",
+    title: "10 EXCEPTIONAL FEATURES THAT MAKE LAWRENCE VIEW HOTEL YOUR PREMIER DESTINATION",
+    slug: "10-exceptional-features",
     excerpt:
-      "Nestled in the heart of the bustling city, where business meets leisure and luxury blooms on bounds, the Lawrence View Hotel stands tall as a beacon of opulence and sophistication. This magnificent 4-star establishment has redefined the art of hospitality.",
+      "Nestled in the heart of the vibrant cityscape, where business seamlessly integrates with leisure and luxury knows no bounds, Lawrence View Hotel stands as an architectural masterpiece of sophistication and unparalleled hospitality. This prestigious 5-star establishment has redefined the art of luxury accommodation with its commitment to excellence in every detail.",
     content: `
-      <p class="mb-6 text-lg font-medium leading-relaxed">Nestled in the heart of the bustling city, where business meets leisure and luxury blooms on bounds, the Lawrence View Hotel stands tall as a beacon of opulence and sophistication. This magnificent 4-star establishment has redefined the art of hospitality.</p>
+      <p class="mb-6 text-lg font-medium leading-relaxed">Nestled in the heart of the vibrant cityscape, where business seamlessly integrates with leisure and luxury knows no bounds, Lawrence View Hotel stands as an architectural masterpiece of sophistication and unparalleled hospitality. This prestigious 5-star establishment has redefined the art of luxury accommodation with its commitment to excellence in every detail.</p>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">1. Unparalleled Location</h2>
-      <p class="mb-6 leading-relaxed">Situated in the prime location of the city center, Lawrence View Hotel offers easy access to major business districts, shopping malls, and tourist attractions. The strategic positioning makes it an ideal choice for both business and leisure travelers.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">1. Prime Strategic Location</h2>
+      <p class="mb-6 leading-relaxed">Located at the epicenter of the metropolitan hub, Lawrence View Hotel offers unrivaled accessibility to major business districts, premium shopping destinations, cultural landmarks, and tourist attractions. Just 15 minutes from the international airport and adjacent to the city's financial district, our strategic positioning makes us the preferred choice for discerning business travelers and leisure seekers alike. The hotel's proximity to public transportation networks ensures effortless exploration of the city's treasures, while our complimentary shuttle service connects guests to key locations throughout the day.</p>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">2. Luxurious Accommodations</h2>
-      <p class="mb-6 leading-relaxed">Our 120 meticulously designed rooms and suites combine contemporary elegance with traditional charm. Each room features plush bedding, premium linens, and modern amenities to ensure a comfortable stay. The panoramic city views from the floor-to-ceiling windows add an extra touch of luxury to your experience.</p>
+      <div class="my-8 bg-gray-50 p-6 rounded-lg border-l-4 border-[#c8a45e]">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Guest Testimonial</h3>
+        <p class="italic text-gray-600">"The location of Lawrence View Hotel made my business trip exceptionally productive. I could attend meetings across the financial district within minutes and still have time to explore the cultural offerings nearby. The convenience factor alone makes this my go-to accommodation whenever I'm in the city."</p>
+        <p class="mt-2 text-sm text-gray-500">— Richard Thompson, CEO of Global Investments Ltd</p>
+      </div>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">3. Culinary Excellence</h2>
-      <p class="mb-6 leading-relaxed">Indulge in a gastronomic adventure at our three specialty restaurants. From authentic local cuisine to international delicacies, our award-winning chefs craft culinary masterpieces that tantalize your taste buds. The rooftop dining experience under the stars is particularly popular among guests.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">2. Exquisite Accommodations</h2>
+      <p class="mb-6 leading-relaxed">Our collection of 165 meticulously designed rooms and suites represents the pinnacle of contemporary elegance fused with timeless charm. Each accommodation features custom-crafted furniture imported from Italy, 400-thread-count Egyptian cotton linens, and handpicked artwork from local and international artists. The floor-to-ceiling windows showcase breathtaking panoramic views of the city skyline or the serene gardens, providing an ever-changing visual tapestry throughout your stay.</p>
+      <p class="mb-6 leading-relaxed">Every room features a smart home system allowing guests to control lighting, temperature, entertainment, and even curtains through a dedicated tablet or smartphone app. The marble-clad bathrooms boast rainfall showers, deep soaking tubs, heated floors, and a curated selection of Penhaligon's luxury toiletries. For the ultimate indulgence, our Presidential Suite offers 2,500 square feet of opulence, including a private terrace with a jacuzzi, a dedicated butler service, and a fully stocked premium bar.</p>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">4. State-of-the-Art Facilities</h2>
-      <p class="mb-6 leading-relaxed">Stay active during your stay with our comprehensive fitness center equipped with the latest exercise machines. Our temperature-controlled infinity pool offers a refreshing escape, while the spa provides rejuvenating treatments to help you unwind.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">3. Culinary Excellence</h2>
+      <p class="mb-6 leading-relaxed">Lawrence View Hotel stands as a gastronomic destination in its own right, featuring four distinct dining venues that cater to the most sophisticated palates. Our signature restaurant, "Sapphire," helmed by two-Michelin-starred Chef Antoine Dubois, offers a contemporary interpretation of traditional cuisine using locally sourced ingredients and innovative cooking techniques. The seasonal tasting menu with paired wines has become a coveted experience among food enthusiasts and critics alike.</p>
+      <p class="mb-6 leading-relaxed">"Silk Road" explores the rich tapestry of Asian cuisines, with specialized chefs creating authentic dishes from Japanese, Chinese, Thai, and Indian traditions. "Mediterranean" celebrates the coastal flavors of southern Europe with its fresh seafood, handmade pasta, and wood-fired specialties. For casual dining, "The Lounge" offers an all-day menu of international favorites, afternoon tea, and an extensive collection of craft cocktails, rare whiskies, and fine wines. Our rooftop dining experience, "Celestial," combines panoramic city views with astronomy-themed gastronomy, creating unforgettable memories under the stars.</p>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">5. Business-Friendly Environment</h2>
-      <p class="mb-6 leading-relaxed">Lawrence View Hotel boasts five versatile conference rooms and a grand ballroom, making it the perfect venue for business meetings, conferences, and corporate events. Our dedicated event planning team ensures flawless execution of your business functions.</p>
-
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">6. Wedding Destination</h2>
-      <p class="mb-6 leading-relaxed">Create unforgettable memories on your special day with our comprehensive wedding packages. From intimate ceremonies to grand celebrations, our wedding specialists work closely with you to curate a personalized experience that reflects your vision.</p>
-
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">7. Impeccable Service</h2>
-      <p class="mb-6 leading-relaxed">At Lawrence View Hotel, we take pride in our attentive and personalized service. Our multilingual staff is available 24/7 to cater to your needs, ensuring a seamless and enjoyable stay from check-in to check-out.</p>
-
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">8. Sustainability Initiatives</h2>
-      <p class="mb-6 leading-relaxed">We are committed to reducing our environmental footprint through various eco-friendly practices. From energy-efficient lighting to water conservation measures and waste reduction strategies, we strive to be a responsible member of the community.</p>
-
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">9. Local Experiences</h2>
-      <p class="mb-6 leading-relaxed">Immerse yourself in the local culture with our curated experiences. Our concierge can arrange city tours, cultural performances, and authentic dining experiences, allowing you to explore the rich heritage of the region.</p>
-
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">10. Exclusive Loyalty Program</h2>
-      <p class="mb-6 leading-relaxed">Join our exclusive Lawrence Rewards program to enjoy special benefits, including room upgrades, early check-in, late check-out, and dining discounts. Our loyal guests also receive personalized amenities and preferential rates on future bookings.</p>
-
-      <blockquote class="border-l-4 border-primary-500 pl-4 italic my-8">
-        "Lawrence View Hotel exemplifies luxury and comfort in every aspect. It's our preferred choice for both business trips and family vacations." - Travel & Leisure Magazine
-      </blockquote>
-
-      <p class="text-lg font-medium leading-relaxed">Experience the perfect blend of luxury, comfort, and convenience at Lawrence View Hotel. Book your stay today and discover why we are the preferred choice for discerning travelers.</p>
-    `,
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80",
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    ],
-    date: "February 17, 2023",
-    author: "Sarah Johnson",
-    authorImage:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-    authorBio:
-      "Sarah is our senior hospitality correspondent with over 10 years of experience reviewing luxury hotels worldwide.",
-    comments: 8,
-    category: "Accommodation",
-    tags: ["luxury", "hospitality", "travel tips", "hotel features"],
-  },
-  {
-    id: 2,
-    title: "LAWRENCE VIEW HOTEL: A SYMBOL OF ELEGANCE",
-    slug: "grand-millennium-hotel",
-    excerpt:
-      "Introduction to the heart of the bustling city, where business meets leisure and luxury blooms on bounds, the Lawrence View Hotel stands tall as a beacon of opulence and sophistication. Nestled in the heart of the city, this magnificent 4-star establishment has redefined the art of hospitality.",
-    content: `
-      <p class="mb-6 text-lg font-medium leading-relaxed">Nestled in the heart of the bustling city, where business meets leisure and luxury blooms on bounds, the Lawrence View Hotel stands tall as a beacon of opulence and sophistication. This magnificent 4-star establishment has redefined the art of hospitality with its impeccable service and world-class amenities.</p>
-      
       <div class="my-8">
-        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="Hotel Lobby" class="w-full h-auto rounded-lg shadow-lg mb-2" />
-        <p class="text-sm text-gray-500 italic">The elegant lobby of Lawrence View Hotel welcomes guests with its sophisticated ambiance.</p>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Elegant dining experience" class="w-full h-auto rounded-lg shadow-lg mb-2" />
+        <p class="text-sm text-gray-500 italic">The exquisite presentation of seasonal delicacies at our signature restaurant, Sapphire.</p>
       </div>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">A Legacy of Excellence</h2>
-      <p class="mb-6 leading-relaxed">Since its inception in 2005, Lawrence View Hotel has been synonymous with luxury and excellence. What began as a vision to create a sanctuary for travelers has evolved into one of the most prestigious hotel chains in the region. The founders, with their keen eye for detail and passion for hospitality, have created a space where every corner tells a story of elegance and refinement.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">4. Cutting-Edge Wellness Facilities</h2>
+      <p class="mb-6 leading-relaxed">Our comprehensive wellness center spans 10,000 square feet of tranquil space dedicated to physical and mental rejuvenation. The state-of-the-art fitness center features the latest Technogym equipment, comprehensive free weights area, dedicated yoga and Pilates studio, and personal trainers available upon request. The 25-meter temperature-controlled infinity pool offers both indoor and outdoor sections, with underwater music and fiber-optic lighting creating a magical atmosphere for evening swims.</p>
+      <p class="mb-6 leading-relaxed">The award-winning "Serenity Spa" features ten treatment rooms, including two couples' suites with private jacuzzis. Our therapists blend ancient healing traditions with contemporary techniques, using exclusive products from La Prairie and Aromatherapy Associates. The thermal suite includes a Himalayan salt sauna, aromatic steam room, ice fountain, and experience showers. For ultimate relaxation, the floating meditation pods and oxygen therapy lounge provide cutting-edge solutions to combat stress and fatigue.</p>
 
-      <p class="mb-6 leading-relaxed">The architectural marvel that houses the Lawrence View Hotel is a perfect blend of contemporary design and traditional elements. The façade, with its glass panels and intricate stonework, is a testament to the hotel's commitment to combining modern aesthetics with timeless charm.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">5. Unparalleled Business Facilities</h2>
+      <p class="mb-6 leading-relaxed">Lawrence View Hotel boasts seven versatile conference rooms and two grand ballrooms, establishing it as the premier venue for high-profile business gatherings and corporate events. Our facilities incorporate advanced audiovisual technology, including 4K projection systems, interactive smart boards, and sophisticated teleconferencing capabilities that connect with participants worldwide in crystal-clear definition.</p>
+      <p class="mb-6 leading-relaxed">The dedicated business center offers 24/7 administrative support, translation services in 12 languages, and private meeting pods for confidential discussions. Our experienced event planning team works closely with clients to curate bespoke corporate experiences, from intimate board meetings to international conferences for up to 500 delegates. The "Executive Floor" provides additional privileges for business travelers, including a private lounge with panoramic views, complimentary breakfast and evening canapés, and priority access to meeting facilities.</p>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">Unparalleled Luxury Accommodations</h2>
-      <p class="mb-6 leading-relaxed">Step into any of our 150 rooms and suites, and you'll be greeted by an ambiance of refined luxury. Each accommodation is meticulously designed with attention to every detail, from the handpicked furniture to the custom artwork that adorns the walls. The rooms feature plush king-sized beds with premium linens, ensuring a restful night's sleep after a day of business or exploration.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">6. Dream Wedding Destination</h2>
+      <p class="mb-6 leading-relaxed">Lawrence View Hotel has earned its reputation as the city's most sought-after wedding venue, offering comprehensive packages tailored to diverse cultural traditions and personal preferences. Our dedicated wedding specialists bring expertise in both intimate ceremonies and grand celebrations, collaborating closely with couples to transform their vision into reality.</p>
+      <p class="mb-6 leading-relaxed">The Grand Ballroom, with its crystal chandeliers and adjustable mood lighting, accommodates up to 350 guests, while the Garden Terrace provides an enchanting outdoor setting for ceremonies amidst lush landscaping and cascading fountains. Our culinary team creates customized menus that reflect personal tastes and cultural heritage, while partnerships with the city's premier vendors ensure seamless coordination of flowers, photography, entertainment, and décor. The bridal suite offers 360-degree views of the city, a private dressing room, and champagne butler service for the wedding party's pre-ceremony preparations.</p>
 
-      <div class="grid grid-cols-2 gap-4 my-8">
-        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Suite" class="w-full h-auto rounded-lg shadow-lg" />
-        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Executive Room" class="w-full h-auto rounded-lg shadow-lg" />
+      <div class="my-8 bg-gray-50 p-6 rounded-lg border-l-4 border-[#c8a45e]">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Wedding Highlight</h3>
+        <p class="italic text-gray-600">"From our initial consultation to the final dance, Lawrence View Hotel exceeded our expectations in every way. The team anticipated our needs before we could express them, and our guests continue to rave about the impeccable service, spectacular venue, and exquisite food. Our wedding wasn't just an event—it was the realization of a dream."</p>
+        <p class="mt-2 text-sm text-gray-500">— Elena & Michael Crawford, married at Lawrence View Hotel in June 2024</p>
       </div>
 
-      <p class="mb-6 leading-relaxed">The spacious marble bathrooms are equipped with rainfall showers, deep soaking tubs, and premium toiletries, offering a spa-like experience in the comfort of your room. The floor-to-ceiling windows not only flood the space with natural light but also offer breathtaking views of the cityscape or the meticulously maintained gardens.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">7. Exceptional Personalized Service</h2>
+      <p class="mb-6 leading-relaxed">At Lawrence View Hotel, we believe that true luxury lies in anticipatory service that recognizes each guest's unique preferences and needs. Our extensively trained staff members maintain a staff-to-guest ratio of 1:2, ensuring attentive yet unobtrusive assistance throughout your stay. The multilingual team, proficient in over 15 languages, provides seamless communication with international guests.</p>
+      <p class="mb-6 leading-relaxed">Our proprietary guest preference system tracks individual preferences, from pillow firmness to room temperature, preferred newspapers, and dietary requirements, ensuring a personalized experience from the moment of arrival. The dedicated concierge team possesses unparalleled knowledge of the city's hidden gems and maintains relationships with exclusive establishments to secure priority reservations and special privileges for our guests. For families, our "Young VIP" program offers age-appropriate amenities, customized activities, and specialized menus that make children feel valued and entertained.</p>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">Culinary Delights</h2>
-      <p class="mb-6 leading-relaxed">Lawrence View Hotel is a haven for food enthusiasts. Our four specialty restaurants offer a diverse range of culinary experiences, from authentic local flavors to international cuisines. The flagship restaurant, 'Sapphire,' helmed by Michelin-starred Chef Michael Laurent, specializes in fusion cuisine that tantalizes the taste buds with its innovative combinations.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">8. Pioneering Sustainability Initiatives</h2>
+      <p class="mb-6 leading-relaxed">Lawrence View Hotel stands at the forefront of sustainable luxury hospitality, having implemented comprehensive environmental practices that minimize our ecological footprint without compromising guest experience. Our LEED Platinum-certified building incorporates solar panels, rainwater harvesting systems, and energy-efficient design that reduces energy consumption by 40% compared to conventional hotels of similar size.</p>
+      <p class="mb-6 leading-relaxed">Our farm-to-table philosophy supports local organic producers within a 50-mile radius, reducing carbon emissions associated with food transportation while ensuring the freshest ingredients for our restaurants. The hotel's hydroponic garden supplies herbs and microgreens year-round. We've eliminated single-use plastics throughout the property, implemented comprehensive waste sorting and recycling systems, and introduced biodegradable alternatives for essential disposable items. Guests can participate in our "Green Stay" program, which directs a percentage of room revenue to local environmental conservation projects.</p>
 
-      <p class="mb-6 leading-relaxed">'The Oriental Pavilion' takes you on a journey through the exotic flavors of Asia, while 'La Terrazza' offers an authentic Italian dining experience with its wood-fired pizzas and handmade pasta. For those seeking a more casual setting, 'The Café' serves artisanal coffee, freshly baked pastries, and light meals throughout the day.</p>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">9. Authentic Cultural Immersion</h2>
+      <p class="mb-6 leading-relaxed">Lawrence View Hotel serves as a gateway to the region's rich cultural heritage through curated experiences that go beyond typical tourist itineraries. Our "Cultural Concierge" team specializes in creating bespoke journeys that align with guests' interests, from private viewings at leading galleries to intimate performances by local musicians in historic venues.</p>
+      <p class="mb-6 leading-relaxed">The hotel hosts a rotating exhibition of works by emerging local artists, with quarterly opening receptions where guests can engage directly with creators. Our weekly cultural program includes craft workshops led by master artisans, culinary demonstrations focusing on regional specialties, and guided historical walks exploring the city's architectural evolution. For a deeper connection to local traditions, guests can join exclusive excursions to artisan studios, family-owned wineries, and seasonal festivals normally inaccessible to visitors.</p>
 
-      <blockquote class="border-l-4 border-primary-500 pl-4 italic my-8">
-        "The culinary experience at Lawrence View Hotel is a journey of discovery. Each dish tells a story of tradition, innovation, and passion." - Chef Michael Laurent
-      </blockquote>
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">10. Prestigious Rewards Program</h2>
+      <p class="mb-6 leading-relaxed">The Lawrence Elite program represents one of the hospitality industry's most generous loyalty initiatives, offering substantive benefits that enhance every aspect of the guest experience. Membership tiers—Silver, Gold, Platinum, and the invitation-only Diamond level—provide escalating privileges, from guaranteed late check-out to complimentary suite upgrades, spa treatments, and airport transfers.</p>
+      <p class="mb-6 leading-relaxed">Members earn points at an accelerated rate, with the flexibility to redeem for free nights without blackout dates, exclusive experiences, or airline miles with 25 partner carriers. The program extends beyond our property through strategic partnerships with luxury retail brands, premium cultural institutions, and fine dining establishments worldwide. Diamond members receive particularly noteworthy privileges, including a dedicated lifestyle manager, priority access to limited-edition hotel collaborations with luxury brands, and exclusive invitations to cultural events sponsored by Lawrence View Hotel.</p>
 
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">Wellness and Recreation</h2>
-      <p class="mb-6 leading-relaxed">The Lawrence Spa is a sanctuary of tranquility and rejuvenation. Our expert therapists offer a range of treatments that combine traditional techniques with modern therapies. The signature 'Lawrence Ritual' is a 120-minute journey that includes a body scrub, wrap, and massage, leaving you refreshed and revitalized.</p>
-
-      <p class="mb-6 leading-relaxed">The fitness center, equipped with state-of-the-art equipment, caters to all fitness levels, while the temperature-controlled indoor pool offers a refreshing escape. For those who prefer outdoor activities, the hotel's tennis courts and jogging track provide ample opportunities to stay active.</p>
-
-      <h2 class="text-2xl font-bold mb-4 text-primary-600 mt-8">Events and Celebrations</h2>
-      <p class="mb-6 leading-relaxed">Lawrence View Hotel is the preferred venue for high-profile events and celebrations. The Grand Ballroom, with its capacity to accommodate up to 500 guests, has hosted everything from international conferences to fairy-tale weddings. The advanced audiovisual systems, coupled with the expertise of our event planning team, ensure that every event is executed to perfection.</p>
-
-      <p class="mb-8 leading-relaxed">As a guest at Lawrence View Hotel, you're not just booking a room; you're investing in an experience that combines luxury, comfort, and impeccable service. Whether you're a business traveler seeking convenience, a couple looking for a romantic getaway, or a family planning a memorable vacation, Lawrence View Hotel promises a stay that exceeds your expectations.</p>
-
-      <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-bold mb-2">Book Your Stay</h3>
-        <p class="mb-4">Experience the epitome of luxury at Lawrence View Hotel. Contact our reservations team to book your stay or inquire about our special packages.</p>
-        <div class="flex items-center space-x-4">
+      <div class="my-8 bg-[#f9f5ea] p-8 rounded-lg shadow-md border border-[#e6d5b8]">
+        <h3 class="text-2xl font-bold mb-4 text-[#c8a45e]">Experience Lawrence View Hotel</h3>
+        <p class="mb-4 text-gray-700">Discover why Lawrence View Hotel has earned its reputation as the city's premier luxury destination. From our sophisticated accommodations and world-class dining to our comprehensive wellness facilities and impeccable service, every element has been thoughtfully designed to create unforgettable memories for our guests.</p>
+        <p class="mb-6 text-gray-700">We invite you to experience the perfect synthesis of luxury, comfort, and authentic hospitality that defines Lawrence View Hotel.</p>
+        <div class="flex items-center space-x-6 text-[#c8a45e]">
           <div class="flex items-center">
-            <span class="mr-2 text-primary-600">Email:</span>
-            <span>reservations@lawrenceviewhotel.com</span>
+            <span class="mr-2 font-semibold">Reservations:</span>
+            <Link to:'tel:+924236311574'>+92 (42) 36311574</Link>
           </div>
           <div class="flex items-center">
-            <span class="mr-2 text-primary-600">Phone:</span>
-            <span>+1 (555) 123-4567</span>
+            <span class="mr-2 font-semibold">Email:</span>
+            <span>reservations@lawrenceviewhotel.com</span>
           </div>
         </div>
       </div>
+
+      <blockquote class="border-l-4 border-[#c8a45e] pl-4 italic my-8 text-gray-600">
+        "Lawrence View Hotel represents the pinnacle of luxury hospitality, seamlessly blending opulent accommodations with genuine warmth and attentiveness. It remains our publication's top recommendation for discerning travelers seeking an extraordinary urban hotel experience." - Luxury Travel & Lifestyle Magazine, Annual Hotel Awards 2024
+      </blockquote>
+
+      <p class="text-lg font-medium leading-relaxed">Experience the distinguished difference that has established Lawrence View Hotel as the benchmark for luxury hospitality. Book your stay today and join the ranks of satisfied guests who return to us time and again, not just for our exceptional facilities, but for the feeling of coming home to luxury.</p>
     `,
     image:
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     galleryImages: [
-      "https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80",
-      "https://images.unsplash.com/photo-1606402179428-a57976d71fa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     ],
-    date: "October 5, 2023",
-    author: "David Martinez",
+    date: "March 15, 2025",
+    author: "Sophia Reynolds",
     authorImage:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
     authorBio:
-      "David is a luxury travel writer and photographer whose work has been featured in leading travel and lifestyle magazines.",
-    comments: 15,
-    category: "Uncategorized",
-    tags: ["luxury hotel", "accommodation", "city center", "fine dining"],
+      "Sophia Reynolds is an award-winning luxury travel journalist with over 15 years of experience reviewing the world's finest hotels and resorts. Her work has been featured in Condé Nast Traveler, Forbes Travel Guide, and Robb Report.",
+    comments: 24,
+    category: "Luxury Accommodation",
+    tags: ["5-star hotel", "luxury stay", "fine dining", "wellness", "business facilities", "wedding venue"],
   },
+  
 ];
 export const categories = [
   { id: 1, name: "Accommodation", slug: "accommodation", count: 12 },
