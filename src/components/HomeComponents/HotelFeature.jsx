@@ -41,25 +41,39 @@ Luxury Hotel | City Views | Exceptional Comfort
         </div>
 
         {/* Bullet Points */}
-        <ul className="mt-6 space-y-2 text-center lg:text-left">
-          <li className="flex flex-col justify-center lg:justify-start gap-2 text-gray-700">
-            
-            <li>Seamless room booking for an unmatched stay.
-            </li>
-            <li>Enjoy breathtaking city views from your hotel room.
-            </li>
-            <li>Stay at the best hotel, where luxury meets comfort.
-            </li>
+        <ul className="mt-8 space-y-4 text-center lg:text-left">
+            <motion.div
+              className="space-y-2"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <li className="flex items-start gap-2 text-gray-700">
+                <span className="text-[#c4a053] font-bold mt-1">•</span>
+                <span>Seamless room booking for an unmatched stay.</span>
+              </li>
+              <li className="flex items-start gap-2 text-gray-700">
+                <span className="text-[#c4a053] font-bold mt-1">•</span>
+                <span>Enjoy breathtaking city views from your hotel room.</span>
+              </li>
+              <li className="flex items-start gap-2 text-gray-700">
+                <span className="text-[#c4a053] font-bold mt-1">•</span>
+                <span>Stay at the best hotel, where luxury meets comfort.</span>
+              </li>
+            </motion.div>
 
-          </li>
-          <li className="flex items-center justify-center lg:justify-start gap-2 text-gray-700">
-          
-            Book your stay at Lawrence View Hotel, the best hotel in Lahore and hotel in Malam Jabba, where every stay promises a luxurious retreat with the finest hospitality.
-
-
-          </li>
-         
-        </ul>
+            <motion.li
+              className="text-gray-700 italic border-l-2 border-[#c4a053] pl-4 mt-4"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              Book your stay at Lawrence View Hotel, the best hotel in Lahore and hotel in Malam Jabba, where every stay
+              promises a luxurious retreat with the finest hospitality.
+            </motion.li>
+          </ul>
         <div class="animated-button-container">
   <a href="/about" class="animated-button">
     <span>DISCOVER MORE</span>

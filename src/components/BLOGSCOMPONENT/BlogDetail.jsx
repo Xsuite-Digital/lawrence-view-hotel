@@ -88,7 +88,7 @@ const BlogDetail = () => {
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-[600px] object-cover rounded-xl shadow-lg"
+              className="w-full  object-contain rounded-xl shadow-lg"
             />
             <div className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white text-sm px-3 py-1 rounded-full">
               Featured Image
@@ -128,7 +128,7 @@ const BlogDetail = () => {
                 <img
                   src={image}
                   alt={`Gallery ${index + 1}`}
-                  className="w-  full h-64 object-cover rounded-lg shadow-md group-hover:shadow-xl transition duration-300"
+                  className="w-full   h-64 object-cover rounded-lg shadow-md group-hover:shadow-xl transition duration-300"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300 rounded-lg" />
               </motion.div>

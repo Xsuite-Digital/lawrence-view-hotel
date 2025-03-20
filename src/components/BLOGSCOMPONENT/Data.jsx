@@ -1,3 +1,8 @@
+import img2 from "../../assets/3.webp";
+import S1 from "../../assets/S1.webp";
+import SA1 from "../../assets/SA1.webp";
+import T1 from "../../assets/T1.webp";
+
 export const blogPosts = [
   {
     id: 1,
@@ -75,7 +80,7 @@ export const blogPosts = [
           </div>
           <div class="flex items-center">
             <span class="mr-2 font-semibold">Email:</span>
-            <span>reservations@lawrenceviewhotel.com</span>
+            <span>reservation@lawrenceviewhotel.com</span>
           </div>
         </div>
       </div>
@@ -87,11 +92,9 @@ export const blogPosts = [
       <p class="text-lg font-medium leading-relaxed">Experience the distinguished difference that has established Lawrence View Hotel as the benchmark for luxury hospitality. Book your stay today and join the ranks of satisfied guests who return to us time and again, not just for our exceptional facilities, but for the feeling of coming home to luxury.</p>
     `,
     image:
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      img2,
     galleryImages: [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    S1 , SA1 , T1 
     ],
     date: "March 15, 2025",
     author: "Sophia Reynolds",
