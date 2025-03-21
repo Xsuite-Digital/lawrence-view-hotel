@@ -18,7 +18,7 @@ export default function Sidebar() {
   return (
     <>
       <button
-        className={`md:hidden p-2 ${scroll ? "text-white" : "text-black "} duration-300 ease-in-out`}
+        className={`md:hidden p-2 text-white duration-300 ease-in-out`}
         onClick={() => setIsOpen(true)}
       >
         <Menu size={28} />

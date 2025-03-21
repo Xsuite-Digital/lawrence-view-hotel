@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <>
       <div className="  flex  justify-between bg-black  text-white items-center  lg:hidden">
-        <div className=" border-b">
+        <div className=" ">
           <Link to="/">
             <img
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -54,9 +54,9 @@ export default function Header() {
         </div>
         <Sidebar />
       </div>
-      <div className="fixed hidden lg:block top-0 w-full z-50 transition-all duration-300 ease-in-out bg-black text-white shadow-md">
+      <div className="fixed hidden lg:block top-0 w-full z-50 transition-all duration-300 ease-in-out bg-black text-white ">
         {/* Top Header */}
-        <div className="flex justify-evenly items-center  border-b">
+        <div className="flex justify-evenly items-center  ">
           <Link to="/">
             <img
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -119,12 +119,12 @@ export default function Header() {
             </button>
 
             {languageMenu && (
-              <div className="absolute top-full left-0 bg-white border shadow-md w-32">
+              <div className="absolute top-full left-0 bg-white  border shadow-md w-32">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code)}
-                    className="block p-2 w-full text-left hover:bg-[#b89628]"
+                    className="block p-2 w-full text-left text-black hover:bg-[#b89628]"
                   >
                     {lang.name}
                   </button>
