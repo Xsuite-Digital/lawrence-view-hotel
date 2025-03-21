@@ -33,13 +33,7 @@ const features = [
   },
 ];
 
-const FeatureCard = ({ Icon, title, description }) => (
-  <div className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center">
-    <Icon className="text-[#c4a053]" size={40} />
-    <h3 className="text-lg font-semibold mt-4">{title}</h3>
-    <p className="text-gray-600 text-center mt-2">{description}</p>
-  </div>
-);
+
 
 const Contact = () => {
   return (

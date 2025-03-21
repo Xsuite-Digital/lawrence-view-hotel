@@ -2,6 +2,7 @@ import img2 from "../../assets/3.webp";
 import S1 from "../../assets/S1.webp";
 import SA1 from "../../assets/SA1.webp";
 import T1 from "../../assets/T1.webp";
+import cityguide from "../../assets/cityguide.jpg";
 
 export const blogPosts = [
   {
@@ -31,7 +32,7 @@ export const blogPosts = [
       <p class="mb-6 leading-relaxed">"Silk Road" explores the rich tapestry of Asian cuisines, with specialized chefs creating authentic dishes from Japanese, Chinese, Thai, and Indian traditions. "Mediterranean" celebrates the coastal flavors of southern Europe with its fresh seafood, handmade pasta, and wood-fired specialties. For casual dining, "The Lounge" offers an all-day menu of international favorites, afternoon tea, and an extensive collection of craft cocktails, rare whiskies, and fine wines. Our rooftop dining experience, "Celestial," combines panoramic city views with astronomy-themed gastronomy, creating unforgettable memories under the stars.</p>
 
       <div class="my-8">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Elegant dining experience" class="w-full h-auto rounded-lg shadow-lg mb-2" />
+        <img src=${cityguide} alt="Elegant dining experience" class="w-full h-auto rounded-lg shadow-lg mb-2" />
         <p class="text-sm text-gray-500 italic">The exquisite presentation of seasonal delicacies at our signature restaurant, Sapphire.</p>
       </div>
 
