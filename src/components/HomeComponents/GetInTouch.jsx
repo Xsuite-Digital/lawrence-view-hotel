@@ -34,7 +34,7 @@ export default function GetInTouch() {
       <div className="hidden lg:block bg-white py-6 px-4 rounded-md">
         <h2 className="text-lg md:text-xl flex items-center justify-center font-semibold text-black mb-4">
           <img src={before} alt="icon" className="lg:w-6 2xl:w-4 2xl:h-4 w-full h-auto lg:h-6" />
-          <span className="mx-2">Get in Touch</span>
+          <span className="mx-2">Contact us</span>
           <img src={before} alt="icon" className="lg:w-6 lg:h-6 2xl:w-4 2xl:h-4 w-full h-auto" />
         </h2>
 

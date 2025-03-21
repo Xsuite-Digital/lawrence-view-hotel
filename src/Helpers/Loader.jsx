@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logo from "../assets/logo.webp";
 
 const Loader = () => {
   const [progress, setProgress] = useState(0);
@@ -60,9 +61,17 @@ const Loader = () => {
           
           {/* Center hotel branding */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-[#c4a053] w-24 h-24 rounded-full flex items-center justify-center shadow-lg">
+            {/* <div className="bg-[#c4a053] w-24 h-24 rounded-full flex items-center justify-center shadow-lg">
               <span className="text-white font-serif text-4xl font-bold">LVH</span>
-            </div>
+            </div> */}
+             <img
+                          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                          src={logo}
+                          alt="Lawrence View Hotel Logo"
+                          width={200}
+                          height={300}
+                          className="lg:w-32 lg:h-32 w-24 h-24"
+                        />
           </div>
           
           {/* Pulsing effect */}
