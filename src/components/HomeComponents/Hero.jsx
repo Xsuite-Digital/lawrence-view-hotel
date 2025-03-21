@@ -28,23 +28,23 @@ export default function HeroSection() {
 
       <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-      <div className="relative z-20 h-full flex flex-col">
-        <div className="  flex flex-col absolute top-1/4 2xl:top-1/3 2xl:left-1/3 lg:left-1/3 left-3.5 ">
-          <h2 className="text-3xl md:text-5xl mt-12 text-white lg:text-5xl font-serif tracking-wide text-center">
-          Lawrence View Hotel
+      <div className="relative z-20 h-full flex flex-col justify-center items-center px-4">
+  <div className="flex flex-col text-center lg:text-left lg:absolute lg:top-1/4 2xl:top-1/3 2xl:left-12 lg:left-1/3">
+    <h2 className="text-3xl md:text-5xl text-white font-serif tracking-wide">
+      Lawrence View Hotel
+    </h2>
+    <p className="mt-4 text-sm md:text-lg lg:text-xl text-white max-w-md">
+      Welcome to Lawrence View Hotel, where comfort meets elegance in the heart of Lahore and the breathtaking landscapes of Malam Jabba. Whether you're here for business or leisure, our warm hospitality, modern amenities, and serene ambiance ensure a memorable stay.
+    </p>
+    {/* Center Button */}
+    <Link to="/about">
+      <button className="bg-[#b89628] text-white px-6 py-2 mt-6 rounded-md">
+        Explore More
+      </button>
+    </Link>
+  </div>
+</div>
 
-          </h2>
-          
-          {/* Center Button */}
-          <Link to="/about">
-          <button className="bg-[#b89628] text-white px-6 py-2 absolute left-1/4 2xl:left-1/3 lg:left-1/3 rounded-md mt-4">
-            Explore More
-          </button>
-          </Link>
-        </div>
-
-        
-      </div>
     </div>
   );
 }
