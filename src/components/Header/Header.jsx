@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="  flex  justify-between items-center  lg:hidden">
+      <div className="  flex  justify-between bg-black  text-white items-center  lg:hidden">
         <div className=" border-b">
           <Link to="/">
             <img
@@ -54,7 +54,7 @@ export default function Header() {
         </div>
         <Sidebar />
       </div>
-      <div className="fixed hidden lg:block top-0 w-full z-50 transition-all duration-300 ease-in-out bg-white text-black shadow-md">
+      <div className="fixed hidden lg:block top-0 w-full z-50 transition-all duration-300 ease-in-out bg-black text-white shadow-md">
         {/* Top Header */}
         <div className="flex justify-evenly items-center  border-b">
           <Link to="/">
@@ -75,17 +75,17 @@ export default function Header() {
                 <span>Book Your Stay</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <a href="tel:+923206361916" className="text-sm text-gray-600">
+                <a href="tel:+923206361916" className="text-sm text-gray-300">
                   +92 (320) 6361-916
                 </a>
-                <a href="tel:+924236311574" className="text-sm text-gray-600">
+                <a href="tel:+924236311574" className="text-sm text-gray-300">
                   +92 (42) 36311574
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="flex space-x-3 text-gray-600">
+          <div className="flex space-x-3 text-gray-300">
             <span className="tracking-widest">Follow Us On |</span>
             <a
               href="https://www.facebook.com/LawrenceViewHotelLahore"
@@ -134,7 +134,7 @@ export default function Header() {
           </div>
         </div>
         {/* Navigation Bar */}
-        <nav className="flex justify-center space-x-6 text-sm py-3 bg-white shadow-md font-bold hover:no-underline">
+        <nav className="flex justify-center space-x-6 text-sm py-3 bg-black text-white shadow-md font-bold hover:no-underline">
           {navLinks.map((link, index) =>
             link.dropdown ? (
               <div
