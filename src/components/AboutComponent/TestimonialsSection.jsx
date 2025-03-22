@@ -4,22 +4,22 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Michael Thompson",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200",
+    name: "Maura",
+    title: "A safe bet in Lahore",
     rating: 5,
-    text: "An exceptional experience from start to finish. The attention to detail and personalized service exceeded all expectations."
+    text: "My third stay here and the standards remain high. Great staff who helped me get a package to Skardu( thanks Hasnain!). Excellent food and standards."
   },
   {
-    name: "Sophie Chen",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200",
+    name: "Hladisch",
+    title: "Great, clean and comfortable",
     rating: 5,
-    text: "The epitome of luxury hospitality. Every moment of our stay was absolutely perfect."
+    text: "It’s a good location, very clean and comfortable, the staff is nice and polite. All around one of the nicer hotels I’ve stayed in while traveling Pakistan.Don’t really have anything to complain about. I would recommend it to everyone🙌👍"
   },
   {
-    name: "David Martinez",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200",
+    name: "Maris",
+    title: "Good home in Lahore",
     rating: 5,
-    text: "A truly remarkable hotel that combines classic elegance with modern luxury. Will definitely return!"
+    text: "Breakfast was ok. With vegetarian/vegan options. Staff is good."
   }
 ];
 
@@ -56,11 +56,7 @@ export const TestimonialsSection = () => {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <img
-              src={testimonials[currentIndex].image}
-              alt={testimonials[currentIndex].name}
-              className="w-20 h-20 rounded-full mx-auto mb-6 object-cover"
-            />
+         <h1 className='text-black font-semibold mb-2 text-xl'>{testimonials[currentIndex].title}</h1>
             <div className="flex justify-center mb-4">
               {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                 <Star key={i} className="text-amber-500 fill-current" size={20} />

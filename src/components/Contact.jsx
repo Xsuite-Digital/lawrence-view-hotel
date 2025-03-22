@@ -1,8 +1,7 @@
 import { Hotel, Bell, Star, MapPin, Phone, Mail, Clock } from "lucide-react"; // Lucide Icons
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import P2 from "../assets/LVVH.webp";
-import logor from "../assets/logor.webp";
+import P2 from "../assets/F1.webp";
 import GetInTouch from "./HomeComponents/GetInTouch";
 
 const features = [

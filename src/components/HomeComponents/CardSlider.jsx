@@ -1,10 +1,15 @@
 import { Ruler, Users, Bath, Utensils, Bike, Info, Wifi, ParkingCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { rooms } from "../../Helpers/Data";
+import { Link, useLocation } from "react-router-dom";
+import { rooms  as allRooms} from "../../Helpers/Data";
 import { useState, useEffect } from "react";
 
 export default function CardSlider() {
+  const location = useLocation();
+
+  // Check if the current route is "/MLJ"
+  const rooms = location.pathname === "/MLJ" ? allRooms.slice(-3) : allRooms.slice(0, 3);
+
   return (
     <div className="bg-gray-100 h-full py-12">
       <h2 className="text-3xl font-bold text-center mb-8">Featured Rooms</h2>
