@@ -1,5 +1,7 @@
+
 import { motion } from "framer-motion";
-import A1 from "../../assets/ABOUT1.webp";
+import A1 from "../../assets/LVHH.webp";
+
 export const StorySection = () => {
   return (
     <section className="py-24 bg-white overflow-hidden">
@@ -23,15 +25,28 @@ export const StorySection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="max-w-full"
+            className="relative max-w-full"
           >
+            {/* Outer Image Effect */}
+            <div className="absolute top-4 left-4 right-4 bottom-4 border-4 border-white bg-white rounded-lg shadow-lg z-0"></div>
+
+            {/* Foreground Image */}
             <img
               src={A1}
               alt="Lawrence View Hotel Vintage"
-              className="rounded-lg shadow-xl lg:h-[40rem] h-auto w-full"
+              className="relative rounded-lg shadow-xl lg:h-[30rem] h-auto w-full z-10"
             />
+
+            {/* Golden Overlay Content */}
+            <div className="absolute top-6 left-6 right-6 p-6 bg-[#b89628] bg-opacity-85 rounded-md shadow-md text-white z-20">
+              <h4 className="text-xl font-semibold mb-2 text-white">Lawrence View HOTEL</h4>
+              <p className="text-sm leading-relaxed">
+              Each corner of our hotel tells a story of elegance, tradition, and unwavering dedication to exceptional service.
+              </p>
+            </div>
           </motion.div>
 
+         
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,6 +54,8 @@ export const StorySection = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="space-y-6 max-w-full"
           >
+
+<h3 className="text-sm text-[#b89628] font-semibold">FROM $100.00 PER NIGHT</h3>
             <h3 className="text-2xl font-semibold text-gray-900">
               A Legacy of Luxury Since 1985
             </h3>
@@ -55,6 +72,9 @@ export const StorySection = () => {
               elegance, tradition, and unwavering dedication to exceptional
               service.
             </p>
+            <div className="text-gray-700">
+              Recommended on: <span className="text-[#b89628]">Book_Holidays</span>, Lawrence View Hotel
+            </div>
           </motion.div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { rooms } from "../../Helpers/Data";
 import { useState, useEffect } from "react";
+import image from "../../assets/H3.webp";
 
 export default function CardSlider() {
   return (
