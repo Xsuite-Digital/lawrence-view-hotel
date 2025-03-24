@@ -1,12 +1,12 @@
 import React, { Suspense, lazy } from "react";
 import { ArrowRight } from "lucide-react";
-import { FacilitiesSection } from "../components/AboutComponent/FacilitiesSection";
+import FacilitiesSection from "../components/AboutComponent/FacilitiesSection";
 import { StorySection } from "../components/AboutComponent/StorySection";
 import { TestimonialsSection } from "../components/AboutComponent/TestimonialsSection";
 import { Link } from "react-router-dom";
 import Loader from "../Helpers/Loader";
 
-const ValuesSection = lazy(() => 
+const ValuesSection = lazy(() =>
   import("../components/AboutComponent/ValuesSection").then(module => ({
     default: module.ValuesSection
   }))
