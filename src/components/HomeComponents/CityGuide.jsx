@@ -21,7 +21,7 @@ const CityGuideTour = () => {
     position: absolute;
     background-color: #c4a053;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;  
   }
   
   .top-border {
