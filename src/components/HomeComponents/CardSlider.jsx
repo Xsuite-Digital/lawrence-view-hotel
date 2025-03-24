@@ -20,7 +20,7 @@ export default function CardSlider() {
       </div>
       <div className="text-center mt-8">
         <Link to="/rooms">
-          <button className="bg-[#b89628] text-white  hover:scale-105 bg-opacity-70 px-6 py-2 rounded-md hover transition">
+          <button className="bg-black text-white  hover:scale-105  px-6 py-2 rounded-md hover transition">
             View All Rooms
           </button>
         </Link>
