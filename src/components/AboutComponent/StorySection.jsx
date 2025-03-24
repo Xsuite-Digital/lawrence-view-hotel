@@ -38,7 +38,7 @@ export const StorySection = () => {
             />
 
             {/* Golden Overlay Content */}
-            <div className="absolute top-6 left-6 right-6 p-6 bg-[#b89628] bg-opacity-85 rounded-md shadow-md text-white z-20">
+            <div className="absolute top-6 left-6 right-6 p-6 bg-black bg-opacity-85 rounded-md shadow-md text-white z-20">
               <h4 className="text-xl font-semibold mb-2 text-white">Lawrence View HOTEL</h4>
               <p className="text-sm leading-relaxed">
               Each corner of our hotel tells a story of elegance, tradition, and unwavering dedication to exceptional service.
