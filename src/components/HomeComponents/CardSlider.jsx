@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { rooms  as allRooms} from "../../Helpers/Data";
 import { useState, useEffect } from "react";
+import image from "../../assets/H3.webp";
 
 export default function CardSlider() {
   const location = useLocation();
