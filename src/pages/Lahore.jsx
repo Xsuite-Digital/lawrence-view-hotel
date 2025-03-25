@@ -14,7 +14,7 @@ const Lahore = () => {
       <Suspense fallback={<Loader/>}>
 
       <LahoreHero />
-      <div className=" bg-black/50 border-t-4 border-b-4 border-[#c4a053]">
+      <div className=" bg-black/50 border-t-4 border-b-4 border-[#b89628]">
         <Bookingengine />
       </div>
       </Suspense>

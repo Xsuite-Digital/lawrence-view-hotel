@@ -101,7 +101,7 @@ const CityGuideTour = () => {
       </div>
         {/* Left Section with Text */}
         <div className="text-left">
-          <h2 className="text-4xl font-bold text-[#c4a053]">
+          <h2 className="text-4xl font-bold text-[#b89628]">
             Discover & Explore
           </h2>
           <p className="text-lg text-gray-700 mt-4">
@@ -110,19 +110,19 @@ const CityGuideTour = () => {
           </p>
           <div className="mt-6 grid grid-cols-2 gap-6">
             <div className="flex items-center gap-3">
-              <MapPin size={30} className="text-[#c4a053]" />
+              <MapPin size={30} className="text-[#b89628]" />
               <p className="text-black font-semibold">Top Attractions</p>
             </div>
             <div className="flex items-center gap-3">
-              <Landmark size={30} className="text-[#c4a053]" />
+              <Landmark size={30} className="text-[#b89628]" />
               <p className="text-black font-semibold">Historic Landmarks</p>
             </div>
             <div className="flex items-center gap-3">
-              <Navigation size={30} className="text-[#c4a053]" />
+              <Navigation size={30} className="text-[#b89628]" />
               <p className="text-black font-semibold">Guided Tours</p>
             </div>
             <div className="flex items-center gap-3">
-              <Compass size={30} className="text-[#c4a053]" />
+              <Compass size={30} className="text-[#b89628]" />
               <p className="text-black font-semibold">Hidden Gems</p>
             </div>
           </div>

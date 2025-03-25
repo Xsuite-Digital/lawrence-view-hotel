@@ -47,7 +47,7 @@ const SpecialOffers = () => {
       className="mb-20"
     >
       <h2 className="text-3xl font-bold mb-2 text-black">Special Offers</h2>
-      <div className="h-1 w-24 bg-[#c4a053] mb-10"></div>
+      <div className="h-1 w-24 bg-[#b89628] mb-10"></div>
       <p className="text-gray-700 mb-10 max-w-3xl">
         Take advantage of our exclusive special offers and enjoy the best of Lawrence View Hotel.
         Book directly with us for the best rates and special packages.

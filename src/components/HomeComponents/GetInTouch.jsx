@@ -51,7 +51,7 @@ export default function GetInTouch() {
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-2 rounded hover:bg-[#c4a053] transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-black text-white py-2 rounded hover:bg-[#b89628] transition disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={loading} 
           >
             {loading ? "Sending..." : "CHECK AVAILABILITY"}

@@ -8,7 +8,7 @@ const CorporatePackages = () => {
       id: 1,
       title: "Conference Package",
       description: "Full-day conference package with state-of-the-art facilities and catering options.",
-      icon: <Users className="text-[#c4a053]" size={24} />,
+      icon: <Users className="text-[#b89628]" size={24} />,
       features: [
         "Meeting room setup for up to 50 people",
         "Projector and sound system",
@@ -21,7 +21,7 @@ const CorporatePackages = () => {
       id: 2,
       title: "Business Stay",
       description: "Special rates for corporate travelers with business amenities.",
-      icon: <Briefcase className="text-[#c4a053]" size={24} />,
+      icon: <Briefcase className="text-[#b89628]" size={24} />,
       features: [
         "Deluxe room accommodations",
         "Breakfast included",
@@ -34,7 +34,7 @@ const CorporatePackages = () => {
       id: 3,
       title: "Virtual Meeting Setup",
       description: "Professional setup for virtual meetings and webinars.",
-      icon: <Video className="text-[#c4a053]" size={24} />,
+      icon: <Video className="text-[#b89628]" size={24} />,
       features: [
         "High-speed internet connection",
         "Technical support staff",
@@ -55,9 +55,9 @@ const CorporatePackages = () => {
     >
       <div className="flex items-center mb-2">
         <h2 className="text-3xl font-bold text-black">Corporate Packages</h2>
-        <Award className="ml-3 text-[#c4a053]" size={28} />
+        <Award className="ml-3 text-[#b89628]" size={28} />
       </div>
-      <div className="h-1 w-24 bg-[#c4a053] mb-10"></div>
+      <div className="h-1 w-24 bg-[#b89628]] mb-10"></div>
       
       <div className="bg-gray-50 p-8 rounded-xl mb-10">
         <h3 className="text-2xl font-bold mb-4 text-black">Why Choose Us for Your Business Needs?</h3>
@@ -122,7 +122,7 @@ const CorporatePackages = () => {
               <ul className="mb-6 space-y-2">
                 {pkg.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-[#c4a053] mr-2">•</span>
+                    <span className="text-[#b89628] mr-2">•</span>
                     <span className="text-sm text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -131,7 +131,7 @@ const CorporatePackages = () => {
               <div className="pt-4 border-t border-gray-200">
                 <p className="text-[#c4a053] font-semibold mb-4">{pkg.price}</p>
                 <motion.button 
-                  className="w-full bg-black text-white py-2 rounded-md hover:bg-[#c4a053] transition-colors duration-300"
+                  className="w-full bg-black text-white py-2 rounded-md hover:bg-[#b89628] transition-colors duration-300"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
                 >

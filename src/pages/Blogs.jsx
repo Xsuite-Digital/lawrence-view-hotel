@@ -6,7 +6,7 @@ const Blogs = () => {
     <div>
        <div className="bg-black text-white p-12 text-center">
         <h1 className="text-4xl text-white md:text-5xl mt-24  font-serif mb-2">Our Blog</h1>
-        <p className="text-[#c8a45e] italic">Discover stories from Lawrence View Hotel</p>
+        <p className="text-[#b89628] italic">Discover stories from Lawrence View Hotel</p>
       </div>
 
       <BlogPage />

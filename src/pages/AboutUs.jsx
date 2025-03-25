@@ -20,7 +20,7 @@ export default function AboutUs() {
           <div>
             <h1 className="text-white text-5xl mb-4">About Us</h1>
             <span className="text-white flex justify-center items-center gap-2">
-              <Link to="/" className="hover:no-underline hover:text-[#c4a053]">
+              <Link to="/" className="hover:no-underline hover:text-[#b89628]">
                 Home
               </Link>{" "}
               <ArrowRight /> About Us

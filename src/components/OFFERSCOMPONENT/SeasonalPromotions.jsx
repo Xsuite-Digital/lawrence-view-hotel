@@ -14,7 +14,7 @@ const promotions = [
     image: Deluxe,
     icon: Calendar,
     features: ['Luxury Suite', 'Gourmet Dining', 'Airport Transfer'],
-    accent: 'from-[#c4a053] to-amber-600'
+    accent: 'from-[#b89628] to-amber-600'
   },
   {
     id: 'winter-escape',
@@ -25,7 +25,7 @@ const promotions = [
     image: MLJH2,
     icon: Snowflake,
     features: ['Fireplace Suite', 'Hot Chocolate Bar',  'Winter Activities'],
-    accent: 'from-[#c4a053] to-amber-500'
+    accent: 'from-[#b89628] to-amber-500'
   },
   {
     id: 'summer-delight',
@@ -36,7 +36,7 @@ const promotions = [
     image: LVHL,
     icon: Sun,
     features: [ 'Beach Activities', 'Sunset Dinner'],
-    accent: 'from-[#c4a053] to-amber-400'
+    accent: 'from-[#b89628] to-amber-400'
   }
 ];
 
@@ -58,7 +58,7 @@ const PromotionCard = ({ promotion, index }) => {
       
       <div className="p-8">
         <div className="flex items-center gap-3 mb-4">
-          <promotion.icon className="w-6 h-6 text-[#c4a053]" />
+          <promotion.icon className="w-6 h-6 text-[#b89628]" />
           <h3 className="text-2xl font-semibold">{promotion.title}</h3>
         </div>
         
@@ -73,7 +73,7 @@ const PromotionCard = ({ promotion, index }) => {
               transition={{ delay: i * 0.1 + 0.5 }}
               className="flex items-center gap-2"
             >
-              <Star className="w-5 h-5 text-[#c4a053]" />
+              <Star className="w-5 h-5 text-[#b89628]" />
               <span className="text-gray-700">{feature}</span>
             </motion.div>
           ))}
@@ -82,14 +82,14 @@ const PromotionCard = ({ promotion, index }) => {
         <div className="flex items-end justify-between">
           <div>
             <p className="text-sm text-gray-500">Starting from</p>
-            <p className="text-3xl font-bold text-[#c4a053]">${promotion.price}</p>
+            <p className="text-3xl font-bold text-[#b89628]">${promotion.price}</p>
             <p className="text-sm text-gray-500">{promotion.duration}</p>
           </div>
           
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#c4a053] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#b38f42] transition-colors duration-300"
+            className="bg-[#b89628] text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#b89628] transition-colors duration-300"
           >
             Book Now
             <ArrowRight className="w-4 h-4" />
@@ -117,7 +117,7 @@ const Amenities = () => {
           transition={{ delay: index * 0.2 + 1 }}
           className="flex flex-col items-center gap-2"
         >
-          <amenity.icon className="w-8 h-8 text-[#c4a053]" />
+          <amenity.icon className="w-8 h-8 text-[#b89628]" />
           <span className="text-gray-600">{amenity.label}</span>
         </motion.div>
       ))}

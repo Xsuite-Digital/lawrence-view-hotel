@@ -44,7 +44,7 @@ export const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Guest Testimonials</h2>
-          <div className="w-20 h-1 bg-amber-500 mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-[#b89628] mx-auto mb-8"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -59,7 +59,7 @@ export const TestimonialsSection = () => {
          <h1 className='text-black font-semibold mb-2 text-xl'>{testimonials[currentIndex].title}</h1>
             <div className="flex justify-center mb-4">
               {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star key={i} className="text-amber-500 fill-current" size={20} />
+                <Star key={i} className="text-[#b89628] fill-current" size={20} />
               ))}
             </div>
             <p className="text-xl text-gray-600 italic mb-6">
@@ -76,7 +76,7 @@ export const TestimonialsSection = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  index === currentIndex ? 'bg-amber-500' : 'bg-gray-300'
+                  index === currentIndex ? 'bg-[#b89628]' : 'bg-gray-300'
                 }`}
               />
             ))}

@@ -197,14 +197,14 @@ const HotelFeature = () => {
       <div className="max-w-7xl mx-auto px-6 relative">
         {/* Floating Gold Accents */}
         <motion.div 
-          className="absolute top-20 right-10 w-20 h-1 bg-[#c4a053]"
+          className="absolute top-20 right-10 w-20 h-1 bg-[#b89628]"
           initial={{ opacity: 0, x: 100 }}
           animate={controls}
           custom={0}
           variants={fadeInUp}
         ></motion.div>
         <motion.div 
-          className="absolute bottom-20 left-10 w-20 h-1 bg-[#c4a053]"
+          className="absolute bottom-20 left-10 w-20 h-1 bg-[#b89628]"
           initial={{ opacity: 0, x: -100 }}
           animate={controls}
           custom={0}
@@ -219,13 +219,13 @@ const HotelFeature = () => {
           custom={1}
           variants={fadeInUp}
         >
-          <span className="text-[#c4a053] uppercase tracking-widest font-medium">
+          <span className="text-[#b89628] uppercase tracking-widest font-medium">
             Lawrence View Hotel
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold mt-3 tracking-tight text-gray-900">
-            Where <span className="text-[#c4a053]">Luxury</span> Meets Comfort
+            Where <span className="text-[#b89628]">Luxury</span> Meets Comfort
           </h2>
-          <div className="w-24 h-1 bg-[#c4a053] mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-[#b89628] mx-auto mt-6"></div>
         </motion.div>
 
         {/* Main Content Grid */}
@@ -250,7 +250,7 @@ const HotelFeature = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-[#c4a053] text-white p-3 text-sm font-medium">
+              <div className="absolute bottom-0 left-0 right-0 bg-[#b89628] text-white p-3 text-sm font-medium">
                 <div className="flex items-center justify-between">
                   <span>Luxury Interiors</span>
                   <div className="flex gap-1">
@@ -275,7 +275,7 @@ const HotelFeature = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-[#c4a053] text-white p-3 text-sm font-medium">
+              <div className="absolute bottom-0 left-0 right-0 bg-[#b89628] text-white p-3 text-sm font-medium">
                 <div className="flex items-center justify-between">
                   <span>Breathtaking Views</span>
                   <div className="flex gap-1">
@@ -289,12 +289,12 @@ const HotelFeature = () => {
 
             {/* Decorative Elements */}
             <motion.div 
-              className="absolute z-0 w-[50%] h-[50%] top-[15%] left-[15%] border-2 border-[#c4a053] rounded-lg"
+              className="absolute z-0 w-[50%] h-[50%] top-[15%] left-[15%] border-2 border-[#b89628] rounded-lg"
               variants={fadeInUp}
               custom={4}
             ></motion.div>
             <motion.div 
-              className="absolute z-0 w-[50%] h-[50%] bottom-[15%] right-[15%] border-2 border-[#c4a053] rounded-lg"
+              className="absolute z-0 w-[50%] h-[50%] bottom-[15%] right-[15%] border-2 border-[#b89628] rounded-lg"
               variants={fadeInUp}
               custom={4}
             ></motion.div>
@@ -323,22 +323,22 @@ const HotelFeature = () => {
             >
               {[
                 {
-                  icon: <Lightbulb className="w-8 h-8 text-[#c4a053]" />,
+                  icon: <Lightbulb className="w-8 h-8 text-[#b89628]" />,
                   title: "Elegant Ambiance",
                   desc: "Immerse yourself in our carefully curated atmosphere"
                 },
                 {
-                  icon: <Utensils className="w-8 h-8 text-[#c4a053]" />,
+                  icon: <Utensils className="w-8 h-8 text-[#b89628]" />,
                   title: "Fine Dining",
                   desc: "Exquisite culinary experiences await your palate"
                 },
                 {
-                  icon: <Map className="w-8 h-8 text-[#c4a053]" />,
+                  icon: <Map className="w-8 h-8 text-[#b89628]" />,
                   title: "Prime Locations",
                   desc: "Perfectly situated in Lahore and Malam Jabba"
                 },
                 {
-                  icon: <Star className="w-8 h-8 text-[#c4a053]" />,
+                  icon: <Star className="w-8 h-8 text-[#b89628]" />,
                   title: "5-Star Service",
                   desc: "Attentive staff dedicated to your comfort"
                 }
@@ -358,7 +358,7 @@ const HotelFeature = () => {
 
             {/* Quote */}
             <motion.div 
-              className="border-l-4 border-[#c4a053] pl-4 py-2 bg-[#c4a053]/5 rounded-r-lg"
+              className="border-l-4 border-[#b89628] pl-4 py-2 bg-[#b89628]/5 rounded-r-lg"
               variants={fadeInUp}
               custom={7}
             >
@@ -376,7 +376,7 @@ const HotelFeature = () => {
             >
               <Link 
                 to="/about" 
-                className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium bg-[#c4a053] text-white rounded-md shadow-md"
+                className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium bg-[#b89628] text-white rounded-md shadow-md"
               >
                 <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
                 <span className="relative flex items-center gap-2">
