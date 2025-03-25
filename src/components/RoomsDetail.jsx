@@ -55,7 +55,7 @@ export default function RoomsDetail() {
                 src={image}
                 alt={`Thumbnail ${index}`}
                 className={`w-20 h-20 object-cover   cursor-pointer  transition-transform hover:scale-110 ${
-                  currentImageIndex === index ? "ring-4 ring-[#c4a053]" : ""
+                  currentImageIndex === index ? "ring-4 ring-[#b89628]" : ""
                 }`}
                 onClick={() => setCurrentImageIndex(index)}
               />
@@ -69,13 +69,13 @@ export default function RoomsDetail() {
           <p className="text-gray-600 mt-2 text-lg">
             {room.guests} • {room.size}
           </p>
-          <p className="text-3xl font-semibold text-[#c4a053] mt-4">
+          <p className="text-3xl font-semibold text-[#b89628] mt-4">
             {room.price}
           </p>
 
           {/* Room Overview */}
           <div className="mt-6">
-            <h2 className="text-3xl font-bold text-gray-800 border-b-4 border-[#c4a053] inline-block pb-2">
+            <h2 className="text-3xl font-bold text-gray-800 border-b-4 border-[#b89628] inline-block pb-2">
               Room Overview
             </h2>
             <p className="text-gray-700 mt-4 text-lg leading-relaxed">
@@ -85,7 +85,7 @@ export default function RoomsDetail() {
 
           {/* Amenities */}
           <div className="mt-6">
-            <h2 className="text-3xl font-bold text-gray-800 border-b-4 border-[#c4a053] inline-block pb-2">
+            <h2 className="text-3xl font-bold text-gray-800 border-b-4 border-[#b89628] inline-block pb-2">
               Amenities
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-2 gap-4 mt-4 text-gray-700 text-lg">
@@ -102,7 +102,7 @@ export default function RoomsDetail() {
 
           {/* Room Rules */}
           <div className="mt-6">
-            <h2 className="text-3xl font-bold text-gray-800 border-b-4 border-[#c4a053] inline-block pb-2">
+            <h2 className="text-3xl font-bold text-gray-800 border-b-4 border-[#b89628] inline-block pb-2">
               Room Rules
             </h2>
             <ul className="list-disc ml-6 text-gray-700 mt-4 text-lg">

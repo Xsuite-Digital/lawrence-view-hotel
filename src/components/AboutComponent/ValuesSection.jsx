@@ -41,7 +41,7 @@ export const ValuesSection = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Mission & Values
           </h2>
-          <div className="w-20 h-1 bg-amber-500 mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-[#b89628] mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
           At Lawrence View Hotel, we are dedicated to providing exceptional hospitality, seamless comfort, and a memorable experience for every guest.
 
@@ -57,7 +57,7 @@ export const ValuesSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:shadow-[#c4a053]"
             >
-              <div className="text-amber-500 mb-4">
+              <div className="text-[#b89628] mb-4">
                 <value.icon size={32} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">

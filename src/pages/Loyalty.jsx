@@ -73,7 +73,7 @@ const Loyalty = () => {
     </motion.p>
     <Link to="/contact">
       <motion.button
-        className="bg-[#c4a053] hover:bg-[#c4a053] text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center"
+        className="bg-[#b89628] hover:bg-[#b89628] text-white font-bold py-3 px-8 rounded-full transition duration-300 flex items-center"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -99,7 +99,7 @@ const Loyalty = () => {
       variants={itemAnimation}
       className="bg-white p-6 rounded-lg shadow-md  duration-300 ease-in-out text-center hover:shadow-black"
     >
-      <div className="bg-[#c4a053] p-4 rounded-full inline-flex items-center justify-center mb-4">
+      <div className="bg-[#b89628] p-4 rounded-full inline-flex items-center justify-center mb-4">
         <item.icon className="h-8 w-8 text-white" />
       </div>
       <h3 className="text-2xl font-semibold mb-2">{item.value}</h3>
@@ -118,7 +118,7 @@ const Loyalty = () => {
         />
 
         <motion.div
-          className="bg-gradient-to-r from-[#c4a053] to-[#c4a053] rounded-xl p-8 text-white text-center relative overflow-hidden"
+          className="bg-gradient-to-r from-[#b89628] to-[#b89628] rounded-xl p-8 text-white text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -138,7 +138,7 @@ const Loyalty = () => {
             </p>
             <Link to="/contact">
               <motion.button
-                className="bg-white text-[#c4a053] hover:bg-gray-100 font-bold py-3 px-8 rounded-full inline-flex items-center"
+                className="bg-white text-[#b89628] hover:bg-gray-100 font-bold py-3 px-8 rounded-full inline-flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

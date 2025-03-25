@@ -160,7 +160,7 @@ const ReasonsToBook = () => {
 
             {/* Left Text Bar */}
             <div className="absolute left-0 top-0 bottom-0 bg-black bg-opacity-95 text-white w-16 flex items-center justify-center z-10">
-  <div className="transform -rotate-90 whitespace-nowrap text-[#c4a053] font-serif tracking-[0.5em] text-lg font-semibold">
+  <div className="transform -rotate-90 whitespace-nowrap text-[#b89628] font-serif tracking-[0.5em] text-lg font-semibold">
     OUR SPECIALIZATION
   </div>
 </div>
@@ -210,7 +210,7 @@ const ReasonsToBook = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <motion.div
-                      className="w-16 h-16 rounded-full bg-black text-[#c4a053] flex items-center justify-center mb-4"
+                      className="w-16 h-16 rounded-full bg-black text-[#b89628] flex items-center justify-center mb-4"
                       whileHover={{ scale: 1.1 }}
                     >
                       {feature.icon}

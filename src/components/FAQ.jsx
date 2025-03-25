@@ -62,9 +62,9 @@ const FAQ = () => {
             >
               <span className="mr-4">{faq.question}</span>
               {openIndex === index ? (
-                <Minus className="w-5 h-5 ml-auto shrink-0 text-[#c4a053] transition-all duration-300" />
+                <Minus className="w-5 h-5 ml-auto shrink-0 text-[#b89628] transition-all duration-300" />
               ) : (
-                <Plus className="w-5 h-5 ml-auto shrink-0 text-[#c4a053] transition-all duration-300" />
+                <Plus className="w-5 h-5 ml-auto shrink-0 text-[#b89628] transition-all duration-300" />
               )}
             </button>
             <div

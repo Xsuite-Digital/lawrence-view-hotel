@@ -21,7 +21,7 @@ const Amenities = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {amenitiesData.map(({ icon: Icon, title, desc }, index) => (
             <div key={index} className="flex items-center space-x-4">
-              <Icon className="w-8 h-8 text-[#c4a053]" />
+              <Icon className="w-8 h-8 text-[#b89628]" />
               <div>
                 <h3 className="text-lg font-semibold">{title}</h3>
                 <p className="text-gray-600 text-sm">{desc}</p>

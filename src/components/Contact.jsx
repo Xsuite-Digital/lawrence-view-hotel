@@ -85,10 +85,10 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
-              Why Choose <span className="text-[#c4a053]">Lawrence View</span> Hotel?
+              Why Choose <span className="text-[#b89628]">Lawrence View</span> Hotel?
             </h2>
             <div className="flex justify-center mt-4">
-              <div className="w-20 h-1 bg-[#c4a053]"></div>
+              <div className="w-20 h-1 bg-[#b89628]"></div>
             </div>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               Experience luxury, comfort, and excellence in the heart of the city. Our dedication to impeccable service ensures your stay is nothing short of extraordinary.
@@ -109,8 +109,8 @@ const Contact = () => {
                 boxShadow: "0 20px 25px -5px rgba(196, 160, 83, 0.2), 0 10px 10px -5px rgba(196, 160, 83, 0.1)"
               }}
             >
-              <div className="absolute -right-20 -top-20 w-40 h-40 bg-[#c4a053] opacity-10 rounded-full group-hover:opacity-20 transition-opacity"></div>
-              <div className="text-4xl text-[#c4a053] mb-5 flex justify-center">
+              <div className="absolute -right-20 -top-20 w-40 h-40 bg-[#b89628] opacity-10 rounded-full group-hover:opacity-20 transition-opacity"></div>
+              <div className="text-4xl text-[#b89628] mb-5 flex justify-center">
                 <Icon size={40} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 text-center">
@@ -131,7 +131,7 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="absolute -top-10 -left-10 w-40 h-40 border-8 border-[#c4a053] opacity-20"></div>
+            <div className="absolute -top-10 -left-10 w-40 h-40 border-8 border-[#b89628] opacity-20"></div>
             <img
               src={P2}
               alt="Luxury Hotel Room"
@@ -146,23 +146,23 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Get in <span className="text-[#c4a053]">Touch</span>
+              Get in <span className="text-[#b89628]">Touch</span>
             </h2>
-            <div className="w-20 h-1 bg-[#c4a053] mb-8"></div>
+            <div className="w-20 h-1 bg-[#b89628] mb-8"></div>
             
             <div className="space-y-6">
               {contactInfo.map(({ icon: Icon, title, info, action }, index) => (
                 <motion.a
                   key={index}
                   href={action}
-                  className={`flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#c4a053] transition-all ${!action && 'pointer-events-none'}`}
+                  className={`flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#b89628] transition-all ${!action && 'pointer-events-none'}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 * index }}
                   whileHover={{ x: 10 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#c4a053] bg-opacity-10 flex items-center justify-center mr-4">
-                    <Icon className="text-[#c4a053]" size={20} />
+                  <div className="w-12 h-12 rounded-full bg-[#b89628] bg-opacity-10 flex items-center justify-center mr-4">
+                    <Icon className="text-[#b89628]" size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">{title}</p>
@@ -174,7 +174,7 @@ const Contact = () => {
 
             <div className="mt-10">
               <motion.div
-                className="rounded-xl overflow-hidden shadow-lg border-4 border-[#c4a053] border-opacity-30"
+                className="rounded-xl overflow-hidden shadow-lg border-4 border-[#b89628] border-opacity-30"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
@@ -203,10 +203,10 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Send Us a <span className="text-[#c4a053]">Message</span>
+              Send Us a <span className="text-[#b89628]">Message</span>
             </h2>
             <div className="flex justify-center mt-4">
-              <div className="w-20 h-1 bg-[#c4a053]"></div>
+              <div className="w-20 h-1 bg-[#b89628]"></div>
             </div>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
               We'd love to hear from you. Fill out the form below and our team will get back to you shortly.

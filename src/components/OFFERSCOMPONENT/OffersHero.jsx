@@ -16,7 +16,7 @@ const OffersHero = () => {
           Exclusive Offers
         </motion.h1>
         <motion.div 
-          className="h-1 w-32 bg-[#c4a053] mb-6"
+          className="h-1 w-32 bg-[#b89628] mb-6"
           initial={{ width: 0 }}
           animate={{ width: "8rem" }}
           transition={{ duration: 0.8, delay: 0.3 }}
