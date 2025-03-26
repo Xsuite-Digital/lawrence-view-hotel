@@ -1,21 +1,25 @@
-import { Ruler, Users, Bath, Utensils, Bike, Info, Wifi, ParkingCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { Ruler, Users, Bath, Info, Wifi, ParkingCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { rooms } from "../../Helpers/Data";
 import { useState, useEffect } from "react";
 
 export default function CardSlider() {
+  const location = useLocation();
+  const isMLJRoute = location.pathname === "/MLJ";
+  const displayedRooms = isMLJRoute ? rooms.slice(-3) : rooms.slice(0, 3);
+
   return (
     <div className="bg-gray-100 h-full py-12">
       <h2 className="text-3xl font-bold text-center mb-8">Featured Rooms</h2>
       <div className="grid lg:grid-cols-3 max-w-5xl w-full mx-auto grid-cols-1 gap-y-8">
-        {rooms.slice(0, 3).map((room) => (
+        {displayedRooms.map((room) => (
           <RoomCard key={room.id} room={room} />
         ))}
       </div>
       <div className="text-center mt-8">
         <Link to="/rooms">
-          <button className="bg-[#b89628] text-white  hover:scale-105 bg-opacity-70 px-6 py-2 rounded-md hover transition">
+          <button className="bg-[#b89628] text-white hover:scale-105 bg-opacity-70 px-6 py-2 rounded-md hover transition">
             View All Rooms
           </button>
         </Link>
@@ -50,7 +54,7 @@ function RoomCard({ room }) {
 
   return (
     <motion.div
-      className="bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-xs mx-auto flex flex-col h-full border-animated "
+      className="bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-xs mx-auto flex flex-col h-full border-animated"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -60,10 +64,10 @@ function RoomCard({ room }) {
           alt={room.title}
           className="w-full h-48 object-cover absolute"
         />
-        <button onClick={prevSlide} className="absolute left-2 top-1/2  bg-white p-2 rounded-full shadow-md">
+        <button onClick={prevSlide} className="absolute left-2 top-1/2 bg-white p-2 rounded-full shadow-md">
           <ChevronLeft size={20} />
         </button>
-        <button onClick={nextSlide} className="absolute right-2 top-1/2  bg-white p-2 rounded-full shadow-md">
+        <button onClick={nextSlide} className="absolute right-2 top-1/2 bg-white p-2 rounded-full shadow-md">
           <ChevronRight size={20} />
         </button>
       </div>
@@ -78,11 +82,11 @@ function RoomCard({ room }) {
         <div className="flex items-center justify-between text-gray-500 text-sm mt-auto">
           <div className="flex space-x-3">
             <Bath size={16} className="hover:text-[#b89628] text-black duration-300 ease-in-out" />
-            <Wifi size={16} className="hover:text-[#b89628] text-black duration-300 ease-in-out"/>
-            <ParkingCircle size={16} className="hover:text-[#b89628] text-black duration-300 ease-in-out"/>
+            <Wifi size={16} className="hover:text-[#b89628] text-black duration-300 ease-in-out" />
+            <ParkingCircle size={16} className="hover:text-[#b89628] text-black duration-300 ease-in-out" />
           </div>
           <Link to={`/rooms/${room.id}`}>
-            <button className="flex items-center hover:text-[#b89628]  text-black">
+            <button className="flex items-center hover:text-[#b89628] text-black">
               More Details <Info size={16} className="ml-1" />
             </button>
           </Link>
