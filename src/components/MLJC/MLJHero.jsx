@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import p1 from "../../assets/MLJH.webp";
 import p2 from "../../assets/MLJH2.webp";
-import BookingEngine from "../BookingEngine/Bookingengine";
-import GetInTouch from "../HomeComponents/GetInTouch";
+
 
 
 const images = [p1, p2];
