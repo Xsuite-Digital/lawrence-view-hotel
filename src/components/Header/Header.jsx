@@ -74,27 +74,27 @@ export default function Header() {
           </Link>
 
           <div className="relative bg-black border-l-2 border-[#b89628] pl-4 py-2">
-    <div className="flex items-center space-x-2 mb-1">
-      <Phone size={18} className="text-[#b89628]" />
-      <span className="font-semibold tracking-wide">BOOK YOUR STAY</span>
-    </div>
-    <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-3">
-      <a 
-        href="tel:+923206361916" 
-        className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
-      >
-        <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
-        +92 (320) 6361-916
-      </a>
-      <a 
-        href="tel:+924236311574" 
-        className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
-      >
-        <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
-        +92 (42) 36311574
-      </a>
-    </div>
-    </div>
+  <div className="flex items-center space-x-2 mb-1">
+    <Phone size={18} className="text-[#b89628]" />
+    <span className="font-semibold tracking-wide">BOOK YOUR STAY</span>
+  </div>
+  <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-3">
+    <a 
+      href="tel:+923206361916" 
+      className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center font-mono"
+    >
+      <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
+      +92 320 6361916
+    </a>
+    <a 
+      href="tel:+924236311574" 
+      className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center font-mono"
+    >
+      <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
+      +92 42 36311574
+    </a>
+  </div>
+</div>
 
           <div className="flex space-x-3 text-gray-300">
             <span className="tracking-widest">Follow Us On |</span>
@@ -102,7 +102,7 @@ export default function Header() {
               href="https://www.facebook.com/LawrenceViewHotelLahore"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#b89628]"
+              className="hover:text-[#e4c45d]"
             >
               <Facebook size={20} />
             </a>
@@ -110,13 +110,13 @@ export default function Header() {
               href="https://www.instagram.com/lawrence.view.hotel.lahore/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#b89628]"
+              className="hover:text-[#e4c45d]"
             >
               <Instagram size={20} />
             </a>
             <a
               href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
-              className="hover:text-[#b89628]"
+              className="hover:text-[#e4c45d]"
             >
               <Music2 size={20} />
             </a>
