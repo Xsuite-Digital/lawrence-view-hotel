@@ -27,7 +27,8 @@ const OffersHero = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          Discover our carefully curated special packages and promotions designed to make your stay at Lawrence View Hotel truly memorable.
+       Book this hotel now to access exclusive rates and limited-time offers, ensuring every guest enjoys a personalized and unforgettable stay at Lawrence View Hotel. Don’t miss out on the ultimate hotel experience.
+
         </motion.p>
       </div>
     </div>

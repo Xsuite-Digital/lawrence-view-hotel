@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { Lightbulb, Utensils, Map, Star, ChevronRight } from "lucide-react";
 import P1 from "../../assets/ABOUT1.webp";
 import P2 from "../../assets/QUAD.webp";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -43,6 +43,8 @@ const HotelFeature = () => {
       },
     },
   };
+  const location = useLocation()
+  const path = location.pathname
 
   return (
     <section ref={ref} className="relative py-20 overflow-hidden bg-white">
@@ -163,13 +165,29 @@ const HotelFeature = () => {
             animate={controls}
             variants={staggerContainer}
           >
-            <motion.div variants={fadeInUp} custom={5}>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Discover a world of luxury, comfort, and hospitality at Lawrence View Hotel. 
-                Whether you're staying in the heart of Lahore or the breathtaking heights of 
-                Malam Jabba, every moment is designed for your relaxation and joy.
-              </p>
-            </motion.div>
+          {path === "/" ? (
+  <motion.div variants={fadeInUp} custom={5}>
+    <p className="text-lg text-gray-700 leading-relaxed">
+      Discover a world of luxury, comfort, and hospitality at Lawrence View Hotel. 
+      Whether you're staying in the heart of Lahore or the breathtaking heights of 
+      Malam Jabba, every moment is designed for your relaxation and joy.
+    </p>
+  </motion.div>
+) : path === "/MLJ" ? (  // ✅ Corrected Syntax
+  <motion.div variants={fadeInUp} custom={5}>
+    <p className="text-lg text-gray-700 leading-relaxed">
+      Discover a world of luxury, comfort, and hospitality at Lawrence View Hotel. 
+      Whether you're staying in the breathtaking heights of 
+      Malam Jabba, every moment is designed for your relaxation and joy.
+    </p>
+  </motion.div>
+) : path === "/Lahore" ? ( 
+  <motion.div variants={fadeInUp} custom={5}>
+    <p className="text-lg text-gray-700 leading-relaxed">
+      Searching for the best hotel rooms near me in Lahore? Lawrence View Hotel Lahore provides comfortable stays, budget-friendly room rates, and a prime location, making it the perfect choice for travelers. Visit Lahore and discover exceptional hospitality with luxurious accommodations and seamless room booking for a hassle-free stay only at Lawrence View Hotel.
+    </p>
+  </motion.div>
+) : null}
 
             {/* Feature Cards */}
             <motion.div 
@@ -180,22 +198,22 @@ const HotelFeature = () => {
               {[
                 {
                   icon: <Lightbulb className="w-8 h-8 text-[#b89628]" />,
-                  title: "Elegant Ambiance",
+                  title: "Elegant stays",
                   desc: "Immerse yourself in our carefully curated atmosphere"
                 },
                 {
                   icon: <Utensils className="w-8 h-8 text-[#b89628]" />,
-                  title: "Fine Dining",
+                  title: " city views",
                   desc: "Exquisite culinary experiences await your palate"
                 },
                 {
                   icon: <Map className="w-8 h-8 text-[#b89628]" />,
-                  title: "Prime Locations",
+                  title: "Premium hospitality",
                   desc: "Perfectly situated in Lahore and Malam Jabba"
                 },
                 {
                   icon: <Star className="w-8 h-8 text-[#b89628]" />,
-                  title: "5-Star Service",
+                  title: "services",
                   desc: "Attentive staff dedicated to your comfort"
                 }
               ].map((feature, index) => (
@@ -212,8 +230,35 @@ const HotelFeature = () => {
               ))}
             </motion.div>
 
-            {/* Quote */}
-            <motion.div 
+            {/* Quote */}{
+              path ===" /" ? (
+
+                <motion.div 
+                className="border-l-4 border-[#b89628] pl-4 py-2 bg-[#b89628]/5 rounded-r-lg"
+              variants={fadeInUp}
+              custom={7}
+            >
+
+              
+              <p className="text-gray-700 italic">
+                "Book your stay at Lawrence View Hotel, where every stay
+                promises a luxurious retreat with the finest hospitality."
+              </p>
+            </motion.div>
+              ) : path ==="/Lahore" ? ( <motion.div 
+                className="border-l-4 border-[#b89628] pl-4 py-2 bg-[#b89628]/5 rounded-r-lg"
+              variants={fadeInUp}
+              custom={7}
+            >
+
+              
+              <p className="text-gray-700 italic">
+              Experience a top-rated hotel in Lahore with stunning city views and modern comforts
+Perfect for visitors, residents, and travelers seeking a luxury stay.
+Book the best hotel room for an unforgettable hotel experience in Lahore.
+
+              </p>
+            </motion.div>) : path ==="/MLJ" ? ( <motion.div
               className="border-l-4 border-[#b89628] pl-4 py-2 bg-[#b89628]/5 rounded-r-lg"
               variants={fadeInUp}
               custom={7}
@@ -222,7 +267,8 @@ const HotelFeature = () => {
                 "Book your stay at Lawrence View Hotel, where every stay
                 promises a luxurious retreat with the finest hospitality."
               </p>
-            </motion.div>
+            </motion.div>) : null
+            }
 
             {/* CTA Button */}
             <motion.div

@@ -9,12 +9,10 @@ export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 4;
 
-  // Calculate current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
 
-  // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
