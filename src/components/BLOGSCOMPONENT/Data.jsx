@@ -1,9 +1,10 @@
 import img2 from "../../assets/3.webp";
+import img3 from "../../assets/M1.webp";
 import S1 from "../../assets/S1.webp";
 import SA1 from "../../assets/SA1.webp";
 import T1 from "../../assets/T1.webp";
 import cityguide from "../../assets/cityguide.jpg";
-
+import LVHL from "../../assets/LVHL.webp";
 export const blogPosts = [
   {
     id: 1,
@@ -107,7 +108,61 @@ export const blogPosts = [
     category: "Luxury Accommodation",
     tags: ["5-star hotel", "luxury stay", "fine dining", "wellness", "business facilities", "wedding venue"],
   },
+  {
+    id: 2,
+    title: "SERENITY REDEFINED: THE TRANSFORMATIVE WELLNESS JOURNEY AT LAWRENCE VIEW HOTEL",
+    slug: "wellness-sanctuary-experience",
+    excerpt: "Step into a world where holistic wellness meets luxurious rejuvenation. Lawrence View Hotel's cutting-edge wellness center is not just a spa, but a comprehensive healing sanctuary designed to restore balance to mind, body, and spirit.",
+    content: `
+      <p class="mb-6 text-lg font-medium leading-relaxed">Step into a world where holistic wellness meets luxurious rejuvenation. Lawrence View Hotel's cutting-edge wellness center is not just a spa, but a comprehensive healing sanctuary designed to restore balance to mind, body, and spirit.</p>
   
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">The Holistic Wellness Philosophy</h2>
+      <p class="mb-6 leading-relaxed">At Lawrence View Hotel, wellness is more than a service—it's a transformative experience that begins the moment you enter our 10,000 square foot Serenity Spa. We've curated a holistic approach that integrates advanced medical insights, traditional healing practices, and personalized care to create a truly unique wellness journey.</p>
+  
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">Cutting-Edge Wellness Facilities</h2>
+      <p class="mb-6 leading-relaxed">Our state-of-the-art wellness center features an impressive array of facilities designed to cater to every aspect of personal health and relaxation. From a temperature-controlled infinity pool with underwater acoustic experiences to advanced fitness technologies, every element has been carefully selected to provide an unparalleled wellness experience.</p>
+  
+      <div class="my-8 bg-gray-50 p-6 rounded-lg border-l-4 border-[#c8a45e]">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Expert Testimonial</h3>
+        <p class="italic text-gray-600">"Lawrence View Hotel's wellness approach is revolutionary. They don't just offer treatments; they provide a comprehensive healing experience that addresses physical, mental, and emotional well-being."</p>
+        <p class="mt-2 text-sm text-gray-500">— Dr. Elena Martinez, Holistic Health Consultant</p>
+      </div>
+  
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">Signature Treatment Experiences</h2>
+      <p class="mb-6 leading-relaxed">Our Serenity Spa offers signature treatments that blend traditional techniques with modern scientific approaches. From our "Urban Detox" package that counters the effects of city living to our "Cellular Rejuvenation" treatments using advanced biotechnology, each experience is tailored to individual wellness needs.</p>
+  
+      <h2 class="text-2xl font-bold mb-4 text-[#c8a45e] mt-8">Mindfulness and Mental Wellness</h2>
+      <p class="mb-6 leading-relaxed">Beyond physical treatments, we offer comprehensive mental wellness programs. Our floating meditation pods, oxygen therapy lounge, and guided mindfulness sessions provide guests with tools to manage stress, enhance mental clarity, and achieve inner peace.</p>
+  
+      <div class="my-8 bg-[#f9f5ea] p-8 rounded-lg shadow-md border border-[#e6d5b8]">
+        <h3 class="text-2xl font-bold mb-4 text-[#c8a45e]">Book Your Wellness Journey</h3>
+        <p class="mb-4 text-gray-700">Experience the transformative power of holistic wellness at Lawrence View Hotel. Our expert therapists and state-of-the-art facilities await to guide you towards complete rejuvenation.</p>
+        <div class="flex items-center space-x-6 text-[#c8a45e]">
+          <div class="flex items-center">
+            <span class="mr-2 font-semibold">Spa Reservations:</span>
+            <a href="tel:+924236311574">+92 (42) 36311574</a>
+          </div>
+          <div class="flex items-center">
+            <span class="mr-2 font-semibold">Email:</span>
+            <span>wellness@lawrenceviewhotel.com</span>
+          </div>
+        </div>
+      </div>
+  
+      <blockquote class="border-l-4 border-[#c8a45e] pl-4 italic my-8 text-gray-600">
+        "Lawrence View Hotel's wellness center represents the future of holistic health—a perfect blend of luxury, science, and personalized care." - Wellness & Lifestyle Magazine, 2024
+      </blockquote>
+    `,
+    image: img3,
+    galleryImages: [ S1 , SA1 , T1 ],
+    date: "April 5, 2025",
+    author: "Dr. Marcus Chen",
+    authorImage: "https://images.unsplash.com/photo-1504723468788-82d5318175f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+    authorBio: "Dr. Marcus Chen is a renowned holistic health expert specializing in integrative wellness strategies. With over 20 years of experience, he has consulted for leading luxury wellness destinations worldwide.",
+    comments: 18,
+    category: "Wellness and Spa",
+    tags: ["holistic health", "spa experience", "luxury wellness", "mental health", "rejuvenation"]
+  }
 ];
 export const categories = [
   { id: 1, name: "Accommodation", slug: "accommodation", count: 12 },
@@ -122,34 +177,33 @@ export const categories = [
 export const recentPosts = [
   {
     id: 1,
-    title: "Grand Millennium in Pictures",
-    slug: "grand-millennium-in-pictures",
+    title: "10 EXCEPTIONAL FEATURES THAT MAKE LAWRENCE VIEW HOTEL YOUR PREMIER DESTINATION",
+    slug: "10-exceptional-features",
     image:
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      LVHL,
     date: "February 17, 2023",
   },
   {
     id: 2,
-    title: "10 Things You Should Know",
-    slug: "10-things-you-should-know",
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    title: "SERENITY REDEFINED: THE TRANSFORMATIVE WELLNESS JOURNEY AT LAWRENCE VIEW HOTEL",
+    slug: "wellness-sanctuary-experience",
+    image: img3, 
     date: "February 17, 2023",
   },
-  {
-    id: 3,
-    title: "Grand Millennium Weddings",
-    slug: "grand-millennium-weddings",
-    image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    date: "February 17, 2023",
-  },
-  {
-    id: 4,
-    title: "Live Your Myth in Millennium",
-    slug: "live-your-myth-in-millennium",
-    image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    date: "February 10, 2023",
-  },
+  // {
+  //   id: 3,
+  //   title: "Grand Millennium Weddings",
+  //   slug: "grand-millennium-weddings",
+  //   image:
+  //     "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+  //   date: "February 17, 2023",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Live Your Myth in Millennium",
+  //   slug: "live-your-myth-in-millennium",
+  //   image:
+  //     "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+  //   date: "February 10, 2023",
+  // },
 ];

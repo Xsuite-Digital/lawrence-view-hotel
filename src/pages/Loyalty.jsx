@@ -68,8 +68,8 @@ const Loyalty = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
     >
-      Join our exclusive loyalty program and enjoy premium benefits,
-      exclusive offers, and unforgettable experiences.
+Join our loyalty program and get rewarded for every stay! The more you stay, the more you earn. Enjoy exclusive discounts, priority room booking, special offers, and VIP benefits at Lawrence View Hotel.
+
     </motion.p>
     <Link to="/contact">
       <motion.button
