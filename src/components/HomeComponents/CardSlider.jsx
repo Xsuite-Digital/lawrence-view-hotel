@@ -64,12 +64,12 @@ function RoomCard({ room }) {
           alt={room.title}
           className="w-full h-48 object-cover absolute"
         />
-        <button onClick={prevSlide} className="absolute left-2 top-1/2 bg-white p-2 rounded-full shadow-md">
-          <ChevronLeft size={20} />
+        <button onClick={prevSlide} className="absolute left-2 top-1/2 bg-transparent text-white p-2 rounded-full shadow-md">
+          <ChevronLeft size={26} />
         </button>
-        <button onClick={nextSlide} className="absolute right-2 top-1/2 bg-white p-2 rounded-full shadow-md">
-          <ChevronRight size={20} />
-        </button>
+        <button onClick={nextSlide} className="absolute right-2 top-1/2 bg-transparent text-white p-2 rounded-full shadow-md">
+          <ChevronRight size={26} />
+        </button> 
       </div>
       <div className="p-4 flex flex-col flex-grow">
         <h3 className="font-semibold text-lg">{room.title}</h3>
