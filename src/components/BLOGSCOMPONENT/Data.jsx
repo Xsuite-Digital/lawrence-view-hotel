@@ -139,12 +139,12 @@ export const blogPosts = [
         <p class="mb-4 text-gray-700">Experience the transformative power of holistic wellness at Lawrence View Hotel. Our expert therapists and state-of-the-art facilities await to guide you towards complete rejuvenation.</p>
         <div class="flex items-center space-x-6 text-[#c8a45e]">
           <div class="flex items-center">
-            <span class="mr-2 font-semibold">Spa Reservations:</span>
+            <span class="mr-2 font-semibold"> Reservations:</span>
             <a href="tel:+924236311574">+92 (42) 36311574</a>
           </div>
           <div class="flex items-center">
             <span class="mr-2 font-semibold">Email:</span>
-            <span>wellness@lawrenceviewhotel.com</span>
+            <span>reservation@lawrenceviewhotel.com</span>
           </div>
         </div>
       </div>
