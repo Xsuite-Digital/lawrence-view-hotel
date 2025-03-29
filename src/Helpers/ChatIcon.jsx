@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import Icon from "../assets/ChatIcon.webp";
+import { useLocation } from "react-router-dom";
 const ChatIcon = () => {
+  const location = useLocation();
+  const path = location.pathname;
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const togglevisibility = () => {
@@ -21,7 +24,9 @@ const ChatIcon = () => {
     >
       {visible && (
         <a
-          href="https://wa.me/+923206361916"
+         href={ path === "/MLJ" ? "https://wa.me/+923306361916" :  "https://wa.me/+923206361916" } 
+
+        
           target="_blank"
           rel="noopener noreferrer"
         >

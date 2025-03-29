@@ -35,7 +35,7 @@ import Studio from "../assets/Studio.webp";
       size: "26  ㎡",
       description:
         "A luxurious room with modern amenities and a comfortable ambiance, perfect for a relaxing stay.",
-      price: "$240 per night",
+      price: "From Rs.5,800 per night",
       amenities: [
         "Double Bed",
         "Bathroom with shower",
@@ -75,7 +75,7 @@ import Studio from "../assets/Studio.webp";
       size: "26  ㎡",
       description:
         "Experience the comfort of deluxe living in a modern space with a private balcony and stunning views.",
-      price: "$320 per night",
+      price: "From Rs.7000 per night",
       amenities: [
         "King",
         "Separate luggage store",
@@ -119,7 +119,7 @@ import Studio from "../assets/Studio.webp";
       size: "220 ㎡",
       description:
         "A perfect blend of luxury and elegance, featuring a hot tub and premium services for a sophisticated experience.",
-      price: "$280 per night",
+      price: "From Rs.8000 per night",
       amenities: [
         "King",
         "Garden view",
@@ -162,7 +162,7 @@ import Studio from "../assets/Studio.webp";
       size: "28 ㎡",
       description:
         "A compact and stylish apartment with all essential facilities, ideal for long-term stays.",
-      price: "$200 per night",
+      price: "From Rs.16,150 per night",
       amenities: [
         "Queen Bed",
         "Kitchenette",

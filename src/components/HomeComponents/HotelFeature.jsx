@@ -3,6 +3,8 @@
 import React, { useEffect } from "react";
 import { Lightbulb, Utensils, Map, Star, ChevronRight } from "lucide-react";
 import P1 from "../../assets/ABOUT1.webp";
+import DT from "../../assets/DT.webp";
+import DTR from "../../assets/DTR.webp";
 import P2 from "../../assets/QUAD.webp";
 import { Link, useLocation } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
@@ -103,7 +105,7 @@ const HotelFeature = () => {
             >
               <div className="p-1 bg-white">
                 <img
-                  src={P1}
+                  src={path === "/" || path === "/Lahore" ? P1 :  DT}
                   alt="Luxury Hotel Interior"
                   className="w-full h-full object-cover"
                 />
@@ -128,7 +130,7 @@ const HotelFeature = () => {
             >
               <div className="p-1 bg-white">
                 <img
-                  src={P2}
+                  src={path === "/" || path === "/Lahore" ? P2 :  DTR}
                   alt="Hotel Exterior"
                   className="w-full h-full object-contain"
                 />

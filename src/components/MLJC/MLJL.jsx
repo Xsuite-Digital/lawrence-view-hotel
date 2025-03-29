@@ -80,8 +80,9 @@ function MLJL() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Phone</p>
-                    <a href="tel:+92(042)36311574" className="hover:text-[#c4a053] transition-colors">
-                      +92 (042) 36311574
+                    <a href="tel:03306361916" className="hover:text-[#c4a053] transition-colors">
+                    0330 6361916
+
                     </a>
                   </div>
                 </div>
@@ -93,7 +94,8 @@ function MLJL() {
                   <div>
                     <p className="text-sm text-gray-400">Address</p>
                     <p className="hover:text-[#c4a053] transition-colors">
-                      54-A lawrence view hotel China Chowk , Lahore
+                    Lawrence View Hotel Malam Jabba
+
                     </p>
                   </div>
                 </div>
