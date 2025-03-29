@@ -148,7 +148,7 @@ export const blogPosts = [
           </div>
         </div>
       </div>
-  
+    
       <blockquote class="border-l-4 border-[#c8a45e] pl-4 italic my-8 text-gray-600">
         "Lawrence View Hotel's wellness center represents the future of holistic health—a perfect blend of luxury, science, and personalized care." - Wellness & Lifestyle Magazine, 2024
       </blockquote>

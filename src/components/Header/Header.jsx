@@ -84,14 +84,14 @@ export default function Header() {
         className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
       >
         <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
-        +92 (320) 6361-916
+        Lahore: +92 (320) 6361-916
       </a>
       <a 
         href="tel:+924236311574" 
         className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
       >
         <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
-        +92 (42) 36311574
+        Mallam Jabbah: +92 (330) 36311574
       </a>
     </div>
     </div>
