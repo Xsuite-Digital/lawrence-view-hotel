@@ -86,7 +86,7 @@ function Contact() {
                   href="https://www.facebook.com/LawrenceViewHotelLahore"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#c4a053] transition-colors duration-300"
+                  className="text-[#b89628] transition-colors duration-300"
                 >
                   <Facebook size={20} />
                 </a>
@@ -94,7 +94,7 @@ function Contact() {
                   href="https://www.instagram.com/lawrence.view.hotel.lahore?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#c4a053] transition-colors duration-300"
+                  className="text-[#b89628] transition-colors duration-300"
                 >
                   <Instagram size={20} />
                 </a>
@@ -102,7 +102,7 @@ function Contact() {
                   href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#c4a053] transition-colors duration-300"
+                  className="text-[#b89628] transition-colors duration-300"
                 >
                   <Music2 size={20} />
                 </a>

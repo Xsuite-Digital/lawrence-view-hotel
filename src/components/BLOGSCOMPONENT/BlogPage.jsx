@@ -40,5 +40,5 @@ export default function BlogPage() {
         </div>
       </motion.div>
     </div>
-  );
+  );c
 }
