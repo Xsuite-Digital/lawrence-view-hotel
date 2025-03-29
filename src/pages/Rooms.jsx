@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function Rooms() {
   return (
-    <div className="bg-gray py-12 mt-12">
+    <div className="bg-gray h-full">
       <h2 className="text-3xl font-bold lg:mt-24 -mt-12 p-12 text-white bg-black 2xl:mt-0 text-center mb-8">Rooms</h2>
       <div className="grid lg:grid-cols-3 max-w-5xl w-full mx-auto grid-cols-1 gap-y-8">
         {rooms.map((room) => {
@@ -48,11 +48,11 @@ export default function Rooms() {
                   alt={room.title}
                   className="w-full h-48 object-cover"
                 />
-                <button onClick={prevSlide} className="absolute left-2 top-1/2  bg-white p-2 rounded-full shadow-md">
-                  <ChevronLeft size={20} />
+                <button onClick={prevSlide} className="absolute left-2 top-1/2  text-white bg-transparent p-2 rounded-full shadow-md">
+                  <ChevronLeft size={26} />
                 </button>
-                <button onClick={nextSlide} className="absolute right-2 top-1/2  bg-white p-2 rounded-full shadow-md">
-                  <ChevronRight size={20} />
+                <button onClick={nextSlide} className="absolute right-2 top-1/2 text-white  bg-transparent p-2 rounded-full shadow-md">
+                  <ChevronRight size={26} />
                 </button>
               </div>
               <div className="p-4 flex flex-col flex-grow">
