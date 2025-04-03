@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import p1 from "../../assets/LVVH.webp";
+import p1 from "../../assets/F1.webp";
 import p2 from "../../assets/LVHH.webp";
-import BookingEngine from "../BookingEngine/Bookingengine";
 
 const images = [p1, p2];
 
