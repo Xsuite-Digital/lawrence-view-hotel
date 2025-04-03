@@ -243,7 +243,7 @@ import Studio from "../assets/Studio.webp";
       size: "22 sqft",
       description:
         "A cozy and well-furnished apartment with modern decor and essential amenities.",
-      price: "$280 per night",
+      price: "Rs15000  per night",
       amenities: [
         "Double Bed",
         "Small Living Space",
@@ -281,7 +281,7 @@ import Studio from "../assets/Studio.webp";
       size: "22 sqft",
       description:
         "A cozy and well-furnished apartment with modern decor and essential amenities.",
-      price: "$280 per night",
+      price: "Rs.4000  per night",
       amenities: [
         "Double Bed",
         "Small Living Space",
@@ -319,7 +319,7 @@ import Studio from "../assets/Studio.webp";
       size: "22 sqft",
       description:
         "A cozy and well-furnished apartment with modern decor and essential amenities.",
-      price: "$280 per night",
+      price: "Rs.5500  per night",
       amenities: [
         "Double Bed",
         "Small Living Space",
@@ -395,7 +395,7 @@ import Studio from "../assets/Studio.webp";
       size: "22 sqft",
       description:
         "A cozy and well-furnished apartment with modern decor and essential amenities.",
-      price: "$280 per night",
+      price: "Rs.5500  per night",
       amenities: [
         "Double Bed",
         "Small Living Space",

@@ -70,7 +70,7 @@ export default function RoomsDetail() {
             {room.guests} • {room.size}
           </p>
           <p className="text-3xl font-semibold text-[#b89628] mt-4">
-            {room.price}
+            {room.price} <span className="text-xs">(+tax)</span>
           </p>
 
           {/* Room Overview */}
