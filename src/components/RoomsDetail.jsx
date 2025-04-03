@@ -37,13 +37,13 @@ export default function RoomsDetail() {
             className="w-full h-[500px] object-cover transition-transform duration-500 ease-in-out transform scale-100 hover:scale-105"
           />
           <button
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 transition"
+            className="absolute top-1/2 left-4  bg-black bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 transition"
             onClick={prevImage}
           >
             ❮
           </button>
           <button
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 transition"
+            className="absolute top-1/2 right-4  bg-black bg-opacity-60 text-white p-3 rounded-full hover:bg-opacity-80 transition"
             onClick={nextImage}
           >
             ❯
