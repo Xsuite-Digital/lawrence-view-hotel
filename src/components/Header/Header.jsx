@@ -78,22 +78,23 @@ export default function Header() {
       <Phone size={18} className="text-[#b89628]" />
       <span className="font-semibold tracking-wide">BOOK YOUR STAY</span>
     </div>
-    <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-3">
-      <a 
-        href="tel:+923206361916" 
-        className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
-      >
-        <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
-        Lahore: +92 (320) 6361-916
-      </a>
-      <a 
-        href="tel:+924236311574" 
-        className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
-      >
-        <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
-        Mallam Jabbah: +92 (330) 36311574
-      </a>
-    </div>
+    <div className="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-3 font-sans">
+  <a 
+    href="tel:+923206361916" 
+    className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
+  >
+    <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
+    Lahore: +92 (320) 6361-916
+  </a>
+  <a 
+    href="tel:+924236311574" 
+    className="text-sm text-gray-300 hover:text-[#b89628] transition-colors flex items-center"
+  >
+    <span className="w-2 h-2 bg-[#b89628] rounded-full mr-2 inline-block"></span>
+    Mallam Jabbah: +92 (330) 36311574
+  </a>
+</div>
+
     </div>
 
           <div className="flex space-x-3 text-gray-300">
