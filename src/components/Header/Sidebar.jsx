@@ -30,11 +30,12 @@ export default function Sidebar() {
       )}
 
       {/* Sticky Sidebar Menu */}
-      <div
-        className={`fixed top-0 left-0 h-screen w-72 bg-white shadow-xl z-50 transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300`}
-      >
+    <div
+  className={`fixed top-0 left-0 h-screen w-72 bg-white shadow-xl z-50 transform ${
+    isOpen ? "translate-x-0" : "-translate-x-full"
+  } transition-transform duration-300 overflow-y-auto`}
+>
+
         {/* Close Button */}
         <button className="absolute top-4 right-4 text-black" onClick={() => setIsOpen(false)}>
           <X size={28} />

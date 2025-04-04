@@ -10,12 +10,18 @@ import {
   Linkedin,
 } from "lucide-react";
 import LOGO from "../../assets/logo.webp";
+import TRIPLOGO from "../../assets/trp1.webp"; // Import the TripAdvisor logo
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);
+  const [openFollowUs, setOpenFollowUs] = useState(false); // State for mobile Follow Us tab
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
+  };
+
+  const toggleFollowUs = () => {
+    setOpenFollowUs(!openFollowUs); // Toggle the "Follow Us" section
   };
 
   const sections = [
@@ -82,7 +88,6 @@ const Footer = () => {
         },
       ],
     },
-
     {
       title: "Policies",
       content: [
@@ -149,8 +154,9 @@ const Footer = () => {
           </div>
         ))}
 
-        <div className="flex justify-between items-center mt-6 flex-wrap">
-          <div className="flex space-x-6">
+        {/* Follow Us Section - Mobile View Toggle */}
+        <div className="lg:flex  justify-between items-center mt-6 flex-wrap">
+          <div className="lg:flex hidden space-x-6">
             <span className="font-extrabold">Follow Us</span>
             <a
               href="https://www.facebook.com/LawrenceViewHotelLahore"
@@ -184,6 +190,80 @@ const Footer = () => {
             >
               <Linkedin />
             </a>
+            <div className=" container  -mt-3 w-12">
+              <a
+                href="https://www.tripadvisor.com/Hotel_Review-g295413-d7596482-Reviews-Lawrence_View_Hotel_Hotel_Lahore-Lahore_Punjab_Province.html"
+                className="hover:text-[#c4a053]"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={TRIPLOGO} alt="TripAdvisor" />
+              </a>
+            </div>
+          </div>
+
+          {/* Toggle Follow Us on Mobile */}
+          <div className="lg:hidden mt-4">
+            <button
+              onClick={toggleFollowUs}
+              className="w-full flex justify-between items-center text-lg font-semibold"
+            >
+              Follow Us
+              <ChevronDown
+                className={`h-5 w-5 transition-transform ${
+                  openFollowUs ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            <div
+              className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                openFollowUs ? "h-full" : "max-h-0"
+              }`}
+            >
+              <div className="mt-4 flex space-x-6">
+                <a
+                  href="https://www.facebook.com/LawrenceViewHotelLahore"
+                  className="hover:text-[#c4a053]"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Facebook />
+                </a>
+                <a
+                  href="https://www.instagram.com/lawrence.view.hotel.lahore/"
+                  className="hover:text-[#c4a053]"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Instagram />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@lawrencehotel?_t=ZS-8uNGNPDRuZL&_r=1"
+                  className="hover:text-[#c4a053]"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Music2 />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/lawrence-view-hotel-lahore/"
+                  className="hover:text-[#c4a053]"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Linkedin />
+                </a>
+                
+                  <a
+                    href="https://www.tripadvisor.com/Hotel_Review-g295413-d7596482-Reviews-Lawrence_View_Hotel_Hotel_Lahore-Lahore_Punjab_Province.html"
+                    className="hover:text-[#c4a053]"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={TRIPLOGO} className="h-8 w-8 " alt="TripAdvisor" />
+                  </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
